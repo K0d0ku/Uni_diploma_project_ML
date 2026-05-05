@@ -2,7 +2,7 @@
 
 **A University Diploma Research Project for Accessible Sign Language Recognition**
 
-![Status](https://img.shields.io/badge/status-Deployment%20Ready-brightgreen)
+![Status](https://img.shields.io/badge/status-Active%20Development-brightgreen)
 ![Python](https://img.shields.io/badge/python-3.11-blue)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.15-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -12,7 +12,7 @@
 
 ---
 
-## 🎯 Mission
+## Mission
 
 > **"Help for those in need should not be limited or paid."**
 
@@ -20,7 +20,7 @@ This project develops a deployment-ready Kazakh Sign Language Recognition system
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 
 **KrSL FluentSigners-50** is a masked LSTM-based Kazakh Sign Language gesture recognition system trained as part of university diploma research. The model achieves **85% accuracy** for recognizing 80 Kazakh sign language categories from the FluentSigners-50 dataset, optimized for web and server-side deployment with real-time CPU inference.
 
@@ -30,7 +30,7 @@ This project develops a deployment-ready Kazakh Sign Language Recognition system
 - Creating accessible technology with no usage restrictions or licensing fees
 - Proving that high-quality sign language recognition is achievable on consumer hardware
 
-### ✨ Key Achievements
+### Key Achievements
 
 | Aspect | Details |
 |:---|:---|
@@ -47,7 +47,7 @@ This project develops a deployment-ready Kazakh Sign Language Recognition system
 
 ---
 
-## 🔬 Technical Specifications
+## Technical Specifications
 
 ### Model: `sign_lstm_masked_supreme_best.keras`
 
@@ -109,7 +109,7 @@ The model was developed and optimized on:
 
 ---
 
-## 📊 Dataset & Annotations
+## Dataset & Annotations
 
 ### FluentSigners-50 Dataset Usage
 
@@ -153,7 +153,7 @@ The model recognizes 80 signs including:
 
 ---
 
-## 🏗️ Project Architecture
+## Project Architecture
 
 ### System Pipeline
 
@@ -255,7 +255,7 @@ Total Dimensionality: 132 + 1434 + 63 + 63 = 1,692-D per frame
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 KrSL_FluenSigners-50_Kuro/
@@ -313,7 +313,7 @@ KrSL_FluenSigners-50_Kuro/
 │       └── kerypoints_expressional/     # Expressional variant
 │
 ├── models/                               # Trained models (excluded)
-│   ├── sign_lstm_masked_supreme_best.keras  # 🏆 BEST MODEL
+│   ├── sign_lstm_masked_supreme_best.keras  # BEST MODEL
 │   ├── sign_lstm_supreme_best.keras     # Alternative
 │   ├── sign_lstm_best.keras             # Lightweight variant
 │   └── (other checkpoint variants)
@@ -354,7 +354,7 @@ KrSL_FluenSigners-50_Kuro/
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.11+
@@ -407,7 +407,7 @@ python src/dl/test_cam.py
 
 ---
 
-## 📈 Model Performance
+## Model Performance
 
 ### Validation Results
 ```
@@ -444,26 +444,26 @@ File: P23_S028_02.mp4
 True Gesture:  Сәлем (Hi)
 Predicted:     Сәлем (Hi)
 Confidence:    94.2%
-Result:        ✅ CORRECT
+Result:        CORRECT
 
 TEST VIDEO 2  
 File: P17_S066_03.mp4
 True Gesture:  Қалыңыз қалай (How are you?)
 Predicted:     Қалыңыз қалай (How are you?)
 Confidence:    89.3%
-Result:        ✅ CORRECT
+Result:        CORRECT
 
 TEST VIDEO 3
 File: P10_S054_03.mp4
 True Gesture:  Менде бәрі жақсы (I'm fine)
 Predicted:     Менің жағдайым жаман (I'm not well)
 Confidence:    71.5%
-Result:        ❌ INCORRECT
+Result:        INCORRECT
 ```
 
 ---
 
-## 🔬 Training Methodology
+## Training Methodology
 
 ### Training Approach: Grokking
 
@@ -488,7 +488,7 @@ The "Grokking" method extends training beyond the point of overfitting:
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Core Libraries
 - **TensorFlow/Keras** (2.15.0) - Deep learning framework
@@ -507,7 +507,7 @@ See `requirements.txt` for complete dependency list (223 packages total).
 
 ---
 
-## 📚 Research & Dataset
+## Research & Dataset
 
 ### Original Dataset
 **FluenSigners-50 by KrSLR Team**
@@ -528,7 +528,7 @@ See `requirements.txt` for complete dependency list (223 packages total).
 
 ---
 
-## 💡 Key Innovations
+## Key Innovations
 
 ### 1. Masked LSTM Architecture
 - Handles variable-length video sequences naturally
@@ -559,35 +559,35 @@ See `requirements.txt` for complete dependency list (223 packages total).
 
 ---
 
-## 🎯 Use Cases
+## Use Cases
 
 ### Current Capabilities
-✅ **Video File Processing** - Batch evaluate MP4 videos  
-✅ **Gesture Classification** - Recognize 80 Kazakh signs  
-✅ **Confidence Scoring** - Get prediction confidence for each gesture  
-✅ **Real-time Inference** - CPU-based inference (~50-100ms/sample)  
+**Video File Processing** - Batch evaluate MP4 videos  
+**Gesture Classification** - Recognize 80 Kazakh signs  
+**Confidence Scoring** - Get prediction confidence for each gesture  
+**Real-time Inference** - CPU-based inference (~50-100ms/sample)  
 
 ### Deployment Scenarios
-🚀 **Web Applications** - Integration via REST API  
-🚀 **Mobile Apps** - Server-side inference, client displays results  
-🚀 **Communication Tools** - Live interpretation services  
-🚀 **Accessibility Services** - Real-time deaf-hearing communication  
-🚀 **Research Platform** - Further KrSL research and development  
+**Web Applications** - Integration via REST API  
+**Mobile Apps** - Server-side inference, client displays results  
+**Communication Tools** - Live interpretation services  
+**Accessibility Services** - Real-time deaf-hearing communication  
+**Research Platform** - Further KrSL research and development  
 
 ---
 
-## 🚧 Development Status
+## Development Status
 
 ### Completed Features
-- ✅ Core model training and validation
-- ✅ Video file inference (test_video_solo.py)
-- ✅ Batch video processing (test_video.py)
-- ✅ Real-time prediction display
-- ✅ Confidence scoring and analysis
-- ✅ Comprehensive logging
+- Core model training and validation
+- Video file inference (test_video_solo.py)
+- Batch video processing (test_video.py)
+- Real-time prediction display
+- Confidence scoring and analysis
+- Comprehensive logging
 
 ### In Development
-- 🔄 Webcam real-time inference (test_cam.py)
+- Webcam real-time inference (test_cam.py)
   - Basic functionality working
   - UI/UX improvements in progress
   - Performance optimization ongoing
@@ -606,7 +606,7 @@ See `requirements.txt` for complete dependency list (223 packages total).
 
 ---
 
-## 📊 Performance Analysis
+## Performance Analysis
 
 ### Accuracy by Sign Category
 
@@ -636,7 +636,7 @@ GPU (NVIDIA RTX 3060)    8-12ms           83-125 FPS
 
 ---
 
-## 🐛 Known Limitations
+## Known Limitations
 
 ### Dataset Limitations
 - 25% of original FluentSigners-50 dataset used
@@ -659,7 +659,7 @@ Despite these, the model still achieves 85% accuracy and runs **perfectly fast**
 
 ---
 
-## 📝 Usage Notes
+## Usage Notes
 
 ### For Video File Inference
 1. Ensure video has clear, full-body sign language
@@ -682,7 +682,7 @@ Despite these, the model still achieves 85% accuracy and runs **perfectly fast**
 
 ---
 
-## 📄 Citation & Academic Context
+## Citation & Academic Context
 
 ### University Diploma Project
 - **Research Topic:** Methods for easy communication between deaf people using Kazakh Sign Language and others
@@ -698,7 +698,7 @@ Despite these, the model still achieves 85% accuracy and runs **perfectly fast**
 
 ---
 
-## 🤝 Data & Attribution
+## Data & Attribution
 
 ### Dataset
 - **Source:** FluenSigners-50 by KrSLR Team
@@ -712,7 +712,7 @@ Despite these, the model still achieves 85% accuracy and runs **perfectly fast**
 
 ---
 
-## 💬 About the Mission
+## About the Mission
 
 This project embodies a core principle: **technology for accessibility should never have barriers.**
 
@@ -723,17 +723,17 @@ Too often, assistive technology comes with:
 - Limited customization options
 
 **Our approach:**
-- ✅ Open-source and free to use
-- ✅ Works on consumer computers
-- ✅ No licensing restrictions
-- ✅ Fully customizable for future needs
-- ✅ Community-driven improvements
+- Open-source and free to use
+- Works on consumer computers
+- No licensing restrictions
+- Fully customizable for future needs
+- Community-driven improvements
 
 By proving that quality sign language recognition works on basic hardware, we hope to inspire similar accessible technology initiatives worldwide.
 
 ---
 
-## 📞 Support & Questions
+## Support & Questions
 
 For issues or questions:
 1. Check `logs/` for detailed execution traces
@@ -743,7 +743,7 @@ For issues or questions:
 
 ---
 
-## 📊 Project Statistics
+## Project Statistics
 
 | Metric | Value |
 |:---|:---:|
@@ -760,7 +760,7 @@ For issues or questions:
 
 ---
 
-## ✨ Key Takeaways
+## Key Takeaways
 
 1. **Accessibility is Achievable** - High-quality ML works on consumer hardware
 2. **Open Source Matters** - Free technology enables real-world impact
@@ -770,24 +770,25 @@ For issues or questions:
 
 ---
 
-## 🎓 Conclusion
-
+## Conclusion
 This project demonstrates that:
 - Scientific research can be done with resource constraints
 - Accessible technology starts with choosing the right priorities
 - Machine learning can serve real human needs
 - Open-source collaboration enables impact without barriers
 
-**The model works. It's deployed. It's accessible. It's free.**
-
+**The model works. It's not deployed (yet). It's accessible. It's free.**
 *Help for those in need should not be limited or paid.*
 
 ---
 
-**Project Status:** ✅ Deployment Ready  
+[//]: # (**Project Status:** Deployment Ready  )
 **Last Updated:** May 5, 2026  
 **Version:** 1.4 (Masked Supreme Model)  
-**University Diploma:** ✅ Approved  
 
-**Thank you for exploring this project! 🙏**
+[//]: # (**University Diploma:** Approved  )
 
+**Thank you for exploring this project!**
+
+````markdown
+## 📊 Training Results & Visualizations
