@@ -1,0 +1,12 @@
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\training\load_dataset.py 
+Found 80 classes
+Loading classes: 100%|██████████| 80/80 [02:21<00:00,  1.77s/it]
+
+Dataset loaded:
+X shape: (6400, 30, 225)
+y shape: (6400,)
+Unique signers: 17
+Saving dataset...
+Saved to: c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\data\processed
+
+Process finished with exit code 0

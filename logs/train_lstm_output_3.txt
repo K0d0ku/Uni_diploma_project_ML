@@ -1,0 +1,224 @@
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\training\continue_training.py 
+2026-03-02 23:02:31.557168: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+Loading dataset...
+X_train: (5120, 30, 1692) X_val: (1280, 30, 1692)
+Num classes: 80
+Loading best model from: c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\sign_lstm_best.h5
+2026-03-02 23:03:31.408121: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ bidirectional (Bidirection  (None, 30, 256)           1864704   
+ al)                                                             
+                                                                 
+ batch_normalization (Batch  (None, 30, 256)           1024      
+ Normalization)                                                  
+                                                                 
+ dropout (Dropout)           (None, 30, 256)           0         
+                                                                 
+ bidirectional_1 (Bidirecti  (None, 256)               394240    
+ onal)                                                           
+                                                                 
+ batch_normalization_1 (Bat  (None, 256)               1024      
+ chNormalization)                                                
+                                                                 
+ dropout_1 (Dropout)         (None, 256)               0         
+                                                                 
+ dense (Dense)               (None, 256)               65792     
+                                                                 
+ dropout_2 (Dropout)         (None, 256)               0         
+                                                                 
+ dense_1 (Dense)             (None, 80)                20560     
+                                                                 
+=================================================================
+Total params: 2347344 (8.95 MB)
+Trainable params: 2346320 (8.95 MB)
+Non-trainable params: 1024 (4.00 KB)
+_________________________________________________________________
+Continuing training with rolling checkpoints and smart early stopping...
+Epoch 1/60
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\engine\base_layer_utils.py:384: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+160/160 [==============================] - ETA: 0s - loss: 0.5289 - accuracy: 0.8135Epoch 1: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_1.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_1.keras
+160/160 [==============================] - 76s 349ms/step - loss: 0.5289 - accuracy: 0.8135 - val_loss: 0.7345 - val_accuracy: 0.7719
+Epoch 2/60
+160/160 [==============================] - ETA: 0s - loss: 0.5454 - accuracy: 0.8123Epoch 2: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_2.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_2.keras
+160/160 [==============================] - 57s 356ms/step - loss: 0.5454 - accuracy: 0.8123 - val_loss: 0.7417 - val_accuracy: 0.7906
+Epoch 3/60
+160/160 [==============================] - ETA: 0s - loss: 0.5099 - accuracy: 0.8285Epoch 3: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_3.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_3.keras
+160/160 [==============================] - 51s 319ms/step - loss: 0.5099 - accuracy: 0.8285 - val_loss: 0.7522 - val_accuracy: 0.7859
+Epoch 4/60
+160/160 [==============================] - ETA: 0s - loss: 0.4580 - accuracy: 0.8404Epoch 4: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_4.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_4.keras
+160/160 [==============================] - 52s 322ms/step - loss: 0.4580 - accuracy: 0.8404 - val_loss: 0.7184 - val_accuracy: 0.7953
+Epoch 5/60
+160/160 [==============================] - ETA: 0s - loss: 0.4821 - accuracy: 0.8365Epoch 5: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_5.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_5.keras
+160/160 [==============================] - 53s 332ms/step - loss: 0.4821 - accuracy: 0.8365 - val_loss: 0.7126 - val_accuracy: 0.8000
+Epoch 6/60
+160/160 [==============================] - ETA: 0s - loss: 0.4902 - accuracy: 0.8324Epoch 6: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_6.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_6.keras
+160/160 [==============================] - 48s 303ms/step - loss: 0.4902 - accuracy: 0.8324 - val_loss: 0.7241 - val_accuracy: 0.8016
+Epoch 7/60
+160/160 [==============================] - ETA: 0s - loss: 0.4797 - accuracy: 0.8324Epoch 7: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_7.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_7.keras
+160/160 [==============================] - 51s 320ms/step - loss: 0.4797 - accuracy: 0.8324 - val_loss: 0.7237 - val_accuracy: 0.7953
+Epoch 8/60
+160/160 [==============================] - ETA: 0s - loss: 0.4747 - accuracy: 0.8408Epoch 8: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_8.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_8.keras
+160/160 [==============================] - 50s 310ms/step - loss: 0.4747 - accuracy: 0.8408 - val_loss: 0.7000 - val_accuracy: 0.7937
+Epoch 9/60
+160/160 [==============================] - ETA: 0s - loss: 0.4210 - accuracy: 0.8486Epoch 9: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_9.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_9.keras
+160/160 [==============================] - 54s 336ms/step - loss: 0.4210 - accuracy: 0.8486 - val_loss: 0.6407 - val_accuracy: 0.8102
+Epoch 10/60
+160/160 [==============================] - ETA: 0s - loss: 0.4017 - accuracy: 0.8643Epoch 10: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_10.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_10.keras
+160/160 [==============================] - 46s 287ms/step - loss: 0.4017 - accuracy: 0.8643 - val_loss: 0.6737 - val_accuracy: 0.8148
+Epoch 11/60
+160/160 [==============================] - ETA: 0s - loss: 0.4258 - accuracy: 0.8533Epoch 11: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_11.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_11.keras
+160/160 [==============================] - 49s 307ms/step - loss: 0.4258 - accuracy: 0.8533 - val_loss: 0.6891 - val_accuracy: 0.8203
+Epoch 12/60
+160/160 [==============================] - ETA: 0s - loss: 0.4001 - accuracy: 0.8600Epoch 12: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_12.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_12.keras
+160/160 [==============================] - 51s 318ms/step - loss: 0.4001 - accuracy: 0.8600 - val_loss: 0.6502 - val_accuracy: 0.8078
+Epoch 13/60
+160/160 [==============================] - ETA: 0s - loss: 0.4132 - accuracy: 0.8621Epoch 13: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_13.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_13.keras
+160/160 [==============================] - 52s 322ms/step - loss: 0.4132 - accuracy: 0.8621 - val_loss: 0.6769 - val_accuracy: 0.8102
+Epoch 14/60
+160/160 [==============================] - ETA: 0s - loss: 0.3954 - accuracy: 0.8650Epoch 14: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_14.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_14.keras
+160/160 [==============================] - 49s 305ms/step - loss: 0.3954 - accuracy: 0.8650 - val_loss: 0.6579 - val_accuracy: 0.8203
+Epoch 15/60
+160/160 [==============================] - ETA: 0s - loss: 0.3891 - accuracy: 0.8641Epoch 15: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_15.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_15.keras
+160/160 [==============================] - 51s 317ms/step - loss: 0.3891 - accuracy: 0.8641 - val_loss: 0.6501 - val_accuracy: 0.8227
+Epoch 16/60
+160/160 [==============================] - ETA: 0s - loss: 0.3777 - accuracy: 0.8658Epoch 16: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_16.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_16.keras
+160/160 [==============================] - 49s 307ms/step - loss: 0.3777 - accuracy: 0.8658 - val_loss: 0.6663 - val_accuracy: 0.8211
+Epoch 17/60
+160/160 [==============================] - ETA: 0s - loss: 0.3906 - accuracy: 0.8678Epoch 17: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_17.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_17.keras
+160/160 [==============================] - 52s 324ms/step - loss: 0.3906 - accuracy: 0.8678 - val_loss: 0.6595 - val_accuracy: 0.8133
+Epoch 18/60
+160/160 [==============================] - ETA: 0s - loss: 0.3891 - accuracy: 0.8674Epoch 18: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_18.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_18.keras
+160/160 [==============================] - 48s 301ms/step - loss: 0.3891 - accuracy: 0.8674 - val_loss: 0.6898 - val_accuracy: 0.8109
+Epoch 19/60
+160/160 [==============================] - ETA: 0s - loss: 0.3592 - accuracy: 0.8748Epoch 19: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_19.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_19.keras
+160/160 [==============================] - 52s 326ms/step - loss: 0.3592 - accuracy: 0.8748 - val_loss: 0.6065 - val_accuracy: 0.8406
+Epoch 20/60
+160/160 [==============================] - ETA: 0s - loss: 0.3572 - accuracy: 0.8801Epoch 20: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_20.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_20.keras
+160/160 [==============================] - 48s 303ms/step - loss: 0.3572 - accuracy: 0.8801 - val_loss: 0.6068 - val_accuracy: 0.8375
+Epoch 21/60
+160/160 [==============================] - ETA: 0s - loss: 0.3490 - accuracy: 0.8783Epoch 21: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_21.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_21.keras
+160/160 [==============================] - 47s 294ms/step - loss: 0.3490 - accuracy: 0.8783 - val_loss: 0.5986 - val_accuracy: 0.8375
+Epoch 22/60
+160/160 [==============================] - ETA: 0s - loss: 0.3425 - accuracy: 0.8836Epoch 22: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_22.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_22.keras
+160/160 [==============================] - 47s 296ms/step - loss: 0.3425 - accuracy: 0.8836 - val_loss: 0.5748 - val_accuracy: 0.8391
+Epoch 23/60
+160/160 [==============================] - ETA: 0s - loss: 0.3169 - accuracy: 0.8947Epoch 23: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_23.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_23.keras
+160/160 [==============================] - 48s 302ms/step - loss: 0.3169 - accuracy: 0.8947 - val_loss: 0.5826 - val_accuracy: 0.8352
+Epoch 24/60
+160/160 [==============================] - ETA: 0s - loss: 0.3563 - accuracy: 0.8791Epoch 24: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_24.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_24.keras
+160/160 [==============================] - 50s 313ms/step - loss: 0.3563 - accuracy: 0.8791 - val_loss: 0.6725 - val_accuracy: 0.8219
+Epoch 25/60
+160/160 [==============================] - ETA: 0s - loss: 0.2952 - accuracy: 0.8975Epoch 25: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_25.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_25.keras
+160/160 [==============================] - 48s 303ms/step - loss: 0.2952 - accuracy: 0.8975 - val_loss: 0.6338 - val_accuracy: 0.8172
+Epoch 26/60
+160/160 [==============================] - ETA: 0s - loss: 0.3093 - accuracy: 0.8947Epoch 26: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_26.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_26.keras
+160/160 [==============================] - 50s 310ms/step - loss: 0.3093 - accuracy: 0.8947 - val_loss: 0.6033 - val_accuracy: 0.8359
+Epoch 27/60
+160/160 [==============================] - ETA: 0s - loss: 0.2779 - accuracy: 0.9025Epoch 27: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_27.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_27.keras
+160/160 [==============================] - 51s 319ms/step - loss: 0.2779 - accuracy: 0.9025 - val_loss: 0.5909 - val_accuracy: 0.8359
+Epoch 28/60
+160/160 [==============================] - ETA: 0s - loss: 0.3306 - accuracy: 0.8848Epoch 28: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_28.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_28.keras
+160/160 [==============================] - 47s 293ms/step - loss: 0.3306 - accuracy: 0.8848 - val_loss: 0.5595 - val_accuracy: 0.8508
+Epoch 29/60
+160/160 [==============================] - ETA: 0s - loss: 0.3389 - accuracy: 0.8854Epoch 29: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_29.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_29.keras
+160/160 [==============================] - 51s 320ms/step - loss: 0.3389 - accuracy: 0.8854 - val_loss: 0.6038 - val_accuracy: 0.8406
+Epoch 30/60
+160/160 [==============================] - ETA: 0s - loss: 0.3120 - accuracy: 0.8879Epoch 30: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_30.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_30.keras
+160/160 [==============================] - 48s 298ms/step - loss: 0.3120 - accuracy: 0.8879 - val_loss: 0.5927 - val_accuracy: 0.8539
+Epoch 31/60
+160/160 [==============================] - ETA: 0s - loss: 0.3056 - accuracy: 0.8977Epoch 31: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_31.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_31.keras
+160/160 [==============================] - 49s 306ms/step - loss: 0.3056 - accuracy: 0.8977 - val_loss: 0.6041 - val_accuracy: 0.8344
+Epoch 32/60
+160/160 [==============================] - ETA: 0s - loss: 0.3159 - accuracy: 0.8910Epoch 32: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_32.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_32.keras
+160/160 [==============================] - 48s 303ms/step - loss: 0.3159 - accuracy: 0.8910 - val_loss: 0.5994 - val_accuracy: 0.8594
+Epoch 33/60
+160/160 [==============================] - ETA: 0s - loss: 0.2824 - accuracy: 0.9074Epoch 33: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_33.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_33.keras
+160/160 [==============================] - 49s 304ms/step - loss: 0.2824 - accuracy: 0.9074 - val_loss: 0.5718 - val_accuracy: 0.8531
+Epoch 34/60
+160/160 [==============================] - ETA: 0s - loss: 0.2644 - accuracy: 0.9096Epoch 34: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_34.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_34.keras
+160/160 [==============================] - 48s 302ms/step - loss: 0.2644 - accuracy: 0.9096 - val_loss: 0.7023 - val_accuracy: 0.8219
+Epoch 35/60
+160/160 [==============================] - ETA: 0s - loss: 0.3142 - accuracy: 0.8961Epoch 35: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_35.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_35.keras
+160/160 [==============================] - 48s 297ms/step - loss: 0.3142 - accuracy: 0.8961 - val_loss: 0.5462 - val_accuracy: 0.8539
+Epoch 36/60
+160/160 [==============================] - ETA: 0s - loss: 0.2839 - accuracy: 0.9066Epoch 36: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_36.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_36.keras
+160/160 [==============================] - 47s 297ms/step - loss: 0.2839 - accuracy: 0.9066 - val_loss: 0.5920 - val_accuracy: 0.8523
+Epoch 37/60
+160/160 [==============================] - ETA: 0s - loss: 0.2705 - accuracy: 0.9045Epoch 37: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_37.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_37.keras
+160/160 [==============================] - 49s 310ms/step - loss: 0.2705 - accuracy: 0.9045 - val_loss: 0.6029 - val_accuracy: 0.8469
+Epoch 38/60
+160/160 [==============================] - ETA: 0s - loss: 0.2715 - accuracy: 0.9072Epoch 38: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_38.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_38.keras
+160/160 [==============================] - 48s 301ms/step - loss: 0.2715 - accuracy: 0.9072 - val_loss: 0.5948 - val_accuracy: 0.8555
+Epoch 39/60
+160/160 [==============================] - ETA: 0s - loss: 0.2448 - accuracy: 0.9193Epoch 39: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_39.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_39.keras
+160/160 [==============================] - 48s 302ms/step - loss: 0.2448 - accuracy: 0.9193 - val_loss: 0.6025 - val_accuracy: 0.8547
+Epoch 40/60
+160/160 [==============================] - ETA: 0s - loss: 0.2648 - accuracy: 0.9119Epoch 40: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_40.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_40.keras
+160/160 [==============================] - 46s 290ms/step - loss: 0.2648 - accuracy: 0.9119 - val_loss: 0.6456 - val_accuracy: 0.8406
+Epoch 41/60
+160/160 [==============================] - ETA: 0s - loss: 0.2617 - accuracy: 0.9096Epoch 41: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_41.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_41.keras
+160/160 [==============================] - 48s 299ms/step - loss: 0.2617 - accuracy: 0.9096 - val_loss: 0.5856 - val_accuracy: 0.8469
+Epoch 42/60
+160/160 [==============================] - ETA: 0s - loss: 0.2480 - accuracy: 0.9117Restoring model weights from the end of the best epoch: 32.
+Epoch 42: saved checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_42.keras
+Deleted old checkpoint c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\supreme_checkpoints\sign_lstm_supreme_Epoch_42.keras
+160/160 [==============================] - 48s 299ms/step - loss: 0.2480 - accuracy: 0.9117 - val_loss: 0.6063 - val_accuracy: 0.8500
+Epoch 42: early stopping
+Saving final continued model to: c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\sign_lstm_supreme.keras
+
+Final validation accuracy: 0.8500
+Training complete. Best rolling checkpoints and final model saved.
+
+Process finished with exit code 0

@@ -1,0 +1,15 @@
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\training\prepare_data.py 
+Found classes: 80
+Processing annotations: 100%|██████████| 80/80 [00:23<00:00,  3.35it/s]
+
+Converting to numpy arrays...
+Train: (6015, 250, 275)
+Val: (1197, 250, 275)
+Test: (1588, 250, 275)
+
+Computing normalization statistics...
+
+Saving dataset...
+Saved to: C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\data\processed\expressional
+
+Process finished with exit code 0

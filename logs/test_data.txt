@@ -1,0 +1,36 @@
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\inference\test_model.py 
+2026-03-01 07:54:02.444307: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-01 07:54:17.663336: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Loading dataset...
+Validation samples: 1280
+
+Loading model: sign_lstm_best.h5
+2026-03-01 07:54:42.593759: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Accuracy: 0.7789
+
+Loading model: sign_lstm_supreme.keras
+Accuracy: 0.8375
+
+Sample predictions (Supreme model):
+
+True: 23 → Керемет жаңалық
+Pred: 23 → Керемет жаңалық
+
+True: 31 → мен саған көмектесемін
+Pred: 31 → мен саған көмектесемін
+
+True: 76 → Жоқ, мен қазір осында тұрамын
+Pred: 76 → Жоқ, мен қазір осында тұрамын
+
+True: 79 → Жоқ, біз жақында көшіп келдік
+Pred: 79 → Жоқ, біз жақында көшіп келдік
+
+True: 50 → Бәрі жақсы болғанын қалаймын
+Pred: 50 → Бәрі жақсы болғанын қалаймын
+
+Graph saved to models/model_comparison.png
+
+Done.
+
+Process finished with exit code 0

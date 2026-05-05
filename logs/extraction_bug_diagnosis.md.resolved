@@ -1,0 +1,69 @@
+# Landmark Extraction — Bug Diagnosis & Fix
+
+## 🐛 Root Cause Found
+
+The extraction was failing because of a **landmark count mismatch** between what MediaPipe actually produces and what the code expected:
+
+### The Bug Chain
+
+```mermaid
+graph TD
+    A["mediapipe_utils.py: refine_face_landmarks=True"] --> B["MediaPipe returns 478 face landmarks\n(468 mesh + 10 iris)"]
+    C["mediapipe_utils.py: FACE = 468 * 3"] --> D["EXPECTED_SIZE = 1662"]
+    B --> E["Actual extracted vector = 1692 dims"]
+    D --> F["extract_landmarks.py checks:\nlandmarks.shape[0] == 1662"]
+    E --> G["1692 ≠ 1662 → EVERY frame rejected"]
+    F --> G
+    G --> H["sequence is always empty → return None"]
+    H --> I["'Skipping broken video' for ALL videos"]
+```
+
+| Component | Expected | Actual | Off by |
+|-----------|----------|--------|--------|
+| Face landmarks | 468 | **478** (iris refined) | +10 |
+| Feature vector | 468×3 = 1404 | **478×3 = 1434** | +30 |
+| Total size | 1662 | **1692** | +30 |
+
+### Why 28 files existed in class 000
+Those were from an **earlier version** of the script (before `EXPECTED_SIZE` validation was added). They have shape [(variable_frames, 1692)](file:///c:/Users/Bekal/Documents/my_own_documents/Uni_Diploma/Project/Model_training/KrSL_FluenSigners-50_Kuro/src/main.py#7-10) — no padding/truncation was applied.
+
+---
+
+## ✅ Fixes Applied
+
+### 1. [mediapipe_utils.py](file:///c:/Users/Bekal/Documents/my_own_documents/Uni_Diploma/Project/Model_training/KrSL_FluenSigners-50_Kuro/src/utils/mediapipe_utils.py) — Fixed landmark count
+```diff
+-FACE = 468 * 3
++FACE = 478 * 3    # 478 because refine_face_landmarks=True adds 10 iris landmarks
+```
+`EXPECTED_SIZE` is now correctly **1692**.
+
+### 2. [extract_landmarks.py](file:///c:/Users/Bekal/Documents/my_own_documents/Uni_Diploma/Project/Model_training/KrSL_FluenSigners-50_Kuro/src/preprocessing/extract_landmarks.py) — Rewritten for robustness
+
+| Change | Before | After |
+|--------|--------|-------|
+| EXPECTED_SIZE | Duplicate hardcoded `1662` | Imported from `mediapipe_utils` |
+| Dead code | `process_video()` unused | Removed |
+| Error handling | Single exception → abort video | Per-frame try/except, continue |
+| Target per class | Up to 100, no minimum | **MIN_VIDEOS_PER_CLASS = 15**, stops early when met |
+| Long sequences | Hard truncation `[:30]` | **Uniform temporal sampling** (preserves full temporal coverage) |
+| Short sequences | Zero-pad | Zero-pad (unchanged) |
+| Reporting | Minimal prints | **Full summary** showing per-class success/failure counts |
+
+---
+
+## ⚠️ Old Data is Inconsistent
+
+> [!WARNING]
+> The 80+ existing keypoint folders contain data from a previous extraction run with **different shapes** (variable length, no padding). These will break training if mixed with new extractions.
+
+**Recommended action:** Delete `data/keypoints/` contents and re-extract cleanly so all files have the uniform shape `(30, 1692)`.
+
+---
+
+## 📋 Next Steps
+
+1. **Clear old keypoints**: Delete contents of `data/keypoints/`
+2. **Re-run extraction**: `python -m src.preprocessing.extract_landmarks` (or run through PyCharm)
+3. **Verify**: Each class should have 15+ `.npy` files, all with shape `(30, 1692)`
+4. **Proceed to normalization/training**

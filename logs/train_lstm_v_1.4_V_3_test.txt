@@ -1,0 +1,722 @@
+test 1:
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\inference\test_on_videos.py 
+2026-04-24 21:05:00.389544: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+
+==============================
+Testing: sign_lstm_best.keras
+==============================
+2026-04-24 21:05:13.040338: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sequence shape: (1, 30, 1692)
+
+VIDEO 1/10
+
+Opened: P23_S038_03.mp4
+True ID: 38
+True: мен дем ала алмаймын
+Pred ID: 38
+Pred: мен дем ала алмаймын
+Confidence: 99.29%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 2/10
+
+Opened: P22_S017_03.mp4
+True ID: 17
+True: бірдеңе болды (сұрақ)
+Pred ID: 15
+Pred: не болды
+Confidence: 94.64%
+RESULT: FAIL
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 3/10
+
+Opened: P14_S041_00.mp4
+True ID: 41
+True: Күндеріңіз сәтті өтсін
+Pred ID: 41
+Pred: Күндеріңіз сәтті өтсін
+Confidence: 99.80%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 4/10
+
+Opened: P17_S071_02.mp4
+True ID: 71
+True: Мен Мәскеуде тұрамын
+Pred ID: 71
+Pred: Мен Мәскеуде тұрамын
+Confidence: 59.97%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 5/10
+
+Opened: P18_S058_04.mp4
+True ID: 58
+True: Менің лақап атым
+Pred ID: 58
+Pred: Менің лақап атым
+Confidence: 94.45%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 6/10
+
+Opened: P12_S029_02.mp4
+True ID: 29
+True: Мен қалай көмектесе аламын (сұрақ)
+Pred ID: 29
+Pred: Мен қалай көмектесе аламын (сұрақ)
+Confidence: 99.41%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 7/10
+
+Opened: P6_S031_00.mp4
+True ID: 31
+True: мен саған көмектесемін
+Pred ID: 20
+Pred: менің саған жаңалығым бар
+Confidence: 83.09%
+RESULT: FAIL
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 8/10
+
+Opened: P2_S064_03.mp4
+True ID: 64
+True: сен қайдансың?
+Pred ID: 40
+Pred: не істеу керек (сұрақ)
+Confidence: 92.66%
+RESULT: FAIL
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 9/10
+
+Opened: P20_S053_00.mp4
+True ID: 53
+True: Біз бір-бірімізді шақырамыз
+Pred ID: 53
+Pred: Біз бір-бірімізді шақырамыз
+Confidence: 81.36%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 10/10
+
+Opened: P20_S014_02.mp4
+True ID: 14
+True: Өзіңізді қалай сезінесіз
+Pred ID: 14
+Pred: Өзіңізді қалай сезінесіз
+Confidence: 99.95%
+RESULT: PASS
+
+
+==============================
+FINAL RESULT
+==============================
+Score: 7/10
+
+Process finished with exit code 0
+
+
+
+
+
+
+test 2
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\inference\test_on_videos.py 
+2026-04-24 21:09:29.870711: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+
+==============================
+Testing: sign_lstm_best.keras
+==============================
+2026-04-24 21:09:39.158077: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sequence shape: (1, 30, 1692)
+
+VIDEO 1/10
+
+Opened: P17_S024_01.mp4
+True ID: 24
+True: Күніңіз қалай өтті (сұрақ)
+Pred ID: 14
+Pred: Өзіңізді қалай сезінесіз
+Confidence: 41.43%
+RESULT: FAIL
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 2/10
+
+Opened: P24_S028_04.mp4
+True ID: 28
+True: мен дәретханаға баруым керек
+Pred ID: 49
+Pred: ертеңгі сәттілік
+Confidence: 93.37%
+RESULT: FAIL
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 3/10
+
+Opened: P18_S041_02.mp4
+True ID: 41
+True: Күндеріңіз сәтті өтсін
+Pred ID: 41
+Pred: Күндеріңіз сәтті өтсін
+Confidence: 99.88%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 4/10
+
+Opened: P11_S003_00.mp4
+True ID: 3
+True: Жұмысыңыз қалай
+Pred ID: 3
+Pred: Жұмысыңыз қалай
+Confidence: 99.95%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 5/10
+
+Opened: P19_S022_02.mp4
+True ID: 22
+True: Жаңа ештеңе жоқ
+Pred ID: 22
+Pred: Жаңа ештеңе жоқ
+Confidence: 99.97%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 6/10
+
+Opened: P1_S040_00.mp4
+True ID: 40
+True: не істеу керек (сұрақ)
+Pred ID: 40
+Pred: не істеу керек (сұрақ)
+Confidence: 100.00%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 7/10
+
+Opened: P2_S016_01.mp4
+True ID: 16
+True: Ой, мен жай ғана шаршадым
+Pred ID: 6
+Pred: менде бәрі жақсы
+Confidence: 35.80%
+RESULT: FAIL
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 8/10
+
+Opened: P5_S021_00.mp4
+True ID: 21
+True: менде жаңалық бар
+Pred ID: 78
+Pred: Мен туғаннан бері өмір сүремін
+Confidence: 55.55%
+RESULT: FAIL
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 9/10
+
+Opened: P24_S004_03.mp4
+True ID: 4
+True: менде бәрі керемет
+Pred ID: 17
+Pred: бірдеңе болды (сұрақ)
+Confidence: 33.04%
+RESULT: FAIL
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 10/10
+
+Opened: P16_S026_04.mp4
+True ID: 26
+True: Жарайды, мен бүгін көп нәрсе жасадым
+Pred ID: 26
+Pred: Жарайды, мен бүгін көп нәрсе жасадым
+Confidence: 99.99%
+RESULT: PASS
+
+
+==============================
+FINAL RESULT
+==============================
+Score: 5/10
+
+Process finished with exit code 0
+
+
+
+
+
+test 3
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\inference\test_on_videos.py 
+2026-04-24 21:59:59.977687: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+
+==============================
+Testing: sign_lstm_best.keras
+==============================
+2026-04-24 22:00:12.661457: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sequence shape: (1, 30, 1692)
+
+VIDEO 1/10
+
+Opened: P22_S027_01.mp4
+True ID: 27
+True: Дәретхана қайда?
+Pred ID: 27
+Pred: Дәретхана қайда?
+Confidence: 99.99%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 2/10
+
+Opened: P14_S043_00.mp4
+True ID: 43
+True: қайырлы таң
+Pred ID: 43
+Pred: қайырлы таң
+Confidence: 100.00%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 3/10
+
+Opened: P24_S020_03.mp4
+True ID: 20
+True: менің саған жаңалығым бар
+Pred ID: 79
+Pred: Жоқ, біз жақында көшіп келдік
+Confidence: 75.60%
+RESULT: FAIL
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 4/10
+
+Opened: P5_S066_01.mp4
+True ID: 66
+True: мен Қазақстанның солтүстігіненмін
+Pred ID: 66
+Pred: мен Қазақстанның солтүстігіненмін
+Confidence: 98.09%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 5/10
+
+Opened: P11_S059_01.mp4
+True ID: 59
+True: Танысқаныма қуаныштымын
+Pred ID: 59
+Pred: Танысқаныма қуаныштымын
+Confidence: 99.92%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 6/10
+
+Opened: P11_S012_03.mp4
+True ID: 12
+True: мен теледидар көріп отырмын
+Pred ID: 12
+Pred: мен теледидар көріп отырмын
+Confidence: 100.00%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 7/10
+
+Opened: P1_S051_04.mp4
+True ID: 51
+True: көп рахмет
+Pred ID: 51
+Pred: көп рахмет
+Confidence: 99.92%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 8/10
+
+Opened: P18_S018_01.mp4
+True ID: 18
+True: Ештеңе, бәрі жақсы
+Pred ID: 18
+Pred: Ештеңе, бәрі жақсы
+Confidence: 99.98%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 9/10
+
+Opened: P7_S000_04.mp4
+True ID: 0
+True: Сәлеметсіз бе
+Pred ID: 13
+Pred: Өмір қалай (қалай)
+Confidence: 47.57%
+RESULT: FAIL
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 10/10
+
+Opened: P23_S080_03.mp4
+True ID: 80
+True: туған күнің қашан
+Pred ID: 80
+Pred: туған күнің қашан
+Confidence: 99.89%
+RESULT: PASS
+
+
+==============================
+FINAL RESULT
+==============================
+Score: 8/10
+
+Process finished with exit code 0
+
+
+
+test 4
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\inference\test_on_videos.py 
+2026-04-24 22:06:41.205103: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+
+==============================
+Testing: sign_lstm_best.keras
+==============================
+2026-04-24 22:06:51.742828: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sequence shape: (1, 30, 1692)
+
+VIDEO 1/10
+
+Opened: P8_S064_02.mp4
+True ID: 64
+True: сен қайдансың?
+Pred ID: 54
+Pred: Қош бол
+Confidence: 54.72%
+RESULT: FAIL
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 2/10
+
+Opened: P2_S069_00.mp4
+True ID: 69
+True: мен Ресейдің шығысынанмын
+Pred ID: 69
+Pred: мен Ресейдің шығысынанмын
+Confidence: 57.48%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 3/10
+
+Opened: P21_S060_00.mp4
+True ID: 60
+True: мен де
+Pred ID: 60
+Pred: мен де
+Confidence: 97.14%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 4/10
+
+Opened: P16_S056_03.mp4
+True ID: 56
+True: менің атым
+Pred ID: 56
+Pred: менің атым
+Confidence: 100.00%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 5/10
+
+Opened: P15_S080_02.mp4
+True ID: 80
+True: туған күнің қашан
+Pred ID: 80
+Pred: туған күнің қашан
+Confidence: 100.00%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 6/10
+
+Opened: P6_S053_04.mp4
+True ID: 53
+True: Біз бір-бірімізді шақырамыз
+Pred ID: 51
+Pred: көп рахмет
+Confidence: 54.56%
+RESULT: FAIL
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 7/10
+
+Opened: P11_S065_00.mp4
+True ID: 65
+True: Қай жерде дүниеге келдіңіз
+Pred ID: 65
+Pred: Қай жерде дүниеге келдіңіз
+Confidence: 92.74%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 8/10
+
+Opened: P4_S014_02.mp4
+True ID: 14
+True: Өзіңізді қалай сезінесіз
+Pred ID: 55
+Pred: Сіздің атыңыз кім (сұрақ)
+Confidence: 99.90%
+RESULT: FAIL
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 9/10
+
+Opened: P2_S046_00.mp4
+True ID: 46
+True: Қайырлы түн
+Pred ID: 0
+Pred: Сәлеметсіз бе
+Confidence: 26.54%
+RESULT: FAIL
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 10/10
+
+Opened: P2_S071_02.mp4
+True ID: 71
+True: Мен Мәскеуде тұрамын
+Pred ID: 8
+Pred: менің жағдайым өте нашар
+Confidence: 99.96%
+RESULT: FAIL
+
+
+==============================
+FINAL RESULT
+==============================
+Score: 5/10
+
+Process finished with exit code 0
+
+
+
+test 5
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\inference\test_on_videos.py 
+2026-04-24 22:12:16.736161: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+
+==============================
+Testing: sign_lstm_best.keras
+==============================
+2026-04-24 22:12:27.044088: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Sequence shape: (1, 30, 1692)
+
+VIDEO 1/10
+
+Opened: P23_S006_04.mp4
+True ID: 6
+True: менде бәрі жақсы
+Pred ID: 6
+Pred: менде бәрі жақсы
+Confidence: 99.97%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 2/10
+
+Opened: P4_S009_03.mp4
+True ID: 9
+True: сіз не істеп жатырсыз
+Pred ID: 55
+Pred: Сіздің атыңыз кім (сұрақ)
+Confidence: 99.72%
+RESULT: FAIL
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 3/10
+
+Opened: P8_S081_03.mp4
+True ID: 81
+True: Бүгін менің туған күнім
+Pred ID: 6
+Pred: менде бәрі жақсы
+Confidence: 79.31%
+RESULT: FAIL
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 4/10
+
+Opened: P1_S078_02.mp4
+True ID: 78
+True: Мен туғаннан бері өмір сүремін
+Pred ID: 78
+Pred: Мен туғаннан бері өмір сүремін
+Confidence: 100.00%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 5/10
+
+Opened: P5_S011_04.mp4
+True ID: 11
+True: мен жұмыс істеп жатырмын
+Pred ID: 61
+Pred: Жасың нешеде
+Confidence: 81.91%
+RESULT: FAIL
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 6/10
+
+Opened: P16_S019_03.mp4
+True ID: 19
+True: Қандай жаңалық (сұрақ)
+Pred ID: 19
+Pred: Қандай жаңалық (сұрақ)
+Confidence: 99.97%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 7/10
+
+Opened: P4_S023_01.mp4
+True ID: 23
+True: Керемет жаңалық
+Pred ID: 52
+Pred: Жақында кездескенше
+Confidence: 99.85%
+RESULT: FAIL
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 8/10
+
+Opened: P3_S033_04.mp4
+True ID: 33
+True: Маған аудармашы керек
+Pred ID: 36
+Pred: (Өтінемін) Полиция шақырыңыз
+Confidence: 66.07%
+RESULT: FAIL
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 9/10
+
+Opened: P17_S029_03.mp4
+True ID: 29
+True: Мен қалай көмектесе аламын (сұрақ)
+Pred ID: 29
+Pred: Мен қалай көмектесе аламын (сұрақ)
+Confidence: 99.88%
+RESULT: PASS
+
+Sequence shape: (1, 30, 1692)
+
+VIDEO 10/10
+
+Opened: P0_S059_04.mp4
+True ID: 59
+True: Танысқаныма қуаныштымын
+Pred ID: 59
+Pred: Танысқаныма қуаныштымын
+Confidence: 99.95%
+RESULT: PASS
+
+
+==============================
+FINAL RESULT
+==============================
+Score: 5/10
+
+Process finished with exit code 0

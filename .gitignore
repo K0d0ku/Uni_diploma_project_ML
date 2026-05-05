@@ -1,0 +1,101 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+*.iml
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Sensitive Project Data - Exclude specific folders
+# Model files
+/models/
+/fin/
+
+# Training data and processed datasets
+data/keypoints/
+data/kerypoints_expressional/
+data/processed/
+
+# Data related subdirectories in source
+src/dl/data/
+src/dl/model/
+src/ot/data/
+src/ot/models/
+
+# Configuration/Preview files that expose system paths
+src/dl/preview.json
+src/dl/test_video_preview.py
+
+# External datasets (not included in repo)
+/data/videos/
+/datasets/
+
+# Logs (optional - uncomment if you want to exclude)
+# logs/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Jupyter Notebook
+#.ipynb_checkpoints
+#*.ipynb
+
+# pytest
+.pytest_cache/
+.coverage
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Temporary files
+*.tmp
+*.bak
+
+# Large files
+*.h5
+*.keras
+*.npy
+*.pkl
+*.pickle
+*.pth
+

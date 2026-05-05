@@ -1,0 +1,612 @@
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\training\train_lstm.py 
+2026-04-24 16:40:24.965484: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+
+Loading dataset...
+X shape: (6400, 30, 1692)
+y shape: (6400,)
+Classes: 80
+Sanity checks passed.
+Train: (5120, 30, 1692)
+Val: (1280, 30, 1692)
+
+Building model...
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\backend.py:873: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+2026-04-24 16:41:05.476350: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ bidirectional (Bidirection  (None, 30, 256)           1864704   
+ al)                                                             
+                                                                 
+ batch_normalization (Batch  (None, 30, 256)           1024      
+ Normalization)                                                  
+                                                                 
+ dropout (Dropout)           (None, 30, 256)           0         
+                                                                 
+ bidirectional_1 (Bidirecti  (None, 256)               394240    
+ onal)                                                           
+                                                                 
+ batch_normalization_1 (Bat  (None, 256)               1024      
+ chNormalization)                                                
+                                                                 
+ dropout_1 (Dropout)         (None, 256)               0         
+                                                                 
+ dense (Dense)               (None, 256)               65792     
+                                                                 
+ dropout_2 (Dropout)         (None, 256)               0         
+                                                                 
+ dense_1 (Dense)             (None, 80)                20560     
+                                                                 
+=================================================================
+Total params: 2347344 (8.95 MB)
+Trainable params: 2346320 (8.95 MB)
+Non-trainable params: 1024 (4.00 KB)
+_________________________________________________________________
+
+Training...
+Epoch 1/240
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\engine\base_layer_utils.py:384: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+160/160 [==============================] - 88s 418ms/step - loss: 4.8968 - accuracy: 0.0141 - val_loss: 4.3583 - val_accuracy: 0.0180 - lr: 5.0000e-04
+Epoch 2/240
+160/160 [==============================] - 50s 310ms/step - loss: 4.6148 - accuracy: 0.0207 - val_loss: 4.3078 - val_accuracy: 0.0289 - lr: 5.0000e-04
+Epoch 3/240
+160/160 [==============================] - ETA: 0s - loss: 4.4834 - accuracy: 0.0254Deleted worse checkpoint: epoch_001_valloss_4.3583_valacc_0.0180.keras
+160/160 [==============================] - 44s 272ms/step - loss: 4.4834 - accuracy: 0.0254 - val_loss: 4.2178 - val_accuracy: 0.0328 - lr: 5.0000e-04
+Epoch 4/240
+160/160 [==============================] - ETA: 0s - loss: 4.3475 - accuracy: 0.0385Deleted worse checkpoint: epoch_002_valloss_4.3078_valacc_0.0289.keras
+160/160 [==============================] - 56s 352ms/step - loss: 4.3475 - accuracy: 0.0385 - val_loss: 4.0880 - val_accuracy: 0.0562 - lr: 5.0000e-04
+Epoch 5/240
+160/160 [==============================] - ETA: 0s - loss: 4.2350 - accuracy: 0.0414Deleted worse checkpoint: epoch_003_valloss_4.2178_valacc_0.0328.keras
+160/160 [==============================] - 54s 339ms/step - loss: 4.2350 - accuracy: 0.0414 - val_loss: 3.9862 - val_accuracy: 0.0516 - lr: 5.0000e-04
+Epoch 6/240
+160/160 [==============================] - ETA: 0s - loss: 4.0980 - accuracy: 0.0500Deleted worse checkpoint: epoch_004_valloss_4.0880_valacc_0.0562.keras
+160/160 [==============================] - 59s 369ms/step - loss: 4.0980 - accuracy: 0.0500 - val_loss: 3.8632 - val_accuracy: 0.0617 - lr: 5.0000e-04
+Epoch 7/240
+160/160 [==============================] - ETA: 0s - loss: 3.9681 - accuracy: 0.0613Deleted worse checkpoint: epoch_005_valloss_3.9862_valacc_0.0516.keras
+160/160 [==============================] - 51s 322ms/step - loss: 3.9681 - accuracy: 0.0613 - val_loss: 3.7692 - val_accuracy: 0.0633 - lr: 5.0000e-04
+Epoch 8/240
+160/160 [==============================] - ETA: 0s - loss: 3.8635 - accuracy: 0.0693Deleted worse checkpoint: epoch_006_valloss_3.8632_valacc_0.0617.keras
+160/160 [==============================] - 60s 377ms/step - loss: 3.8635 - accuracy: 0.0693 - val_loss: 3.6455 - val_accuracy: 0.0711 - lr: 5.0000e-04
+Epoch 9/240
+160/160 [==============================] - ETA: 0s - loss: 3.7494 - accuracy: 0.0789Deleted worse checkpoint: epoch_007_valloss_3.7692_valacc_0.0633.keras
+160/160 [==============================] - 48s 298ms/step - loss: 3.7494 - accuracy: 0.0789 - val_loss: 3.5564 - val_accuracy: 0.0891 - lr: 5.0000e-04
+Epoch 10/240
+160/160 [==============================] - ETA: 0s - loss: 3.6514 - accuracy: 0.0887Deleted worse checkpoint: epoch_008_valloss_3.6455_valacc_0.0711.keras
+160/160 [==============================] - 75s 467ms/step - loss: 3.6514 - accuracy: 0.0887 - val_loss: 3.4541 - val_accuracy: 0.0906 - lr: 5.0000e-04
+Epoch 11/240
+160/160 [==============================] - ETA: 0s - loss: 3.5383 - accuracy: 0.1072Deleted worse checkpoint: epoch_009_valloss_3.5564_valacc_0.0891.keras
+160/160 [==============================] - 80s 501ms/step - loss: 3.5383 - accuracy: 0.1072 - val_loss: 3.2907 - val_accuracy: 0.1148 - lr: 5.0000e-04
+Epoch 12/240
+160/160 [==============================] - ETA: 0s - loss: 3.3903 - accuracy: 0.1135Deleted worse checkpoint: epoch_010_valloss_3.4541_valacc_0.0906.keras
+160/160 [==============================] - 58s 366ms/step - loss: 3.3903 - accuracy: 0.1135 - val_loss: 3.1842 - val_accuracy: 0.1320 - lr: 5.0000e-04
+Epoch 13/240
+160/160 [==============================] - ETA: 0s - loss: 3.2552 - accuracy: 0.1383Deleted worse checkpoint: epoch_011_valloss_3.2907_valacc_0.1148.keras
+160/160 [==============================] - 66s 416ms/step - loss: 3.2552 - accuracy: 0.1383 - val_loss: 3.0673 - val_accuracy: 0.1547 - lr: 5.0000e-04
+Epoch 14/240
+160/160 [==============================] - ETA: 0s - loss: 3.1717 - accuracy: 0.1504Deleted worse checkpoint: epoch_012_valloss_3.1842_valacc_0.1320.keras
+160/160 [==============================] - 51s 321ms/step - loss: 3.1717 - accuracy: 0.1504 - val_loss: 2.9986 - val_accuracy: 0.1516 - lr: 5.0000e-04
+Epoch 15/240
+160/160 [==============================] - ETA: 0s - loss: 3.0492 - accuracy: 0.1707Deleted worse checkpoint: epoch_013_valloss_3.0673_valacc_0.1547.keras
+160/160 [==============================] - 49s 304ms/step - loss: 3.0492 - accuracy: 0.1707 - val_loss: 2.8638 - val_accuracy: 0.1789 - lr: 5.0000e-04
+Epoch 16/240
+160/160 [==============================] - ETA: 0s - loss: 2.9292 - accuracy: 0.1906Deleted worse checkpoint: epoch_014_valloss_2.9986_valacc_0.1516.keras
+160/160 [==============================] - 52s 327ms/step - loss: 2.9292 - accuracy: 0.1906 - val_loss: 2.7747 - val_accuracy: 0.1727 - lr: 5.0000e-04
+Epoch 17/240
+160/160 [==============================] - ETA: 0s - loss: 2.8212 - accuracy: 0.2016Deleted worse checkpoint: epoch_015_valloss_2.8638_valacc_0.1789.keras
+160/160 [==============================] - 52s 325ms/step - loss: 2.8212 - accuracy: 0.2016 - val_loss: 2.6050 - val_accuracy: 0.2172 - lr: 5.0000e-04
+Epoch 18/240
+160/160 [==============================] - ETA: 0s - loss: 2.6821 - accuracy: 0.2373Deleted worse checkpoint: epoch_016_valloss_2.7747_valacc_0.1727.keras
+160/160 [==============================] - 47s 291ms/step - loss: 2.6821 - accuracy: 0.2373 - val_loss: 2.5399 - val_accuracy: 0.2383 - lr: 5.0000e-04
+Epoch 19/240
+160/160 [==============================] - ETA: 0s - loss: 2.5481 - accuracy: 0.2572Deleted worse checkpoint: epoch_017_valloss_2.6050_valacc_0.2172.keras
+160/160 [==============================] - 52s 326ms/step - loss: 2.5481 - accuracy: 0.2572 - val_loss: 2.4597 - val_accuracy: 0.2406 - lr: 5.0000e-04
+Epoch 20/240
+160/160 [==============================] - ETA: 0s - loss: 2.4661 - accuracy: 0.2729Deleted worse checkpoint: epoch_018_valloss_2.5399_valacc_0.2383.keras
+160/160 [==============================] - 52s 323ms/step - loss: 2.4661 - accuracy: 0.2729 - val_loss: 2.3315 - val_accuracy: 0.2711 - lr: 5.0000e-04
+Epoch 21/240
+160/160 [==============================] - ETA: 0s - loss: 2.3577 - accuracy: 0.3025Deleted worse checkpoint: epoch_019_valloss_2.4597_valacc_0.2406.keras
+160/160 [==============================] - 70s 437ms/step - loss: 2.3577 - accuracy: 0.3025 - val_loss: 2.2402 - val_accuracy: 0.2937 - lr: 5.0000e-04
+Epoch 22/240
+160/160 [==============================] - ETA: 0s - loss: 2.2749 - accuracy: 0.3191Deleted worse checkpoint: epoch_020_valloss_2.3315_valacc_0.2711.keras
+160/160 [==============================] - 62s 385ms/step - loss: 2.2749 - accuracy: 0.3191 - val_loss: 2.1634 - val_accuracy: 0.3203 - lr: 5.0000e-04
+Epoch 23/240
+160/160 [==============================] - ETA: 0s - loss: 2.1638 - accuracy: 0.3432Deleted worse checkpoint: epoch_021_valloss_2.2402_valacc_0.2937.keras
+160/160 [==============================] - 43s 272ms/step - loss: 2.1638 - accuracy: 0.3432 - val_loss: 2.0562 - val_accuracy: 0.3320 - lr: 5.0000e-04
+Epoch 24/240
+160/160 [==============================] - ETA: 0s - loss: 2.0606 - accuracy: 0.3598Deleted worse checkpoint: epoch_022_valloss_2.1634_valacc_0.3203.keras
+160/160 [==============================] - 56s 349ms/step - loss: 2.0606 - accuracy: 0.3598 - val_loss: 1.9615 - val_accuracy: 0.3664 - lr: 5.0000e-04
+Epoch 25/240
+160/160 [==============================] - ETA: 0s - loss: 1.9991 - accuracy: 0.3746Deleted worse checkpoint: epoch_023_valloss_2.0562_valacc_0.3320.keras
+160/160 [==============================] - 45s 284ms/step - loss: 1.9991 - accuracy: 0.3746 - val_loss: 1.9414 - val_accuracy: 0.3938 - lr: 5.0000e-04
+Epoch 26/240
+160/160 [==============================] - ETA: 0s - loss: 1.9355 - accuracy: 0.3930Deleted worse checkpoint: epoch_024_valloss_1.9615_valacc_0.3664.keras
+160/160 [==============================] - 59s 370ms/step - loss: 1.9355 - accuracy: 0.3930 - val_loss: 1.8750 - val_accuracy: 0.4055 - lr: 5.0000e-04
+Epoch 27/240
+160/160 [==============================] - ETA: 0s - loss: 1.7979 - accuracy: 0.4324Deleted worse checkpoint: epoch_025_valloss_1.9414_valacc_0.3938.keras
+160/160 [==============================] - 72s 448ms/step - loss: 1.7979 - accuracy: 0.4324 - val_loss: 1.7570 - val_accuracy: 0.4320 - lr: 5.0000e-04
+Epoch 28/240
+160/160 [==============================] - ETA: 0s - loss: 1.7219 - accuracy: 0.4592Deleted worse checkpoint: epoch_026_valloss_1.8750_valacc_0.4055.keras
+160/160 [==============================] - 37s 229ms/step - loss: 1.7219 - accuracy: 0.4592 - val_loss: 1.6986 - val_accuracy: 0.4656 - lr: 5.0000e-04
+Epoch 29/240
+160/160 [==============================] - ETA: 0s - loss: 1.6294 - accuracy: 0.4834Deleted worse checkpoint: epoch_027_valloss_1.7570_valacc_0.4320.keras
+160/160 [==============================] - 36s 227ms/step - loss: 1.6294 - accuracy: 0.4834 - val_loss: 1.5990 - val_accuracy: 0.4828 - lr: 5.0000e-04
+Epoch 30/240
+160/160 [==============================] - ETA: 0s - loss: 1.6208 - accuracy: 0.4693Deleted worse checkpoint: epoch_028_valloss_1.6986_valacc_0.4656.keras
+160/160 [==============================] - 36s 227ms/step - loss: 1.6208 - accuracy: 0.4693 - val_loss: 1.5562 - val_accuracy: 0.5016 - lr: 5.0000e-04
+Epoch 31/240
+160/160 [==============================] - ETA: 0s - loss: 1.5424 - accuracy: 0.4916Deleted worse checkpoint: epoch_029_valloss_1.5990_valacc_0.4828.keras
+160/160 [==============================] - 36s 226ms/step - loss: 1.5424 - accuracy: 0.4916 - val_loss: 1.5464 - val_accuracy: 0.5055 - lr: 5.0000e-04
+Epoch 32/240
+160/160 [==============================] - ETA: 0s - loss: 1.5042 - accuracy: 0.5156Deleted worse checkpoint: epoch_030_valloss_1.5562_valacc_0.5016.keras
+160/160 [==============================] - 37s 229ms/step - loss: 1.5042 - accuracy: 0.5156 - val_loss: 1.4770 - val_accuracy: 0.5164 - lr: 5.0000e-04
+Epoch 33/240
+160/160 [==============================] - ETA: 0s - loss: 1.4131 - accuracy: 0.5371Deleted worse checkpoint: epoch_031_valloss_1.5464_valacc_0.5055.keras
+160/160 [==============================] - 37s 229ms/step - loss: 1.4131 - accuracy: 0.5371 - val_loss: 1.4329 - val_accuracy: 0.5406 - lr: 5.0000e-04
+Epoch 34/240
+160/160 [==============================] - ETA: 0s - loss: 1.3562 - accuracy: 0.5549Deleted worse checkpoint: epoch_032_valloss_1.4770_valacc_0.5164.keras
+160/160 [==============================] - 38s 235ms/step - loss: 1.3562 - accuracy: 0.5549 - val_loss: 1.4043 - val_accuracy: 0.5273 - lr: 5.0000e-04
+Epoch 35/240
+160/160 [==============================] - ETA: 0s - loss: 1.2708 - accuracy: 0.5807Deleted worse checkpoint: epoch_033_valloss_1.4329_valacc_0.5406.keras
+160/160 [==============================] - 36s 228ms/step - loss: 1.2708 - accuracy: 0.5807 - val_loss: 1.3219 - val_accuracy: 0.5680 - lr: 5.0000e-04
+Epoch 36/240
+160/160 [==============================] - ETA: 0s - loss: 1.2311 - accuracy: 0.5945Deleted worse checkpoint: epoch_034_valloss_1.4043_valacc_0.5273.keras
+160/160 [==============================] - 36s 228ms/step - loss: 1.2311 - accuracy: 0.5945 - val_loss: 1.2991 - val_accuracy: 0.5734 - lr: 5.0000e-04
+Epoch 37/240
+160/160 [==============================] - ETA: 0s - loss: 1.2060 - accuracy: 0.5969Deleted worse checkpoint: epoch_035_valloss_1.3219_valacc_0.5680.keras
+160/160 [==============================] - 36s 228ms/step - loss: 1.2060 - accuracy: 0.5969 - val_loss: 1.3115 - val_accuracy: 0.5945 - lr: 5.0000e-04
+Epoch 38/240
+160/160 [==============================] - ETA: 0s - loss: 1.1518 - accuracy: 0.6207Deleted worse checkpoint: epoch_037_valloss_1.3115_valacc_0.5945.keras
+160/160 [==============================] - 37s 230ms/step - loss: 1.1518 - accuracy: 0.6207 - val_loss: 1.2419 - val_accuracy: 0.6055 - lr: 5.0000e-04
+Epoch 39/240
+160/160 [==============================] - ETA: 0s - loss: 1.0862 - accuracy: 0.6299Deleted worse checkpoint: epoch_036_valloss_1.2991_valacc_0.5734.keras
+160/160 [==============================] - 36s 223ms/step - loss: 1.0862 - accuracy: 0.6299 - val_loss: 1.2237 - val_accuracy: 0.6195 - lr: 5.0000e-04
+Epoch 40/240
+160/160 [==============================] - ETA: 0s - loss: 1.0617 - accuracy: 0.6424Deleted worse checkpoint: epoch_038_valloss_1.2419_valacc_0.6055.keras
+160/160 [==============================] - 37s 231ms/step - loss: 1.0617 - accuracy: 0.6424 - val_loss: 1.2294 - val_accuracy: 0.6133 - lr: 5.0000e-04
+Epoch 41/240
+160/160 [==============================] - ETA: 0s - loss: 1.0107 - accuracy: 0.6602Deleted worse checkpoint: epoch_040_valloss_1.2294_valacc_0.6133.keras
+160/160 [==============================] - 38s 235ms/step - loss: 1.0107 - accuracy: 0.6602 - val_loss: 1.1862 - val_accuracy: 0.6219 - lr: 5.0000e-04
+Epoch 42/240
+160/160 [==============================] - ETA: 0s - loss: 0.9834 - accuracy: 0.6639Deleted worse checkpoint: epoch_039_valloss_1.2237_valacc_0.6195.keras
+160/160 [==============================] - 35s 219ms/step - loss: 0.9834 - accuracy: 0.6639 - val_loss: 1.1369 - val_accuracy: 0.6555 - lr: 5.0000e-04
+Epoch 43/240
+160/160 [==============================] - ETA: 0s - loss: 0.9708 - accuracy: 0.6709Deleted worse checkpoint: epoch_041_valloss_1.1862_valacc_0.6219.keras
+160/160 [==============================] - 35s 220ms/step - loss: 0.9708 - accuracy: 0.6709 - val_loss: 1.1533 - val_accuracy: 0.6547 - lr: 5.0000e-04
+Epoch 44/240
+160/160 [==============================] - ETA: 0s - loss: 0.9179 - accuracy: 0.6922Deleted worse checkpoint: epoch_043_valloss_1.1533_valacc_0.6547.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.9179 - accuracy: 0.6922 - val_loss: 1.0959 - val_accuracy: 0.6820 - lr: 5.0000e-04
+Epoch 45/240
+160/160 [==============================] - ETA: 0s - loss: 0.8826 - accuracy: 0.6936Deleted worse checkpoint: epoch_042_valloss_1.1369_valacc_0.6555.keras
+160/160 [==============================] - 35s 219ms/step - loss: 0.8826 - accuracy: 0.6936 - val_loss: 1.0977 - val_accuracy: 0.6719 - lr: 5.0000e-04
+Epoch 46/240
+160/160 [==============================] - ETA: 0s - loss: 0.8359 - accuracy: 0.7143Deleted worse checkpoint: epoch_045_valloss_1.0977_valacc_0.6719.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.8359 - accuracy: 0.7143 - val_loss: 1.0604 - val_accuracy: 0.6734 - lr: 5.0000e-04
+Epoch 47/240
+160/160 [==============================] - ETA: 0s - loss: 0.8315 - accuracy: 0.7133Deleted worse checkpoint: epoch_044_valloss_1.0959_valacc_0.6820.keras
+160/160 [==============================] - 35s 222ms/step - loss: 0.8315 - accuracy: 0.7133 - val_loss: 1.0203 - val_accuracy: 0.6836 - lr: 5.0000e-04
+Epoch 48/240
+160/160 [==============================] - ETA: 0s - loss: 0.8213 - accuracy: 0.7150Deleted worse checkpoint: epoch_046_valloss_1.0604_valacc_0.6734.keras
+160/160 [==============================] - 35s 219ms/step - loss: 0.8213 - accuracy: 0.7150 - val_loss: 0.9697 - val_accuracy: 0.7109 - lr: 5.0000e-04
+Epoch 49/240
+160/160 [==============================] - ETA: 0s - loss: 0.7946 - accuracy: 0.7275Deleted worse checkpoint: epoch_047_valloss_1.0203_valacc_0.6836.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.7946 - accuracy: 0.7275 - val_loss: 0.9704 - val_accuracy: 0.7195 - lr: 5.0000e-04
+Epoch 50/240
+160/160 [==============================] - ETA: 0s - loss: 0.7271 - accuracy: 0.7473Deleted worse checkpoint: epoch_050_valloss_0.9930_valacc_0.7055.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.7271 - accuracy: 0.7473 - val_loss: 0.9930 - val_accuracy: 0.7055 - lr: 5.0000e-04
+Epoch 51/240
+160/160 [==============================] - ETA: 0s - loss: 0.7455 - accuracy: 0.7471Deleted worse checkpoint: epoch_049_valloss_0.9704_valacc_0.7195.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.7455 - accuracy: 0.7471 - val_loss: 0.9218 - val_accuracy: 0.7266 - lr: 5.0000e-04
+Epoch 52/240
+160/160 [==============================] - ETA: 0s - loss: 0.6870 - accuracy: 0.7605Deleted worse checkpoint: epoch_048_valloss_0.9697_valacc_0.7109.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.6870 - accuracy: 0.7605 - val_loss: 0.9602 - val_accuracy: 0.7312 - lr: 5.0000e-04
+Epoch 53/240
+160/160 [==============================] - ETA: 0s - loss: 0.6666 - accuracy: 0.7693Deleted worse checkpoint: epoch_052_valloss_0.9602_valacc_0.7312.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.6666 - accuracy: 0.7693 - val_loss: 0.9106 - val_accuracy: 0.7508 - lr: 5.0000e-04
+Epoch 54/240
+160/160 [==============================] - ETA: 0s - loss: 0.6689 - accuracy: 0.7773Deleted worse checkpoint: epoch_054_valloss_0.9266_valacc_0.7328.keras
+160/160 [==============================] - 35s 219ms/step - loss: 0.6689 - accuracy: 0.7773 - val_loss: 0.9266 - val_accuracy: 0.7328 - lr: 5.0000e-04
+Epoch 55/240
+160/160 [==============================] - ETA: 0s - loss: 0.6356 - accuracy: 0.7867Deleted worse checkpoint: epoch_055_valloss_0.9674_valacc_0.7258.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.6356 - accuracy: 0.7867 - val_loss: 0.9674 - val_accuracy: 0.7258 - lr: 5.0000e-04
+Epoch 56/240
+160/160 [==============================] - ETA: 0s - loss: 0.6002 - accuracy: 0.7943Deleted worse checkpoint: epoch_051_valloss_0.9218_valacc_0.7266.keras
+160/160 [==============================] - 35s 220ms/step - loss: 0.6002 - accuracy: 0.7943 - val_loss: 0.9154 - val_accuracy: 0.7430 - lr: 5.0000e-04
+Epoch 57/240
+160/160 [==============================] - ETA: 0s - loss: 0.6004 - accuracy: 0.7914Deleted worse checkpoint: epoch_057_valloss_0.9230_valacc_0.7281.keras
+160/160 [==============================] - 35s 220ms/step - loss: 0.6004 - accuracy: 0.7914 - val_loss: 0.9230 - val_accuracy: 0.7281 - lr: 5.0000e-04
+Epoch 58/240
+160/160 [==============================] - ETA: 0s - loss: 0.5920 - accuracy: 0.7932Deleted worse checkpoint: epoch_056_valloss_0.9154_valacc_0.7430.keras
+160/160 [==============================] - 36s 224ms/step - loss: 0.5920 - accuracy: 0.7932 - val_loss: 0.8887 - val_accuracy: 0.7523 - lr: 5.0000e-04
+Epoch 59/240
+160/160 [==============================] - ETA: 0s - loss: 0.5767 - accuracy: 0.8020Deleted worse checkpoint: epoch_053_valloss_0.9106_valacc_0.7508.keras
+160/160 [==============================] - 35s 219ms/step - loss: 0.5767 - accuracy: 0.8020 - val_loss: 0.8546 - val_accuracy: 0.7453 - lr: 5.0000e-04
+Epoch 60/240
+160/160 [==============================] - ETA: 0s - loss: 0.5434 - accuracy: 0.8072Deleted worse checkpoint: epoch_058_valloss_0.8887_valacc_0.7523.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.5434 - accuracy: 0.8072 - val_loss: 0.8384 - val_accuracy: 0.7633 - lr: 5.0000e-04
+Epoch 61/240
+160/160 [==============================] - ETA: 0s - loss: 0.5443 - accuracy: 0.8160Deleted worse checkpoint: epoch_061_valloss_0.8894_valacc_0.7531.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.5443 - accuracy: 0.8160 - val_loss: 0.8894 - val_accuracy: 0.7531 - lr: 5.0000e-04
+Epoch 62/240
+160/160 [==============================] - ETA: 0s - loss: 0.5284 - accuracy: 0.8186Deleted worse checkpoint: epoch_059_valloss_0.8546_valacc_0.7453.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.5284 - accuracy: 0.8186 - val_loss: 0.8260 - val_accuracy: 0.7680 - lr: 5.0000e-04
+Epoch 63/240
+160/160 [==============================] - ETA: 0s - loss: 0.5680 - accuracy: 0.8068Deleted worse checkpoint: epoch_060_valloss_0.8384_valacc_0.7633.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.5680 - accuracy: 0.8068 - val_loss: 0.8260 - val_accuracy: 0.7641 - lr: 5.0000e-04
+Epoch 64/240
+160/160 [==============================] - ETA: 0s - loss: 0.4950 - accuracy: 0.8240Deleted worse checkpoint: epoch_063_valloss_0.8260_valacc_0.7641.keras
+160/160 [==============================] - 35s 219ms/step - loss: 0.4950 - accuracy: 0.8240 - val_loss: 0.7531 - val_accuracy: 0.7906 - lr: 5.0000e-04
+Epoch 65/240
+160/160 [==============================] - ETA: 0s - loss: 0.4760 - accuracy: 0.8385Deleted worse checkpoint: epoch_065_valloss_0.8660_valacc_0.7594.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.4760 - accuracy: 0.8385 - val_loss: 0.8660 - val_accuracy: 0.7594 - lr: 5.0000e-04
+Epoch 66/240
+160/160 [==============================] - ETA: 0s - loss: 0.5078 - accuracy: 0.8248Deleted worse checkpoint: epoch_062_valloss_0.8260_valacc_0.7680.keras
+160/160 [==============================] - 35s 219ms/step - loss: 0.5078 - accuracy: 0.8248 - val_loss: 0.8131 - val_accuracy: 0.7781 - lr: 5.0000e-04
+Epoch 67/240
+160/160 [==============================] - ETA: 0s - loss: 0.4713 - accuracy: 0.8352Deleted worse checkpoint: epoch_066_valloss_0.8131_valacc_0.7781.keras
+160/160 [==============================] - 35s 219ms/step - loss: 0.4713 - accuracy: 0.8352 - val_loss: 0.7876 - val_accuracy: 0.7914 - lr: 5.0000e-04
+Epoch 68/240
+160/160 [==============================] - ETA: 0s - loss: 0.4921 - accuracy: 0.8324Deleted worse checkpoint: epoch_068_valloss_0.8184_valacc_0.7852.keras
+160/160 [==============================] - 35s 221ms/step - loss: 0.4921 - accuracy: 0.8324 - val_loss: 0.8184 - val_accuracy: 0.7852 - lr: 5.0000e-04
+Epoch 69/240
+160/160 [==============================] - ETA: 0s - loss: 0.4654 - accuracy: 0.8438Deleted worse checkpoint: epoch_069_valloss_0.7937_valacc_0.7828.keras
+160/160 [==============================] - 35s 220ms/step - loss: 0.4654 - accuracy: 0.8438 - val_loss: 0.7937 - val_accuracy: 0.7828 - lr: 5.0000e-04
+Epoch 70/240
+160/160 [==============================] - ETA: 0s - loss: 0.4954 - accuracy: 0.8285Deleted worse checkpoint: epoch_067_valloss_0.7876_valacc_0.7914.keras
+160/160 [==============================] - 35s 216ms/step - loss: 0.4954 - accuracy: 0.8285 - val_loss: 0.7629 - val_accuracy: 0.7875 - lr: 5.0000e-04
+Epoch 71/240
+160/160 [==============================] - ETA: 0s - loss: 0.4530 - accuracy: 0.8393Deleted worse checkpoint: epoch_071_valloss_0.8484_valacc_0.7664.keras
+160/160 [==============================] - 35s 219ms/step - loss: 0.4530 - accuracy: 0.8393 - val_loss: 0.8484 - val_accuracy: 0.7664 - lr: 5.0000e-04
+Epoch 72/240
+160/160 [==============================] - ETA: 0s - loss: 0.4305 - accuracy: 0.8436Deleted worse checkpoint: epoch_070_valloss_0.7629_valacc_0.7875.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.4305 - accuracy: 0.8436 - val_loss: 0.7585 - val_accuracy: 0.7875 - lr: 5.0000e-04
+Epoch 73/240
+160/160 [==============================] - ETA: 0s - loss: 0.4382 - accuracy: 0.8502Deleted worse checkpoint: epoch_073_valloss_0.7626_valacc_0.7922.keras
+160/160 [==============================] - 35s 220ms/step - loss: 0.4382 - accuracy: 0.8502 - val_loss: 0.7626 - val_accuracy: 0.7922 - lr: 5.0000e-04
+Epoch 74/240
+160/160 [==============================] - ETA: 0s - loss: 0.4254 - accuracy: 0.8572Deleted worse checkpoint: epoch_072_valloss_0.7585_valacc_0.7875.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.4254 - accuracy: 0.8572 - val_loss: 0.7251 - val_accuracy: 0.7937 - lr: 5.0000e-04
+Epoch 75/240
+160/160 [==============================] - ETA: 0s - loss: 0.3993 - accuracy: 0.8676Deleted worse checkpoint: epoch_064_valloss_0.7531_valacc_0.7906.keras
+160/160 [==============================] - 35s 222ms/step - loss: 0.3993 - accuracy: 0.8676 - val_loss: 0.7224 - val_accuracy: 0.8031 - lr: 5.0000e-04
+Epoch 76/240
+160/160 [==============================] - ETA: 0s - loss: 0.4001 - accuracy: 0.8643Deleted worse checkpoint: epoch_074_valloss_0.7251_valacc_0.7937.keras
+160/160 [==============================] - 35s 222ms/step - loss: 0.4001 - accuracy: 0.8643 - val_loss: 0.7044 - val_accuracy: 0.8117 - lr: 5.0000e-04
+Epoch 77/240
+160/160 [==============================] - ETA: 0s - loss: 0.4066 - accuracy: 0.8611Deleted worse checkpoint: epoch_077_valloss_0.7467_valacc_0.7922.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.4066 - accuracy: 0.8611 - val_loss: 0.7467 - val_accuracy: 0.7922 - lr: 5.0000e-04
+Epoch 78/240
+160/160 [==============================] - ETA: 0s - loss: 0.4014 - accuracy: 0.8635Deleted worse checkpoint: epoch_078_valloss_0.7328_valacc_0.8109.keras
+160/160 [==============================] - 35s 216ms/step - loss: 0.4014 - accuracy: 0.8635 - val_loss: 0.7328 - val_accuracy: 0.8109 - lr: 5.0000e-04
+Epoch 79/240
+160/160 [==============================] - ETA: 0s - loss: 0.3513 - accuracy: 0.8793Deleted worse checkpoint: epoch_079_valloss_0.7280_valacc_0.8172.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.3513 - accuracy: 0.8793 - val_loss: 0.7280 - val_accuracy: 0.8172 - lr: 5.0000e-04
+Epoch 80/240
+160/160 [==============================] - ETA: 0s - loss: 0.4003 - accuracy: 0.8656Deleted worse checkpoint: epoch_080_valloss_0.7498_valacc_0.7937.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.4003 - accuracy: 0.8656 - val_loss: 0.7498 - val_accuracy: 0.7937 - lr: 5.0000e-04
+Epoch 81/240
+160/160 [==============================] - ETA: 0s - loss: 0.3455 - accuracy: 0.8773Deleted worse checkpoint: epoch_081_valloss_0.7497_valacc_0.7992.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.3455 - accuracy: 0.8773 - val_loss: 0.7497 - val_accuracy: 0.7992 - lr: 5.0000e-04
+Epoch 82/240
+160/160 [==============================] - ETA: 0s - loss: 0.3853 - accuracy: 0.8670Deleted worse checkpoint: epoch_082_valloss_0.7690_valacc_0.8070.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.3853 - accuracy: 0.8670 - val_loss: 0.7690 - val_accuracy: 0.8070 - lr: 5.0000e-04
+Epoch 83/240
+160/160 [==============================] - ETA: 0s - loss: 0.3503 - accuracy: 0.8760Deleted worse checkpoint: epoch_075_valloss_0.7224_valacc_0.8031.keras
+160/160 [==============================] - 35s 219ms/step - loss: 0.3503 - accuracy: 0.8760 - val_loss: 0.6982 - val_accuracy: 0.8102 - lr: 5.0000e-04
+Epoch 84/240
+160/160 [==============================] - ETA: 0s - loss: 0.3534 - accuracy: 0.8840Deleted worse checkpoint: epoch_084_valloss_0.7425_valacc_0.8125.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.3534 - accuracy: 0.8840 - val_loss: 0.7425 - val_accuracy: 0.8125 - lr: 5.0000e-04
+Epoch 85/240
+160/160 [==============================] - ETA: 0s - loss: 0.3391 - accuracy: 0.8826Deleted worse checkpoint: epoch_085_valloss_0.7117_valacc_0.8188.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.3391 - accuracy: 0.8826 - val_loss: 0.7117 - val_accuracy: 0.8188 - lr: 5.0000e-04
+Epoch 86/240
+160/160 [==============================] - ETA: 0s - loss: 0.3412 - accuracy: 0.8785Deleted worse checkpoint: epoch_086_valloss_0.7289_valacc_0.8164.keras
+160/160 [==============================] - 35s 219ms/step - loss: 0.3412 - accuracy: 0.8785 - val_loss: 0.7289 - val_accuracy: 0.8164 - lr: 5.0000e-04
+Epoch 87/240
+160/160 [==============================] - ETA: 0s - loss: 0.3210 - accuracy: 0.8898Deleted worse checkpoint: epoch_076_valloss_0.7044_valacc_0.8117.keras
+160/160 [==============================] - 35s 216ms/step - loss: 0.3210 - accuracy: 0.8898 - val_loss: 0.6822 - val_accuracy: 0.8273 - lr: 5.0000e-04
+Epoch 88/240
+160/160 [==============================] - ETA: 0s - loss: 0.3252 - accuracy: 0.8887Deleted worse checkpoint: epoch_088_valloss_0.8043_valacc_0.8039.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.3252 - accuracy: 0.8887 - val_loss: 0.8043 - val_accuracy: 0.8039 - lr: 5.0000e-04
+Epoch 89/240
+160/160 [==============================] - ETA: 0s - loss: 0.3250 - accuracy: 0.8889Deleted worse checkpoint: epoch_089_valloss_0.7608_valacc_0.8148.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.3250 - accuracy: 0.8889 - val_loss: 0.7608 - val_accuracy: 0.8148 - lr: 5.0000e-04
+Epoch 90/240
+160/160 [==============================] - ETA: 0s - loss: 0.3031 - accuracy: 0.8959Deleted worse checkpoint: epoch_090_valloss_0.7781_valacc_0.8281.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.3031 - accuracy: 0.8959 - val_loss: 0.7781 - val_accuracy: 0.8281 - lr: 5.0000e-04
+Epoch 91/240
+160/160 [==============================] - ETA: 0s - loss: 0.3180 - accuracy: 0.8924Deleted worse checkpoint: epoch_091_valloss_0.7292_valacc_0.8266.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.3180 - accuracy: 0.8924 - val_loss: 0.7292 - val_accuracy: 0.8266 - lr: 5.0000e-04
+Epoch 92/240
+160/160 [==============================] - ETA: 0s - loss: 0.3385 - accuracy: 0.8881Deleted worse checkpoint: epoch_092_valloss_0.6983_valacc_0.8359.keras
+160/160 [==============================] - 35s 220ms/step - loss: 0.3385 - accuracy: 0.8881 - val_loss: 0.6983 - val_accuracy: 0.8359 - lr: 5.0000e-04
+Epoch 93/240
+160/160 [==============================] - ETA: 0s - loss: 0.3568 - accuracy: 0.8779Deleted worse checkpoint: epoch_093_valloss_0.7170_valacc_0.8305.keras
+160/160 [==============================] - 35s 222ms/step - loss: 0.3568 - accuracy: 0.8779 - val_loss: 0.7170 - val_accuracy: 0.8305 - lr: 5.0000e-04
+Epoch 94/240
+160/160 [==============================] - ETA: 0s - loss: 0.3372 - accuracy: 0.8830Deleted worse checkpoint: epoch_094_valloss_0.7536_valacc_0.8109.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.3372 - accuracy: 0.8830 - val_loss: 0.7536 - val_accuracy: 0.8109 - lr: 5.0000e-04
+Epoch 95/240
+160/160 [==============================] - ETA: 0s - loss: 0.3069 - accuracy: 0.8961Deleted worse checkpoint: epoch_095_valloss_0.7110_valacc_0.8297.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.3069 - accuracy: 0.8961 - val_loss: 0.7110 - val_accuracy: 0.8297 - lr: 5.0000e-04
+Epoch 96/240
+160/160 [==============================] - ETA: 0s - loss: 0.2855 - accuracy: 0.9066Deleted worse checkpoint: epoch_083_valloss_0.6982_valacc_0.8102.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.2855 - accuracy: 0.9066 - val_loss: 0.6820 - val_accuracy: 0.8344 - lr: 5.0000e-04
+Epoch 97/240
+160/160 [==============================] - ETA: 0s - loss: 0.2834 - accuracy: 0.9020Deleted worse checkpoint: epoch_097_valloss_0.7371_valacc_0.8281.keras
+160/160 [==============================] - 35s 219ms/step - loss: 0.2834 - accuracy: 0.9020 - val_loss: 0.7371 - val_accuracy: 0.8281 - lr: 5.0000e-04
+Epoch 98/240
+160/160 [==============================] - ETA: 0s - loss: 0.2818 - accuracy: 0.8986Deleted worse checkpoint: epoch_087_valloss_0.6822_valacc_0.8273.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.2818 - accuracy: 0.8986 - val_loss: 0.6375 - val_accuracy: 0.8438 - lr: 5.0000e-04
+Epoch 99/240
+160/160 [==============================] - ETA: 0s - loss: 0.2684 - accuracy: 0.9072Deleted worse checkpoint: epoch_099_valloss_0.7237_valacc_0.8320.keras
+160/160 [==============================] - 35s 219ms/step - loss: 0.2684 - accuracy: 0.9072 - val_loss: 0.7237 - val_accuracy: 0.8320 - lr: 5.0000e-04
+Epoch 100/240
+160/160 [==============================] - ETA: 0s - loss: 0.2745 - accuracy: 0.9096Deleted worse checkpoint: epoch_100_valloss_0.7509_valacc_0.8328.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.2745 - accuracy: 0.9096 - val_loss: 0.7509 - val_accuracy: 0.8328 - lr: 5.0000e-04
+Epoch 101/240
+160/160 [==============================] - ETA: 0s - loss: 0.2889 - accuracy: 0.9045Deleted worse checkpoint: epoch_101_valloss_0.6981_valacc_0.8313.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.2889 - accuracy: 0.9045 - val_loss: 0.6981 - val_accuracy: 0.8313 - lr: 5.0000e-04
+Epoch 102/240
+160/160 [==============================] - ETA: 0s - loss: 0.3003 - accuracy: 0.9037Deleted worse checkpoint: epoch_102_valloss_0.6901_valacc_0.8242.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.3003 - accuracy: 0.9037 - val_loss: 0.6901 - val_accuracy: 0.8242 - lr: 5.0000e-04
+Epoch 103/240
+160/160 [==============================] - ETA: 0s - loss: 0.2677 - accuracy: 0.9088Deleted worse checkpoint: epoch_103_valloss_0.6981_valacc_0.8297.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.2677 - accuracy: 0.9088 - val_loss: 0.6981 - val_accuracy: 0.8297 - lr: 5.0000e-04
+Epoch 104/240
+160/160 [==============================] - ETA: 0s - loss: 0.2658 - accuracy: 0.9135Deleted worse checkpoint: epoch_096_valloss_0.6820_valacc_0.8344.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.2658 - accuracy: 0.9135 - val_loss: 0.6452 - val_accuracy: 0.8461 - lr: 5.0000e-04
+Epoch 105/240
+160/160 [==============================] - ETA: 0s - loss: 0.2817 - accuracy: 0.9061Deleted worse checkpoint: epoch_105_valloss_0.7073_valacc_0.8359.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.2817 - accuracy: 0.9061 - val_loss: 0.7073 - val_accuracy: 0.8359 - lr: 5.0000e-04
+Epoch 106/240
+160/160 [==============================] - ETA: 0s - loss: 0.2593 - accuracy: 0.9162Deleted worse checkpoint: epoch_106_valloss_0.6467_valacc_0.8445.keras
+160/160 [==============================] - 45s 280ms/step - loss: 0.2593 - accuracy: 0.9162 - val_loss: 0.6467 - val_accuracy: 0.8445 - lr: 5.0000e-04
+Epoch 107/240
+160/160 [==============================] - ETA: 0s - loss: 0.2612 - accuracy: 0.9109Deleted worse checkpoint: epoch_107_valloss_0.7198_valacc_0.8281.keras
+160/160 [==============================] - 38s 240ms/step - loss: 0.2612 - accuracy: 0.9109 - val_loss: 0.7198 - val_accuracy: 0.8281 - lr: 5.0000e-04
+Epoch 108/240
+160/160 [==============================] - ETA: 0s - loss: 0.2383 - accuracy: 0.9201Deleted worse checkpoint: epoch_108_valloss_0.7308_valacc_0.8367.keras
+160/160 [==============================] - 35s 221ms/step - loss: 0.2383 - accuracy: 0.9201 - val_loss: 0.7308 - val_accuracy: 0.8367 - lr: 5.0000e-04
+Epoch 109/240
+160/160 [==============================] - ETA: 0s - loss: 0.2584 - accuracy: 0.9100Deleted worse checkpoint: epoch_109_valloss_0.6841_valacc_0.8336.keras
+160/160 [==============================] - 36s 224ms/step - loss: 0.2584 - accuracy: 0.9100 - val_loss: 0.6841 - val_accuracy: 0.8336 - lr: 5.0000e-04
+Epoch 110/240
+160/160 [==============================] - ETA: 0s - loss: 0.2830 - accuracy: 0.9043Deleted worse checkpoint: epoch_110_valloss_0.7147_valacc_0.8445.keras
+160/160 [==============================] - 36s 222ms/step - loss: 0.2830 - accuracy: 0.9043 - val_loss: 0.7147 - val_accuracy: 0.8445 - lr: 5.0000e-04
+Epoch 111/240
+160/160 [==============================] - ETA: 0s - loss: 0.2636 - accuracy: 0.9098Deleted worse checkpoint: epoch_111_valloss_0.6891_valacc_0.8469.keras
+160/160 [==============================] - 35s 219ms/step - loss: 0.2636 - accuracy: 0.9098 - val_loss: 0.6891 - val_accuracy: 0.8469 - lr: 5.0000e-04
+Epoch 112/240
+160/160 [==============================] - ETA: 0s - loss: 0.2663 - accuracy: 0.9102Deleted worse checkpoint: epoch_112_valloss_0.6633_valacc_0.8508.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.2663 - accuracy: 0.9102 - val_loss: 0.6633 - val_accuracy: 0.8508 - lr: 5.0000e-04
+Epoch 113/240
+160/160 [==============================] - ETA: 0s - loss: 0.2399 - accuracy: 0.9148Deleted worse checkpoint: epoch_113_valloss_0.6922_valacc_0.8398.keras
+
+Epoch 113: ReduceLROnPlateau reducing learning rate to 0.0001500000071246177.
+160/160 [==============================] - 35s 217ms/step - loss: 0.2399 - accuracy: 0.9148 - val_loss: 0.6922 - val_accuracy: 0.8398 - lr: 5.0000e-04
+Epoch 114/240
+160/160 [==============================] - ETA: 0s - loss: 0.2035 - accuracy: 0.9285Deleted worse checkpoint: epoch_104_valloss_0.6452_valacc_0.8461.keras
+160/160 [==============================] - 35s 219ms/step - loss: 0.2035 - accuracy: 0.9285 - val_loss: 0.6058 - val_accuracy: 0.8664 - lr: 1.5000e-04
+Epoch 115/240
+160/160 [==============================] - ETA: 0s - loss: 0.1548 - accuracy: 0.9441Deleted worse checkpoint: epoch_098_valloss_0.6375_valacc_0.8438.keras
+160/160 [==============================] - 35s 219ms/step - loss: 0.1548 - accuracy: 0.9441 - val_loss: 0.5867 - val_accuracy: 0.8641 - lr: 1.5000e-04
+Epoch 116/240
+160/160 [==============================] - ETA: 0s - loss: 0.1314 - accuracy: 0.9516Deleted worse checkpoint: epoch_114_valloss_0.6058_valacc_0.8664.keras
+160/160 [==============================] - 36s 223ms/step - loss: 0.1314 - accuracy: 0.9516 - val_loss: 0.5728 - val_accuracy: 0.8758 - lr: 1.5000e-04
+Epoch 117/240
+160/160 [==============================] - ETA: 0s - loss: 0.1095 - accuracy: 0.9623Deleted worse checkpoint: epoch_115_valloss_0.5867_valacc_0.8641.keras
+160/160 [==============================] - 36s 226ms/step - loss: 0.1095 - accuracy: 0.9623 - val_loss: 0.5783 - val_accuracy: 0.8687 - lr: 1.5000e-04
+Epoch 118/240
+160/160 [==============================] - ETA: 0s - loss: 0.1182 - accuracy: 0.9578Deleted worse checkpoint: epoch_117_valloss_0.5783_valacc_0.8687.keras
+160/160 [==============================] - 35s 220ms/step - loss: 0.1182 - accuracy: 0.9578 - val_loss: 0.5781 - val_accuracy: 0.8633 - lr: 1.5000e-04
+Epoch 119/240
+160/160 [==============================] - ETA: 0s - loss: 0.1141 - accuracy: 0.9586Deleted worse checkpoint: epoch_118_valloss_0.5781_valacc_0.8633.keras
+160/160 [==============================] - 35s 222ms/step - loss: 0.1141 - accuracy: 0.9586 - val_loss: 0.5663 - val_accuracy: 0.8695 - lr: 1.5000e-04
+Epoch 120/240
+160/160 [==============================] - ETA: 0s - loss: 0.1010 - accuracy: 0.9623Deleted worse checkpoint: epoch_120_valloss_0.5751_valacc_0.8719.keras
+160/160 [==============================] - 35s 220ms/step - loss: 0.1010 - accuracy: 0.9623 - val_loss: 0.5751 - val_accuracy: 0.8719 - lr: 1.5000e-04
+Epoch 121/240
+160/160 [==============================] - ETA: 0s - loss: 0.0992 - accuracy: 0.9656Deleted worse checkpoint: epoch_121_valloss_0.5739_valacc_0.8742.keras
+160/160 [==============================] - 35s 220ms/step - loss: 0.0992 - accuracy: 0.9656 - val_loss: 0.5739 - val_accuracy: 0.8742 - lr: 1.5000e-04
+Epoch 122/240
+160/160 [==============================] - ETA: 0s - loss: 0.0954 - accuracy: 0.9691Deleted worse checkpoint: epoch_122_valloss_0.5933_valacc_0.8805.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.0954 - accuracy: 0.9691 - val_loss: 0.5933 - val_accuracy: 0.8805 - lr: 1.5000e-04
+Epoch 123/240
+160/160 [==============================] - ETA: 0s - loss: 0.0886 - accuracy: 0.9693Deleted worse checkpoint: epoch_123_valloss_0.5945_valacc_0.8727.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.0886 - accuracy: 0.9693 - val_loss: 0.5945 - val_accuracy: 0.8727 - lr: 1.5000e-04
+Epoch 124/240
+160/160 [==============================] - ETA: 0s - loss: 0.0987 - accuracy: 0.9654Deleted worse checkpoint: epoch_124_valloss_0.6054_valacc_0.8664.keras
+160/160 [==============================] - 35s 220ms/step - loss: 0.0987 - accuracy: 0.9654 - val_loss: 0.6054 - val_accuracy: 0.8664 - lr: 1.5000e-04
+Epoch 125/240
+160/160 [==============================] - ETA: 0s - loss: 0.0857 - accuracy: 0.9707Deleted worse checkpoint: epoch_125_valloss_0.6255_valacc_0.8672.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.0857 - accuracy: 0.9707 - val_loss: 0.6255 - val_accuracy: 0.8672 - lr: 1.5000e-04
+Epoch 126/240
+160/160 [==============================] - ETA: 0s - loss: 0.0894 - accuracy: 0.9705Deleted worse checkpoint: epoch_126_valloss_0.6234_valacc_0.8680.keras
+160/160 [==============================] - 37s 229ms/step - loss: 0.0894 - accuracy: 0.9705 - val_loss: 0.6234 - val_accuracy: 0.8680 - lr: 1.5000e-04
+Epoch 127/240
+160/160 [==============================] - ETA: 0s - loss: 0.0832 - accuracy: 0.9729Deleted worse checkpoint: epoch_127_valloss_0.6107_valacc_0.8734.keras
+160/160 [==============================] - 37s 234ms/step - loss: 0.0832 - accuracy: 0.9729 - val_loss: 0.6107 - val_accuracy: 0.8734 - lr: 1.5000e-04
+Epoch 128/240
+160/160 [==============================] - ETA: 0s - loss: 0.0729 - accuracy: 0.9777Deleted worse checkpoint: epoch_128_valloss_0.6367_valacc_0.8758.keras
+160/160 [==============================] - 36s 224ms/step - loss: 0.0729 - accuracy: 0.9777 - val_loss: 0.6367 - val_accuracy: 0.8758 - lr: 1.5000e-04
+Epoch 129/240
+160/160 [==============================] - ETA: 0s - loss: 0.0810 - accuracy: 0.9701Deleted worse checkpoint: epoch_129_valloss_0.6116_valacc_0.8820.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.0810 - accuracy: 0.9701 - val_loss: 0.6116 - val_accuracy: 0.8820 - lr: 1.5000e-04
+Epoch 130/240
+160/160 [==============================] - ETA: 0s - loss: 0.0844 - accuracy: 0.9730Deleted worse checkpoint: epoch_130_valloss_0.6128_valacc_0.8719.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.0844 - accuracy: 0.9730 - val_loss: 0.6128 - val_accuracy: 0.8719 - lr: 1.5000e-04
+Epoch 131/240
+160/160 [==============================] - ETA: 0s - loss: 0.0808 - accuracy: 0.9721Deleted worse checkpoint: epoch_131_valloss_0.6012_valacc_0.8828.keras
+160/160 [==============================] - 35s 221ms/step - loss: 0.0808 - accuracy: 0.9721 - val_loss: 0.6012 - val_accuracy: 0.8828 - lr: 1.5000e-04
+Epoch 132/240
+160/160 [==============================] - ETA: 0s - loss: 0.0837 - accuracy: 0.9693Deleted worse checkpoint: epoch_132_valloss_0.6122_valacc_0.8766.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.0837 - accuracy: 0.9693 - val_loss: 0.6122 - val_accuracy: 0.8766 - lr: 1.5000e-04
+Epoch 133/240
+160/160 [==============================] - ETA: 0s - loss: 0.0710 - accuracy: 0.9752Deleted worse checkpoint: epoch_133_valloss_0.6127_valacc_0.8781.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.0710 - accuracy: 0.9752 - val_loss: 0.6127 - val_accuracy: 0.8781 - lr: 1.5000e-04
+Epoch 134/240
+160/160 [==============================] - ETA: 0s - loss: 0.0711 - accuracy: 0.9756Deleted worse checkpoint: epoch_134_valloss_0.6043_valacc_0.8766.keras
+
+Epoch 134: ReduceLROnPlateau reducing learning rate to 4.500000213738531e-05.
+160/160 [==============================] - 35s 219ms/step - loss: 0.0711 - accuracy: 0.9756 - val_loss: 0.6043 - val_accuracy: 0.8766 - lr: 1.5000e-04
+Epoch 135/240
+160/160 [==============================] - ETA: 0s - loss: 0.0700 - accuracy: 0.9752Deleted worse checkpoint: epoch_135_valloss_0.6034_valacc_0.8773.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.0700 - accuracy: 0.9752 - val_loss: 0.6034 - val_accuracy: 0.8773 - lr: 4.5000e-05
+Epoch 136/240
+160/160 [==============================] - ETA: 0s - loss: 0.0719 - accuracy: 0.9773Deleted worse checkpoint: epoch_136_valloss_0.5973_valacc_0.8781.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.0719 - accuracy: 0.9773 - val_loss: 0.5973 - val_accuracy: 0.8781 - lr: 4.5000e-05
+Epoch 137/240
+160/160 [==============================] - ETA: 0s - loss: 0.0593 - accuracy: 0.9799Deleted worse checkpoint: epoch_137_valloss_0.5908_valacc_0.8766.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.0593 - accuracy: 0.9799 - val_loss: 0.5908 - val_accuracy: 0.8766 - lr: 4.5000e-05
+Epoch 138/240
+160/160 [==============================] - ETA: 0s - loss: 0.0596 - accuracy: 0.9807Deleted worse checkpoint: epoch_138_valloss_0.5850_valacc_0.8805.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.0596 - accuracy: 0.9807 - val_loss: 0.5850 - val_accuracy: 0.8805 - lr: 4.5000e-05
+Epoch 139/240
+160/160 [==============================] - ETA: 0s - loss: 0.0597 - accuracy: 0.9807Deleted worse checkpoint: epoch_139_valloss_0.5832_valacc_0.8836.keras
+160/160 [==============================] - 35s 222ms/step - loss: 0.0597 - accuracy: 0.9807 - val_loss: 0.5832 - val_accuracy: 0.8836 - lr: 4.5000e-05
+Epoch 140/240
+160/160 [==============================] - ETA: 0s - loss: 0.0577 - accuracy: 0.9822Deleted worse checkpoint: epoch_140_valloss_0.5786_valacc_0.8852.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.0577 - accuracy: 0.9822 - val_loss: 0.5786 - val_accuracy: 0.8852 - lr: 4.5000e-05
+Epoch 141/240
+160/160 [==============================] - ETA: 0s - loss: 0.0594 - accuracy: 0.9793Deleted worse checkpoint: epoch_141_valloss_0.5729_valacc_0.8875.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.0594 - accuracy: 0.9793 - val_loss: 0.5729 - val_accuracy: 0.8875 - lr: 4.5000e-05
+Epoch 142/240
+160/160 [==============================] - ETA: 0s - loss: 0.0547 - accuracy: 0.9814Deleted worse checkpoint: epoch_142_valloss_0.5764_valacc_0.8914.keras
+160/160 [==============================] - 35s 216ms/step - loss: 0.0547 - accuracy: 0.9814 - val_loss: 0.5764 - val_accuracy: 0.8914 - lr: 4.5000e-05
+Epoch 143/240
+160/160 [==============================] - ETA: 0s - loss: 0.0520 - accuracy: 0.9812Deleted worse checkpoint: epoch_143_valloss_0.5765_valacc_0.8898.keras
+160/160 [==============================] - 36s 223ms/step - loss: 0.0520 - accuracy: 0.9812 - val_loss: 0.5765 - val_accuracy: 0.8898 - lr: 4.5000e-05
+Epoch 144/240
+160/160 [==============================] - ETA: 0s - loss: 0.0572 - accuracy: 0.9811Deleted worse checkpoint: epoch_116_valloss_0.5728_valacc_0.8758.keras
+160/160 [==============================] - 35s 221ms/step - loss: 0.0572 - accuracy: 0.9811 - val_loss: 0.5698 - val_accuracy: 0.8930 - lr: 4.5000e-05
+Epoch 145/240
+160/160 [==============================] - ETA: 0s - loss: 0.0526 - accuracy: 0.9816Deleted worse checkpoint: epoch_145_valloss_0.5709_valacc_0.8914.keras
+160/160 [==============================] - 35s 222ms/step - loss: 0.0526 - accuracy: 0.9816 - val_loss: 0.5709 - val_accuracy: 0.8914 - lr: 4.5000e-05
+Epoch 146/240
+160/160 [==============================] - ETA: 0s - loss: 0.0531 - accuracy: 0.9836Deleted worse checkpoint: epoch_146_valloss_0.5703_valacc_0.8922.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.0531 - accuracy: 0.9836 - val_loss: 0.5703 - val_accuracy: 0.8922 - lr: 4.5000e-05
+Epoch 147/240
+160/160 [==============================] - ETA: 0s - loss: 0.0461 - accuracy: 0.9836Deleted worse checkpoint: epoch_147_valloss_0.5763_valacc_0.8914.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.0461 - accuracy: 0.9836 - val_loss: 0.5763 - val_accuracy: 0.8914 - lr: 4.5000e-05
+Epoch 148/240
+160/160 [==============================] - ETA: 0s - loss: 0.0536 - accuracy: 0.9826Deleted worse checkpoint: epoch_148_valloss_0.5902_valacc_0.8891.keras
+160/160 [==============================] - 35s 219ms/step - loss: 0.0536 - accuracy: 0.9826 - val_loss: 0.5902 - val_accuracy: 0.8891 - lr: 4.5000e-05
+Epoch 149/240
+160/160 [==============================] - ETA: 0s - loss: 0.0479 - accuracy: 0.9840Deleted worse checkpoint: epoch_149_valloss_0.5876_valacc_0.8898.keras
+
+Epoch 149: ReduceLROnPlateau reducing learning rate to 1.3500000204658135e-05.
+160/160 [==============================] - 35s 217ms/step - loss: 0.0479 - accuracy: 0.9840 - val_loss: 0.5876 - val_accuracy: 0.8898 - lr: 4.5000e-05
+Epoch 150/240
+160/160 [==============================] - ETA: 0s - loss: 0.0526 - accuracy: 0.9797Deleted worse checkpoint: epoch_150_valloss_0.5820_valacc_0.8898.keras
+160/160 [==============================] - 35s 219ms/step - loss: 0.0526 - accuracy: 0.9797 - val_loss: 0.5820 - val_accuracy: 0.8898 - lr: 1.3500e-05
+Epoch 151/240
+160/160 [==============================] - ETA: 0s - loss: 0.0504 - accuracy: 0.9838Deleted worse checkpoint: epoch_151_valloss_0.5811_valacc_0.8898.keras
+160/160 [==============================] - 35s 216ms/step - loss: 0.0504 - accuracy: 0.9838 - val_loss: 0.5811 - val_accuracy: 0.8898 - lr: 1.3500e-05
+Epoch 152/240
+160/160 [==============================] - ETA: 0s - loss: 0.0461 - accuracy: 0.9877Deleted worse checkpoint: epoch_152_valloss_0.5815_valacc_0.8914.keras
+160/160 [==============================] - 35s 220ms/step - loss: 0.0461 - accuracy: 0.9877 - val_loss: 0.5815 - val_accuracy: 0.8914 - lr: 1.3500e-05
+Epoch 153/240
+160/160 [==============================] - ETA: 0s - loss: 0.0418 - accuracy: 0.9861Deleted worse checkpoint: epoch_153_valloss_0.5842_valacc_0.8914.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.0418 - accuracy: 0.9861 - val_loss: 0.5842 - val_accuracy: 0.8914 - lr: 1.3500e-05
+Epoch 154/240
+160/160 [==============================] - ETA: 0s - loss: 0.0462 - accuracy: 0.9850Deleted worse checkpoint: epoch_154_valloss_0.5834_valacc_0.8906.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.0462 - accuracy: 0.9850 - val_loss: 0.5834 - val_accuracy: 0.8906 - lr: 1.3500e-05
+Epoch 155/240
+160/160 [==============================] - ETA: 0s - loss: 0.0461 - accuracy: 0.9848Deleted worse checkpoint: epoch_155_valloss_0.5819_valacc_0.8930.keras
+160/160 [==============================] - 35s 219ms/step - loss: 0.0461 - accuracy: 0.9848 - val_loss: 0.5819 - val_accuracy: 0.8930 - lr: 1.3500e-05
+Epoch 156/240
+160/160 [==============================] - ETA: 0s - loss: 0.0417 - accuracy: 0.9857Deleted worse checkpoint: epoch_156_valloss_0.5768_valacc_0.8914.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.0417 - accuracy: 0.9857 - val_loss: 0.5768 - val_accuracy: 0.8914 - lr: 1.3500e-05
+Epoch 157/240
+160/160 [==============================] - ETA: 0s - loss: 0.0458 - accuracy: 0.9824Deleted worse checkpoint: epoch_157_valloss_0.5798_valacc_0.8930.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.0458 - accuracy: 0.9824 - val_loss: 0.5798 - val_accuracy: 0.8930 - lr: 1.3500e-05
+Epoch 158/240
+160/160 [==============================] - ETA: 0s - loss: 0.0441 - accuracy: 0.9859Deleted worse checkpoint: epoch_158_valloss_0.5793_valacc_0.8945.keras
+160/160 [==============================] - 36s 225ms/step - loss: 0.0441 - accuracy: 0.9859 - val_loss: 0.5793 - val_accuracy: 0.8945 - lr: 1.3500e-05
+Epoch 159/240
+160/160 [==============================] - ETA: 0s - loss: 0.0439 - accuracy: 0.9859Deleted worse checkpoint: epoch_159_valloss_0.5786_valacc_0.8922.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.0439 - accuracy: 0.9859 - val_loss: 0.5786 - val_accuracy: 0.8922 - lr: 1.3500e-05
+Epoch 160/240
+160/160 [==============================] - ETA: 0s - loss: 0.0425 - accuracy: 0.9879Deleted worse checkpoint: epoch_160_valloss_0.5760_valacc_0.8922.keras
+160/160 [==============================] - 35s 222ms/step - loss: 0.0425 - accuracy: 0.9879 - val_loss: 0.5760 - val_accuracy: 0.8922 - lr: 1.3500e-05
+Epoch 161/240
+160/160 [==============================] - ETA: 0s - loss: 0.0419 - accuracy: 0.9881Deleted worse checkpoint: epoch_161_valloss_0.5780_valacc_0.8922.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.0419 - accuracy: 0.9881 - val_loss: 0.5780 - val_accuracy: 0.8922 - lr: 1.3500e-05
+Epoch 162/240
+160/160 [==============================] - ETA: 0s - loss: 0.0474 - accuracy: 0.9830Deleted worse checkpoint: epoch_162_valloss_0.5779_valacc_0.8906.keras
+160/160 [==============================] - 35s 221ms/step - loss: 0.0474 - accuracy: 0.9830 - val_loss: 0.5779 - val_accuracy: 0.8906 - lr: 1.3500e-05
+Epoch 163/240
+160/160 [==============================] - ETA: 0s - loss: 0.0517 - accuracy: 0.9838Deleted worse checkpoint: epoch_163_valloss_0.5792_valacc_0.8891.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.0517 - accuracy: 0.9838 - val_loss: 0.5792 - val_accuracy: 0.8891 - lr: 1.3500e-05
+Epoch 164/240
+160/160 [==============================] - ETA: 0s - loss: 0.0436 - accuracy: 0.9852Deleted worse checkpoint: epoch_164_valloss_0.5777_valacc_0.8922.keras
+
+Epoch 164: ReduceLROnPlateau reducing learning rate to 4.050000006827758e-06.
+160/160 [==============================] - 35s 218ms/step - loss: 0.0436 - accuracy: 0.9852 - val_loss: 0.5777 - val_accuracy: 0.8922 - lr: 1.3500e-05
+Epoch 165/240
+160/160 [==============================] - ETA: 0s - loss: 0.0458 - accuracy: 0.9852Deleted worse checkpoint: epoch_165_valloss_0.5778_valacc_0.8930.keras
+160/160 [==============================] - 35s 219ms/step - loss: 0.0458 - accuracy: 0.9852 - val_loss: 0.5778 - val_accuracy: 0.8930 - lr: 4.0500e-06
+Epoch 166/240
+160/160 [==============================] - ETA: 0s - loss: 0.0382 - accuracy: 0.9875Deleted worse checkpoint: epoch_166_valloss_0.5772_valacc_0.8930.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.0382 - accuracy: 0.9875 - val_loss: 0.5772 - val_accuracy: 0.8930 - lr: 4.0500e-06
+Epoch 167/240
+160/160 [==============================] - ETA: 0s - loss: 0.0480 - accuracy: 0.9840Deleted worse checkpoint: epoch_167_valloss_0.5765_valacc_0.8906.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.0480 - accuracy: 0.9840 - val_loss: 0.5765 - val_accuracy: 0.8906 - lr: 4.0500e-06
+Epoch 168/240
+160/160 [==============================] - ETA: 0s - loss: 0.0417 - accuracy: 0.9867Deleted worse checkpoint: epoch_168_valloss_0.5749_valacc_0.8938.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.0417 - accuracy: 0.9867 - val_loss: 0.5749 - val_accuracy: 0.8938 - lr: 4.0500e-06
+Epoch 169/240
+160/160 [==============================] - ETA: 0s - loss: 0.0461 - accuracy: 0.9844Deleted worse checkpoint: epoch_169_valloss_0.5761_valacc_0.8930.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.0461 - accuracy: 0.9844 - val_loss: 0.5761 - val_accuracy: 0.8930 - lr: 4.0500e-06
+Epoch 170/240
+160/160 [==============================] - ETA: 0s - loss: 0.0381 - accuracy: 0.9877Deleted worse checkpoint: epoch_170_valloss_0.5743_valacc_0.8930.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.0381 - accuracy: 0.9877 - val_loss: 0.5743 - val_accuracy: 0.8930 - lr: 4.0500e-06
+Epoch 171/240
+160/160 [==============================] - ETA: 0s - loss: 0.0434 - accuracy: 0.9855Deleted worse checkpoint: epoch_171_valloss_0.5749_valacc_0.8938.keras
+160/160 [==============================] - 35s 219ms/step - loss: 0.0434 - accuracy: 0.9855 - val_loss: 0.5749 - val_accuracy: 0.8938 - lr: 4.0500e-06
+Epoch 172/240
+160/160 [==============================] - ETA: 0s - loss: 0.0413 - accuracy: 0.9875Deleted worse checkpoint: epoch_172_valloss_0.5729_valacc_0.8945.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.0413 - accuracy: 0.9875 - val_loss: 0.5729 - val_accuracy: 0.8945 - lr: 4.0500e-06
+Epoch 173/240
+160/160 [==============================] - ETA: 0s - loss: 0.0397 - accuracy: 0.9875Deleted worse checkpoint: epoch_173_valloss_0.5733_valacc_0.8922.keras
+160/160 [==============================] - 35s 216ms/step - loss: 0.0397 - accuracy: 0.9875 - val_loss: 0.5733 - val_accuracy: 0.8922 - lr: 4.0500e-06
+Epoch 174/240
+160/160 [==============================] - ETA: 0s - loss: 0.0416 - accuracy: 0.9879Deleted worse checkpoint: epoch_174_valloss_0.5730_valacc_0.8938.keras
+160/160 [==============================] - 35s 220ms/step - loss: 0.0416 - accuracy: 0.9879 - val_loss: 0.5730 - val_accuracy: 0.8938 - lr: 4.0500e-06
+Epoch 175/240
+160/160 [==============================] - ETA: 0s - loss: 0.0448 - accuracy: 0.9840Deleted worse checkpoint: epoch_175_valloss_0.5730_valacc_0.8930.keras
+160/160 [==============================] - 35s 218ms/step - loss: 0.0448 - accuracy: 0.9840 - val_loss: 0.5730 - val_accuracy: 0.8930 - lr: 4.0500e-06
+Epoch 176/240
+160/160 [==============================] - ETA: 0s - loss: 0.0459 - accuracy: 0.9830Deleted worse checkpoint: epoch_176_valloss_0.5701_valacc_0.8930.keras
+160/160 [==============================] - 35s 217ms/step - loss: 0.0459 - accuracy: 0.9830 - val_loss: 0.5701 - val_accuracy: 0.8930 - lr: 4.0500e-06
+Epoch 177/240
+160/160 [==============================] - ETA: 0s - loss: 0.0419 - accuracy: 0.9863Deleted worse checkpoint: epoch_177_valloss_0.5729_valacc_0.8938.keras
+160/160 [==============================] - 35s 220ms/step - loss: 0.0419 - accuracy: 0.9863 - val_loss: 0.5729 - val_accuracy: 0.8938 - lr: 4.0500e-06
+Epoch 178/240
+160/160 [==============================] - ETA: 0s - loss: 0.0381 - accuracy: 0.9887Deleted worse checkpoint: epoch_178_valloss_0.5719_valacc_0.8938.keras
+160/160 [==============================] - 37s 229ms/step - loss: 0.0381 - accuracy: 0.9887 - val_loss: 0.5719 - val_accuracy: 0.8938 - lr: 4.0500e-06
+Epoch 179/240
+160/160 [==============================] - ETA: 0s - loss: 0.0434 - accuracy: 0.9854Deleted worse checkpoint: epoch_179_valloss_0.5699_valacc_0.8914.keras
+
+Epoch 179: ReduceLROnPlateau reducing learning rate to 1.2149999747634864e-06.
+160/160 [==============================] - 38s 237ms/step - loss: 0.0434 - accuracy: 0.9854 - val_loss: 0.5699 - val_accuracy: 0.8914 - lr: 4.0500e-06
+
+Saving final model...
+
+Selecting best model...
+Best model: c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\fl\checkpoints\epoch_119_valloss_0.5663_valacc_0.8695.keras
+
+Training complete.
+Top-2 checkpoints kept in: c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\fl\checkpoints
+Best model saved as sign_lstm_best.keras
+Final model saved as sign_lstm_final.keras
+
+Process finished with exit code 0

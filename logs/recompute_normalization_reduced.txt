@@ -1,0 +1,8 @@
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\preprocessing\recompute_normalization_reduced.py 
+Loading full dataset...
+Original shape: (6400, 30, 1629)
+Reduced shape: (6400, 30, 351)
+Saved mean_reduced.npy and std_reduced.npy
+Done.
+
+Process finished with exit code 0

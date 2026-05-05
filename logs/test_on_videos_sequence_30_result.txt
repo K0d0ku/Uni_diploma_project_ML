@@ -1,0 +1,269 @@
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\inference\test_on_videos.py 
+2026-03-04 14:58:20.619926: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+
+==============================
+Testing: sign_lstm_best.h5
+==============================
+2026-03-04 14:58:56.568487: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Final sequence shape: (1, 30, 1692)
+
+VIDEO 1/10
+
+Opened: P6_S055_00.mp4
+True ID: 55
+True: Сіздің атыңыз кім (сұрақ)
+Pred ID: 66
+Pred: мен Қазақстанның солтүстігіненмін
+Confidence: 99.93%
+RESULT: FAIL
+
+Final sequence shape: (1, 30, 1692)
+
+VIDEO 2/10
+
+Opened: P18_S001_01.mp4
+True ID: 1
+True: Сәлем
+Pred ID: 1
+Pred: Сәлем
+Confidence: 99.93%
+RESULT: PASS
+
+Final sequence shape: (1, 30, 1692)
+
+VIDEO 3/10
+
+Opened: P0_S066_02.mp4
+True ID: 66
+True: мен Қазақстанның солтүстігіненмін
+Pred ID: 64
+Pred: сен қайдансың?
+Confidence: 95.93%
+RESULT: FAIL
+
+Final sequence shape: (1, 30, 1692)
+
+VIDEO 4/10
+
+Opened: P1_S048_02.mp4
+True ID: 48
+True: Әйеліңе сәлем айт
+Pred ID: 48
+Pred: Әйеліңе сәлем айт
+Confidence: 99.94%
+RESULT: PASS
+
+Final sequence shape: (1, 30, 1692)
+
+VIDEO 5/10
+
+Opened: P12_S027_03.mp4
+True ID: 27
+True: Дәретхана қайда?
+Pred ID: 27
+Pred: Дәретхана қайда?
+Confidence: 99.99%
+RESULT: PASS
+
+Final sequence shape: (1, 30, 1692)
+
+VIDEO 6/10
+
+Opened: P12_S032_00.mp4
+True ID: 32
+True: мен жұмыс іздеп жүрмін
+Pred ID: 32
+Pred: мен жұмыс іздеп жүрмін
+Confidence: 100.00%
+RESULT: PASS
+
+Final sequence shape: (1, 30, 1692)
+
+VIDEO 7/10
+
+Opened: P22_S007_04.mp4
+True ID: 7
+True: менің жағдайым жаман
+Pred ID: 7
+Pred: менің жағдайым жаман
+Confidence: 99.90%
+RESULT: PASS
+
+Final sequence shape: (1, 30, 1692)
+
+VIDEO 8/10
+
+Opened: P19_S050_03.mp4
+True ID: 50
+True: Бәрі жақсы болғанын қалаймын
+Pred ID: 50
+Pred: Бәрі жақсы болғанын қалаймын
+Confidence: 100.00%
+RESULT: PASS
+
+Final sequence shape: (1, 30, 1692)
+
+VIDEO 9/10
+
+Opened: P3_S075_04.mp4
+True ID: 75
+True: Иә, мен осында дүниеге келдім
+Pred ID: 59
+Pred: Танысқаныма қуаныштымын
+Confidence: 92.69%
+RESULT: FAIL
+
+Final sequence shape: (1, 30, 1692)
+
+VIDEO 10/10
+
+Opened: P19_S026_04.mp4
+True ID: 26
+True: Жарайды, мен бүгін көп нәрсе жасадым
+Pred ID: 26
+Pred: Жарайды, мен бүгін көп нәрсе жасадым
+Confidence: 100.00%
+RESULT: PASS
+
+
+==============================
+Testing: sign_lstm_supreme_best.keras
+==============================
+Final sequence shape: (1, 30, 1692)
+
+VIDEO 1/10
+
+Opened: P3_S067_04.mp4
+True ID: 67
+True: мен Қазақстанның оңтүстігіненмін
+Pred ID: 64
+Pred: сен қайдансың?
+Confidence: 96.90%
+RESULT: FAIL
+
+Final sequence shape: (1, 30, 1692)
+
+VIDEO 2/10
+
+Opened: P16_S007_02.mp4
+True ID: 7
+True: менің жағдайым жаман
+Pred ID: 7
+Pred: менің жағдайым жаман
+Confidence: 100.00%
+RESULT: PASS
+
+Final sequence shape: (1, 30, 1692)
+
+VIDEO 3/10
+
+Opened: P20_S041_02.mp4
+True ID: 41
+True: Күндеріңіз сәтті өтсін
+Pred ID: 41
+Pred: Күндеріңіз сәтті өтсін
+Confidence: 100.00%
+RESULT: PASS
+
+Final sequence shape: (1, 30, 1692)
+
+VIDEO 4/10
+
+Opened: P21_S056_04.mp4
+True ID: 56
+True: менің атым
+Pred ID: 56
+Pred: менің атым
+Confidence: 100.00%
+RESULT: PASS
+
+Final sequence shape: (1, 30, 1692)
+
+VIDEO 5/10
+
+Opened: P16_S017_04.mp4
+True ID: 17
+True: бірдеңе болды (сұрақ)
+Pred ID: 17
+Pred: бірдеңе болды (сұрақ)
+Confidence: 69.40%
+RESULT: PASS
+
+Final sequence shape: (1, 30, 1692)
+
+VIDEO 6/10
+
+Opened: P3_S020_01.mp4
+True ID: 20
+True: менің саған жаңалығым бар
+Pred ID: 59
+Pred: Танысқаныма қуаныштымын
+Confidence: 99.32%
+RESULT: FAIL
+
+Final sequence shape: (1, 30, 1692)
+
+VIDEO 7/10
+
+Opened: P18_S027_02.mp4
+True ID: 27
+True: Дәретхана қайда?
+Pred ID: 27
+Pred: Дәретхана қайда?
+Confidence: 100.00%
+RESULT: PASS
+
+Final sequence shape: (1, 30, 1692)
+
+VIDEO 8/10
+
+Opened: P23_S049_02.mp4
+True ID: 49
+True: ертеңгі сәттілік
+Pred ID: 49
+Pred: ертеңгі сәттілік
+Confidence: 100.00%
+RESULT: PASS
+
+Final sequence shape: (1, 30, 1692)
+
+VIDEO 9/10
+
+Opened: P1_S048_04.mp4
+True ID: 48
+True: Әйеліңе сәлем айт
+Pred ID: 48
+Pred: Әйеліңе сәлем айт
+Confidence: 100.00%
+RESULT: PASS
+
+Final sequence shape: (1, 30, 1692)
+
+VIDEO 10/10
+
+Opened: P11_S030_04.mp4
+True ID: 30
+True: маған көмек керек
+Pred ID: 30
+Pred: маған көмек керек
+Confidence: 100.00%
+RESULT: PASS
+
+
+==============================
+FINAL COMPARISON
+==============================
+
+Model                  Score
+
+sign_lstm_best        7/10
+sign_lstm_supreme     8/10
+
+
+Process finished with exit code 0

@@ -1,0 +1,722 @@
+{
+    "000": {
+        "avg_fps": 29.697575152120606,
+        "avg_frames": 106,
+        "avg_duration": 3.5702333333333334,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "001": {
+        "avg_fps": 29.97002997002997,
+        "avg_frames": 90,
+        "avg_duration": 3.003,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "002": {
+        "avg_fps": 29.97002997002997,
+        "avg_frames": 143.5,
+        "avg_duration": 4.788116666666667,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "003": {
+        "avg_fps": 29.97002997002997,
+        "avg_frames": 119,
+        "avg_duration": 3.9706333333333337,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "004": {
+        "avg_fps": 29.97002997002997,
+        "avg_frames": 131.5,
+        "avg_duration": 4.387716666666667,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "005": {
+        "avg_fps": 29.97002997002997,
+        "avg_frames": 115.5,
+        "avg_duration": 3.85385,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "006": {
+        "avg_fps": 29.97002997002997,
+        "avg_frames": 125,
+        "avg_duration": 4.170833333333333,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "007": {
+        "avg_fps": 29.766152215131807,
+        "avg_frames": 129.5,
+        "avg_duration": 4.35435,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "008": {
+        "avg_fps": 29.97002997002997,
+        "avg_frames": 127.5,
+        "avg_duration": 4.25425,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "009": {
+        "avg_fps": 29.97002997002997,
+        "avg_frames": 115.5,
+        "avg_duration": 3.8538500000000004,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "010": {
+        "avg_fps": 29.97002997002997,
+        "avg_frames": 120.5,
+        "avg_duration": 4.020683333333333,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "011": {
+        "avg_fps": 29.97002997002997,
+        "avg_frames": 111,
+        "avg_duration": 3.7037,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "012": {
+        "avg_fps": 29.97002997002997,
+        "avg_frames": 135,
+        "avg_duration": 4.5045,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "013": {
+        "avg_fps": 29.413837301112842,
+        "avg_frames": 106,
+        "avg_duration": 3.6036,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "014": {
+        "avg_fps": 29.451416786391054,
+        "avg_frames": 114,
+        "avg_duration": 3.8705333333333334,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "015": {
+        "avg_fps": 29.37008942413807,
+        "avg_frames": 98,
+        "avg_duration": 3.336666666666667,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "016": {
+        "avg_fps": 29.4661896696226,
+        "avg_frames": 117,
+        "avg_duration": 3.970633333333333,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "017": {
+        "avg_fps": 29.373478571339533,
+        "avg_frames": 98.5,
+        "avg_duration": 3.35335,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "018": {
+        "avg_fps": 29.483720851478047,
+        "avg_frames": 121.5,
+        "avg_duration": 4.120783333333334,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "019": {
+        "avg_fps": 29.3793585055721,
+        "avg_frames": 99.5,
+        "avg_duration": 3.3867166666666666,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "020": {
+        "avg_fps": 29.436966195859476,
+        "avg_frames": 110.5,
+        "avg_duration": 3.75375,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "021": {
+        "avg_fps": 29.418449849011267,
+        "avg_frames": 107,
+        "avg_duration": 3.636966666666667,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "022": {
+        "avg_fps": 29.42471472783275,
+        "avg_frames": 108,
+        "avg_duration": 3.6703333333333337,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "023": {
+        "avg_fps": 29.365035451462717,
+        "avg_frames": 97.5,
+        "avg_duration": 3.319983333333333,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "024": {
+        "avg_fps": 29.48853729651879,
+        "avg_frames": 123,
+        "avg_duration": 4.170833333333333,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "025": {
+        "avg_fps": 29.406902201538756,
+        "avg_frames": 104.5,
+        "avg_duration": 3.55355,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "026": {
+        "avg_fps": 29.639288798040496,
+        "avg_frames": 181,
+        "avg_duration": 6.1061,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "027": {
+        "avg_fps": 29.505614643822135,
+        "avg_frames": 127.5,
+        "avg_duration": 4.3209833333333325,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "028": {
+        "avg_fps": 29.41243595449203,
+        "avg_frames": 105.5,
+        "avg_duration": 3.5869166666666663,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "029": {
+        "avg_fps": 29.509576837102152,
+        "avg_frames": 128.5,
+        "avg_duration": 4.35435,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "030": {
+        "avg_fps": 29.424940139225853,
+        "avg_frames": 108,
+        "avg_duration": 3.6703333333333332,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "031": {
+        "avg_fps": 29.3934710355918,
+        "avg_frames": 102.5,
+        "avg_duration": 3.486816666666667,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "032": {
+        "avg_fps": 29.446046395198938,
+        "avg_frames": 112.5,
+        "avg_duration": 3.8204833333333337,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "033": {
+        "avg_fps": 29.43942074376857,
+        "avg_frames": 111,
+        "avg_duration": 3.7704333333333335,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "034": {
+        "avg_fps": 29.446732991551237,
+        "avg_frames": 114,
+        "avg_duration": 3.8705333333333334,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "035": {
+        "avg_fps": 29.417293568236964,
+        "avg_frames": 106.5,
+        "avg_duration": 3.6202833333333335,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "036": {
+        "avg_fps": 29.44845711189537,
+        "avg_frames": 113,
+        "avg_duration": 3.8371666666666666,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "037": {
+        "avg_fps": 24.0,
+        "avg_frames": 235,
+        "avg_duration": 9.791666666666666,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "038": {
+        "avg_fps": 29.388032781697937,
+        "avg_frames": 101,
+        "avg_duration": 3.4367666666666667,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "039": {
+        "avg_fps": 29.5205300260912,
+        "avg_frames": 131.5,
+        "avg_duration": 4.45445,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "040": {
+        "avg_fps": 29.40972071406854,
+        "avg_frames": 105.5,
+        "avg_duration": 3.5869166666666668,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "041": {
+        "avg_fps": 29.40155852777212,
+        "avg_frames": 103.5,
+        "avg_duration": 3.520183333333333,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "042": {
+        "avg_fps": 29.455437708938078,
+        "avg_frames": 114.5,
+        "avg_duration": 3.8872166666666663,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "043": {
+        "avg_fps": 29.29518299537275,
+        "avg_frames": 87,
+        "avg_duration": 2.9696333333333333,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "044": {
+        "avg_fps": 29.3793585055721,
+        "avg_frames": 99.5,
+        "avg_duration": 3.3867166666666666,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "045": {
+        "avg_fps": 29.398965067234734,
+        "avg_frames": 103,
+        "avg_duration": 3.5035,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "046": {
+        "avg_fps": 29.390885440175957,
+        "avg_frames": 101.5,
+        "avg_duration": 3.45345,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "047": {
+        "avg_fps": 29.97002997002997,
+        "avg_frames": 90,
+        "avg_duration": 3.003,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "048": {
+        "avg_fps": 29.739491277952816,
+        "avg_frames": 130,
+        "avg_duration": 4.371033333333333,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "049": {
+        "avg_fps": 29.97002997002997,
+        "avg_frames": 89.5,
+        "avg_duration": 2.9863166666666667,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "050": {
+        "avg_fps": 29.76044934086892,
+        "avg_frames": 129,
+        "avg_duration": 4.337666666666667,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "051": {
+        "avg_fps": 29.97002997002997,
+        "avg_frames": 85.5,
+        "avg_duration": 2.85285,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "052": {
+        "avg_fps": 29.97002997002997,
+        "avg_frames": 96.5,
+        "avg_duration": 3.2198833333333337,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "053": {
+        "avg_fps": 29.41559719053325,
+        "avg_frames": 106.5,
+        "avg_duration": 3.620283333333333,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "054": {
+        "avg_fps": 30.0,
+        "avg_frames": 86.5,
+        "avg_duration": 2.8833333333333333,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "055": {
+        "avg_fps": 30.0,
+        "avg_frames": 110.5,
+        "avg_duration": 3.6833333333333336,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "056": {
+        "avg_fps": 30.0,
+        "avg_frames": 120.5,
+        "avg_duration": 4.016666666666667,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "058": {
+        "avg_fps": 30.0,
+        "avg_frames": 139.5,
+        "avg_duration": 4.65,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "059": {
+        "avg_fps": 30.0,
+        "avg_frames": 105,
+        "avg_duration": 3.5,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "060": {
+        "avg_fps": 30.0,
+        "avg_frames": 106,
+        "avg_duration": 3.533333333333333,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "061": {
+        "avg_fps": 30.0,
+        "avg_frames": 119.5,
+        "avg_duration": 3.9833333333333334,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "062": {
+        "avg_fps": 30.0,
+        "avg_frames": 110,
+        "avg_duration": 3.666666666666667,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "064": {
+        "avg_fps": 30.0,
+        "avg_frames": 99.5,
+        "avg_duration": 3.3166666666666664,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "065": {
+        "avg_fps": 30.0,
+        "avg_frames": 100.5,
+        "avg_duration": 3.35,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "066": {
+        "avg_fps": 30.0,
+        "avg_frames": 114,
+        "avg_duration": 3.8,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "067": {
+        "avg_fps": 30.0,
+        "avg_frames": 103.5,
+        "avg_duration": 3.45,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "068": {
+        "avg_fps": 30.0,
+        "avg_frames": 117.5,
+        "avg_duration": 3.916666666666667,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "069": {
+        "avg_fps": 30.0,
+        "avg_frames": 136.5,
+        "avg_duration": 4.55,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "070": {
+        "avg_fps": 30.0,
+        "avg_frames": 121.5,
+        "avg_duration": 4.05,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "071": {
+        "avg_fps": 30.0,
+        "avg_frames": 130,
+        "avg_duration": 4.333333333333334,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "072": {
+        "avg_fps": 30.0,
+        "avg_frames": 140.5,
+        "avg_duration": 4.683333333333334,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "073": {
+        "avg_fps": 30.0,
+        "avg_frames": 133,
+        "avg_duration": 4.433333333333334,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "074": {
+        "avg_fps": 30.0,
+        "avg_frames": 133.5,
+        "avg_duration": 4.449999999999999,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "075": {
+        "avg_fps": 30.0,
+        "avg_frames": 143,
+        "avg_duration": 4.766666666666667,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "076": {
+        "avg_fps": 30.0,
+        "avg_frames": 136,
+        "avg_duration": 4.533333333333333,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "077": {
+        "avg_fps": 30.0,
+        "avg_frames": 131.5,
+        "avg_duration": 4.383333333333333,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "078": {
+        "avg_fps": 30.0,
+        "avg_frames": 128,
+        "avg_duration": 4.266666666666667,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "079": {
+        "avg_fps": 30.0,
+        "avg_frames": 146,
+        "avg_duration": 4.866666666666667,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "080": {
+        "avg_fps": 30.0,
+        "avg_frames": 125,
+        "avg_duration": 4.166666666666666,
+        "resolution": [
+            1280,
+            720
+        ]
+    },
+    "081": {
+        "avg_fps": 30.0,
+        "avg_frames": 146.5,
+        "avg_duration": 4.883333333333333,
+        "resolution": [
+            1280,
+            720
+        ]
+    }
+}

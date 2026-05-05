@@ -1,0 +1,27 @@
+Epoch 116: val_loss did not improve from 1.04567
+160/160 [==============================] - 28s 176ms/step - loss: 0.9449 - accuracy: 0.9861 - val_loss: 1.0607 - val_accuracy: 0.9211
+Epoch 117/120
+160/160 [==============================] - ETA: 0s - loss: 0.9453 - accuracy: 0.9854
+Epoch 117: val_loss did not improve from 1.04567
+160/160 [==============================] - 28s 174ms/step - loss: 0.9453 - accuracy: 0.9854 - val_loss: 1.0556 - val_accuracy: 0.9219
+Epoch 118/120
+160/160 [==============================] - ETA: 0s - loss: 0.9399 - accuracy: 0.9883
+Epoch 118: val_loss did not improve from 1.04567
+160/160 [==============================] - 28s 172ms/step - loss: 0.9399 - accuracy: 0.9883 - val_loss: 1.0872 - val_accuracy: 0.9172
+Epoch 119/120
+160/160 [==============================] - ETA: 0s - loss: 0.9376 - accuracy: 0.9879
+Epoch 119: val_loss did not improve from 1.04567
+160/160 [==============================] - 28s 173ms/step - loss: 0.9376 - accuracy: 0.9879 - val_loss: 1.0521 - val_accuracy: 0.9180
+Epoch 120/120
+160/160 [==============================] - ETA: 0s - loss: 0.9378 - accuracy: 0.9879
+Epoch 120: val_loss did not improve from 1.04567
+160/160 [==============================] - 28s 174ms/step - loss: 0.9378 - accuracy: 0.9879 - val_loss: 1.0572 - val_accuracy: 0.9148
+
+Saving final model...
+
+Training complete.
+Best model saved as: sign_lstm_best_1.4.h5
+Final model saved as: sign_lstm_model_1.4.h5
+Normalization saved as: mean.npy, std.npy
+
+Process finished with exit code 0

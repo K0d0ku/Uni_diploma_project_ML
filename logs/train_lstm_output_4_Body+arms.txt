@@ -1,0 +1,361 @@
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\training\train_lstm.py 
+2026-03-03 02:46:22.590020: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+
+Loading dataset...
+X shape: (6400, 30, 225)
+y shape: (6400,)
+
+Train set: (5120, 30, 225)
+Validation set: (1280, 30, 225)
+
+Normalizing dataset...
+Normalization saved.
+
+Number of classes: 80
+
+Building model...
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\backend.py:873: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+2026-03-03 02:46:39.789656: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ bidirectional (Bidirection  (None, 30, 128)           148480    
+ al)                                                             
+                                                                 
+ batch_normalization (Batch  (None, 30, 128)           512       
+ Normalization)                                                  
+                                                                 
+ dropout (Dropout)           (None, 30, 128)           0         
+                                                                 
+ bidirectional_1 (Bidirecti  (None, 128)               98816     
+ onal)                                                           
+                                                                 
+ batch_normalization_1 (Bat  (None, 128)               512       
+ chNormalization)                                                
+                                                                 
+ dropout_1 (Dropout)         (None, 128)               0         
+                                                                 
+ dense (Dense)               (None, 128)               16512     
+                                                                 
+ dropout_2 (Dropout)         (None, 128)               0         
+                                                                 
+ dense_1 (Dense)             (None, 80)                10320     
+                                                                 
+=================================================================
+Total params: 275152 (1.05 MB)
+Trainable params: 274640 (1.05 MB)
+Non-trainable params: 512 (2.00 KB)
+_________________________________________________________________
+
+Training...
+Epoch 1/80
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\engine\base_layer_utils.py:384: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+160/160 [==============================] - ETA: 0s - loss: 4.8790 - accuracy: 0.0164
+Epoch 1: val_accuracy improved from -inf to 0.03906, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 31s 90ms/step - loss: 4.8790 - accuracy: 0.0164 - val_loss: 4.3071 - val_accuracy: 0.0391
+Epoch 2/80
+160/160 [==============================] - ETA: 0s - loss: 4.5669 - accuracy: 0.0266
+Epoch 2: val_accuracy improved from 0.03906 to 0.07031, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 9s 59ms/step - loss: 4.5669 - accuracy: 0.0266 - val_loss: 4.1238 - val_accuracy: 0.0703
+Epoch 3/80
+160/160 [==============================] - ETA: 0s - loss: 4.3407 - accuracy: 0.0381
+Epoch 3: val_accuracy improved from 0.07031 to 0.10859, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 10s 60ms/step - loss: 4.3407 - accuracy: 0.0381 - val_loss: 3.8993 - val_accuracy: 0.1086
+Epoch 4/80
+160/160 [==============================] - ETA: 0s - loss: 4.1121 - accuracy: 0.0604
+Epoch 4: val_accuracy improved from 0.10859 to 0.16719, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 11s 71ms/step - loss: 4.1121 - accuracy: 0.0604 - val_loss: 3.6236 - val_accuracy: 0.1672
+Epoch 5/80
+160/160 [==============================] - ETA: 0s - loss: 3.8607 - accuracy: 0.0889
+Epoch 5: val_accuracy improved from 0.16719 to 0.23281, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 9s 57ms/step - loss: 3.8607 - accuracy: 0.0889 - val_loss: 3.3452 - val_accuracy: 0.2328
+Epoch 6/80
+160/160 [==============================] - ETA: 0s - loss: 3.5991 - accuracy: 0.1187
+Epoch 6: val_accuracy improved from 0.23281 to 0.27344, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 9s 56ms/step - loss: 3.5991 - accuracy: 0.1187 - val_loss: 3.0477 - val_accuracy: 0.2734
+Epoch 7/80
+160/160 [==============================] - ETA: 0s - loss: 3.3281 - accuracy: 0.1561
+Epoch 7: val_accuracy improved from 0.27344 to 0.34375, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 10s 62ms/step - loss: 3.3281 - accuracy: 0.1561 - val_loss: 2.7279 - val_accuracy: 0.3438
+Epoch 8/80
+160/160 [==============================] - ETA: 0s - loss: 3.0807 - accuracy: 0.1857
+Epoch 8: val_accuracy improved from 0.34375 to 0.39766, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 12s 72ms/step - loss: 3.0807 - accuracy: 0.1857 - val_loss: 2.4364 - val_accuracy: 0.3977
+Epoch 9/80
+160/160 [==============================] - ETA: 0s - loss: 2.7908 - accuracy: 0.2469
+Epoch 9: val_accuracy improved from 0.39766 to 0.46406, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 10s 62ms/step - loss: 2.7908 - accuracy: 0.2469 - val_loss: 2.1473 - val_accuracy: 0.4641
+Epoch 10/80
+160/160 [==============================] - ETA: 0s - loss: 2.5242 - accuracy: 0.2969
+Epoch 10: val_accuracy improved from 0.46406 to 0.51250, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 10s 62ms/step - loss: 2.5242 - accuracy: 0.2969 - val_loss: 1.8876 - val_accuracy: 0.5125
+Epoch 11/80
+160/160 [==============================] - ETA: 0s - loss: 2.3272 - accuracy: 0.3389
+Epoch 11: val_accuracy improved from 0.51250 to 0.55937, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 10s 60ms/step - loss: 2.3272 - accuracy: 0.3389 - val_loss: 1.6676 - val_accuracy: 0.5594
+Epoch 12/80
+160/160 [==============================] - ETA: 0s - loss: 2.1391 - accuracy: 0.3744
+Epoch 12: val_accuracy improved from 0.55937 to 0.59453, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 9s 57ms/step - loss: 2.1391 - accuracy: 0.3744 - val_loss: 1.5057 - val_accuracy: 0.5945
+Epoch 13/80
+160/160 [==============================] - ETA: 0s - loss: 1.9320 - accuracy: 0.4254
+Epoch 13: val_accuracy improved from 0.59453 to 0.62891, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 9s 58ms/step - loss: 1.9320 - accuracy: 0.4254 - val_loss: 1.3670 - val_accuracy: 0.6289
+Epoch 14/80
+160/160 [==============================] - ETA: 0s - loss: 1.7791 - accuracy: 0.4664
+Epoch 14: val_accuracy improved from 0.62891 to 0.65547, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 11s 67ms/step - loss: 1.7791 - accuracy: 0.4664 - val_loss: 1.2352 - val_accuracy: 0.6555
+Epoch 15/80
+160/160 [==============================] - ETA: 0s - loss: 1.6376 - accuracy: 0.5010
+Epoch 15: val_accuracy improved from 0.65547 to 0.68750, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 11s 70ms/step - loss: 1.6376 - accuracy: 0.5010 - val_loss: 1.1153 - val_accuracy: 0.6875
+Epoch 16/80
+159/160 [============================>.] - ETA: 0s - loss: 1.5196 - accuracy: 0.5271
+Epoch 16: val_accuracy improved from 0.68750 to 0.71406, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 12s 74ms/step - loss: 1.5184 - accuracy: 0.5279 - val_loss: 1.0111 - val_accuracy: 0.7141
+Epoch 17/80
+160/160 [==============================] - ETA: 0s - loss: 1.3854 - accuracy: 0.5629
+Epoch 17: val_accuracy improved from 0.71406 to 0.73594, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 10s 61ms/step - loss: 1.3854 - accuracy: 0.5629 - val_loss: 0.9164 - val_accuracy: 0.7359
+Epoch 18/80
+160/160 [==============================] - ETA: 0s - loss: 1.2707 - accuracy: 0.6029
+Epoch 18: val_accuracy did not improve from 0.73594
+160/160 [==============================] - 10s 61ms/step - loss: 1.2707 - accuracy: 0.6029 - val_loss: 0.8927 - val_accuracy: 0.7305
+Epoch 19/80
+160/160 [==============================] - ETA: 0s - loss: 1.2097 - accuracy: 0.6119
+Epoch 19: val_accuracy improved from 0.73594 to 0.77031, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 10s 60ms/step - loss: 1.2097 - accuracy: 0.6119 - val_loss: 0.7821 - val_accuracy: 0.7703
+Epoch 20/80
+160/160 [==============================] - ETA: 0s - loss: 1.1279 - accuracy: 0.6387
+Epoch 20: val_accuracy did not improve from 0.77031
+160/160 [==============================] - 10s 61ms/step - loss: 1.1279 - accuracy: 0.6387 - val_loss: 0.7661 - val_accuracy: 0.7703
+Epoch 21/80
+160/160 [==============================] - ETA: 0s - loss: 1.0328 - accuracy: 0.6594
+Epoch 21: val_accuracy improved from 0.77031 to 0.80391, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 10s 63ms/step - loss: 1.0328 - accuracy: 0.6594 - val_loss: 0.7132 - val_accuracy: 0.8039
+Epoch 22/80
+160/160 [==============================] - ETA: 0s - loss: 0.9756 - accuracy: 0.6842
+Epoch 22: val_accuracy improved from 0.80391 to 0.82422, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 10s 60ms/step - loss: 0.9756 - accuracy: 0.6842 - val_loss: 0.6520 - val_accuracy: 0.8242
+Epoch 23/80
+160/160 [==============================] - ETA: 0s - loss: 0.8877 - accuracy: 0.7084
+Epoch 23: val_accuracy did not improve from 0.82422
+160/160 [==============================] - 9s 58ms/step - loss: 0.8877 - accuracy: 0.7084 - val_loss: 0.6228 - val_accuracy: 0.8125
+Epoch 24/80
+160/160 [==============================] - ETA: 0s - loss: 0.8295 - accuracy: 0.7258
+Epoch 24: val_accuracy improved from 0.82422 to 0.82500, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 9s 59ms/step - loss: 0.8295 - accuracy: 0.7258 - val_loss: 0.6011 - val_accuracy: 0.8250
+Epoch 25/80
+160/160 [==============================] - ETA: 0s - loss: 0.7935 - accuracy: 0.7338
+Epoch 25: val_accuracy did not improve from 0.82500
+160/160 [==============================] - 9s 58ms/step - loss: 0.7935 - accuracy: 0.7338 - val_loss: 0.6335 - val_accuracy: 0.8070
+Epoch 26/80
+159/160 [============================>.] - ETA: 0s - loss: 0.7398 - accuracy: 0.7551
+Epoch 26: val_accuracy improved from 0.82500 to 0.84219, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 9s 58ms/step - loss: 0.7389 - accuracy: 0.7555 - val_loss: 0.5490 - val_accuracy: 0.8422
+Epoch 27/80
+160/160 [==============================] - ETA: 0s - loss: 0.7024 - accuracy: 0.7670
+Epoch 27: val_accuracy did not improve from 0.84219
+160/160 [==============================] - 9s 57ms/step - loss: 0.7024 - accuracy: 0.7670 - val_loss: 0.5323 - val_accuracy: 0.8398
+Epoch 28/80
+160/160 [==============================] - ETA: 0s - loss: 0.6952 - accuracy: 0.7744
+Epoch 28: val_accuracy improved from 0.84219 to 0.85156, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 9s 59ms/step - loss: 0.6952 - accuracy: 0.7744 - val_loss: 0.5165 - val_accuracy: 0.8516
+Epoch 29/80
+160/160 [==============================] - ETA: 0s - loss: 0.6312 - accuracy: 0.7947
+Epoch 29: val_accuracy did not improve from 0.85156
+160/160 [==============================] - 9s 59ms/step - loss: 0.6312 - accuracy: 0.7947 - val_loss: 0.5190 - val_accuracy: 0.8438
+Epoch 30/80
+160/160 [==============================] - ETA: 0s - loss: 0.5898 - accuracy: 0.8029
+Epoch 30: val_accuracy improved from 0.85156 to 0.86641, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 9s 58ms/step - loss: 0.5898 - accuracy: 0.8029 - val_loss: 0.4996 - val_accuracy: 0.8664
+Epoch 31/80
+160/160 [==============================] - ETA: 0s - loss: 0.5765 - accuracy: 0.8125
+Epoch 31: val_accuracy did not improve from 0.86641
+160/160 [==============================] - 9s 57ms/step - loss: 0.5765 - accuracy: 0.8125 - val_loss: 0.4947 - val_accuracy: 0.8562
+Epoch 32/80
+160/160 [==============================] - ETA: 0s - loss: 0.5661 - accuracy: 0.8057
+Epoch 32: val_accuracy did not improve from 0.86641
+160/160 [==============================] - 9s 57ms/step - loss: 0.5661 - accuracy: 0.8057 - val_loss: 0.4521 - val_accuracy: 0.8625
+Epoch 33/80
+160/160 [==============================] - ETA: 0s - loss: 0.5173 - accuracy: 0.8309
+Epoch 33: val_accuracy did not improve from 0.86641
+160/160 [==============================] - 10s 60ms/step - loss: 0.5173 - accuracy: 0.8309 - val_loss: 0.4579 - val_accuracy: 0.8594
+Epoch 34/80
+160/160 [==============================] - ETA: 0s - loss: 0.4841 - accuracy: 0.8373
+Epoch 34: val_accuracy improved from 0.86641 to 0.87578, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 9s 57ms/step - loss: 0.4841 - accuracy: 0.8373 - val_loss: 0.4590 - val_accuracy: 0.8758
+Epoch 35/80
+159/160 [============================>.] - ETA: 0s - loss: 0.4893 - accuracy: 0.8398
+Epoch 35: val_accuracy did not improve from 0.87578
+160/160 [==============================] - 9s 58ms/step - loss: 0.4889 - accuracy: 0.8396 - val_loss: 0.4477 - val_accuracy: 0.8594
+Epoch 36/80
+160/160 [==============================] - ETA: 0s - loss: 0.4533 - accuracy: 0.8488
+Epoch 36: val_accuracy did not improve from 0.87578
+160/160 [==============================] - 9s 59ms/step - loss: 0.4533 - accuracy: 0.8488 - val_loss: 0.4393 - val_accuracy: 0.8750
+Epoch 37/80
+160/160 [==============================] - ETA: 0s - loss: 0.4251 - accuracy: 0.8594
+Epoch 37: val_accuracy improved from 0.87578 to 0.87734, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 9s 59ms/step - loss: 0.4251 - accuracy: 0.8594 - val_loss: 0.4527 - val_accuracy: 0.8773
+Epoch 38/80
+160/160 [==============================] - ETA: 0s - loss: 0.4154 - accuracy: 0.8596
+Epoch 38: val_accuracy improved from 0.87734 to 0.88672, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 9s 58ms/step - loss: 0.4154 - accuracy: 0.8596 - val_loss: 0.4183 - val_accuracy: 0.8867
+Epoch 39/80
+160/160 [==============================] - ETA: 0s - loss: 0.4095 - accuracy: 0.8576
+Epoch 39: val_accuracy did not improve from 0.88672
+160/160 [==============================] - 9s 57ms/step - loss: 0.4095 - accuracy: 0.8576 - val_loss: 0.4467 - val_accuracy: 0.8672
+Epoch 40/80
+160/160 [==============================] - ETA: 0s - loss: 0.3782 - accuracy: 0.8746
+Epoch 40: val_accuracy improved from 0.88672 to 0.89141, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 10s 61ms/step - loss: 0.3782 - accuracy: 0.8746 - val_loss: 0.4222 - val_accuracy: 0.8914
+Epoch 41/80
+160/160 [==============================] - ETA: 0s - loss: 0.3612 - accuracy: 0.8789
+Epoch 41: val_accuracy did not improve from 0.89141
+160/160 [==============================] - 9s 57ms/step - loss: 0.3612 - accuracy: 0.8789 - val_loss: 0.4104 - val_accuracy: 0.8914
+Epoch 42/80
+159/160 [============================>.] - ETA: 0s - loss: 0.3570 - accuracy: 0.8868
+Epoch 42: val_accuracy did not improve from 0.89141
+160/160 [==============================] - 9s 58ms/step - loss: 0.3570 - accuracy: 0.8865 - val_loss: 0.4075 - val_accuracy: 0.8883
+Epoch 43/80
+159/160 [============================>.] - ETA: 0s - loss: 0.3492 - accuracy: 0.8827
+Epoch 43: val_accuracy did not improve from 0.89141
+160/160 [==============================] - 10s 63ms/step - loss: 0.3490 - accuracy: 0.8826 - val_loss: 0.4450 - val_accuracy: 0.8758
+Epoch 44/80
+160/160 [==============================] - ETA: 0s - loss: 0.3283 - accuracy: 0.8893
+Epoch 44: val_accuracy improved from 0.89141 to 0.89297, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 10s 62ms/step - loss: 0.3283 - accuracy: 0.8893 - val_loss: 0.4224 - val_accuracy: 0.8930
+Epoch 45/80
+159/160 [============================>.] - ETA: 0s - loss: 0.3273 - accuracy: 0.8919
+Epoch 45: val_accuracy improved from 0.89297 to 0.90000, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 10s 60ms/step - loss: 0.3272 - accuracy: 0.8920 - val_loss: 0.4067 - val_accuracy: 0.9000
+Epoch 46/80
+160/160 [==============================] - ETA: 0s - loss: 0.2947 - accuracy: 0.8975
+Epoch 46: val_accuracy did not improve from 0.90000
+160/160 [==============================] - 10s 60ms/step - loss: 0.2947 - accuracy: 0.8975 - val_loss: 0.4106 - val_accuracy: 0.8891
+Epoch 47/80
+160/160 [==============================] - ETA: 0s - loss: 0.2952 - accuracy: 0.8996
+Epoch 47: val_accuracy did not improve from 0.90000
+160/160 [==============================] - 13s 82ms/step - loss: 0.2952 - accuracy: 0.8996 - val_loss: 0.3837 - val_accuracy: 0.8992
+Epoch 48/80
+160/160 [==============================] - ETA: 0s - loss: 0.2792 - accuracy: 0.9035
+Epoch 48: val_accuracy did not improve from 0.90000
+160/160 [==============================] - 9s 59ms/step - loss: 0.2792 - accuracy: 0.9035 - val_loss: 0.4101 - val_accuracy: 0.8875
+Epoch 49/80
+160/160 [==============================] - ETA: 0s - loss: 0.2828 - accuracy: 0.9039
+Epoch 49: val_accuracy improved from 0.90000 to 0.90078, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 10s 60ms/step - loss: 0.2828 - accuracy: 0.9039 - val_loss: 0.3998 - val_accuracy: 0.9008
+Epoch 50/80
+159/160 [============================>.] - ETA: 0s - loss: 0.2637 - accuracy: 0.9135
+Epoch 50: val_accuracy did not improve from 0.90078
+160/160 [==============================] - 9s 59ms/step - loss: 0.2638 - accuracy: 0.9133 - val_loss: 0.3877 - val_accuracy: 0.8930
+Epoch 51/80
+159/160 [============================>.] - ETA: 0s - loss: 0.2556 - accuracy: 0.9133
+Epoch 51: val_accuracy improved from 0.90078 to 0.90391, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 10s 63ms/step - loss: 0.2548 - accuracy: 0.9137 - val_loss: 0.3970 - val_accuracy: 0.9039
+Epoch 52/80
+159/160 [============================>.] - ETA: 0s - loss: 0.2860 - accuracy: 0.9088
+Epoch 52: val_accuracy improved from 0.90391 to 0.90859, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 9s 58ms/step - loss: 0.2874 - accuracy: 0.9080 - val_loss: 0.3550 - val_accuracy: 0.9086
+Epoch 53/80
+159/160 [============================>.] - ETA: 0s - loss: 0.2662 - accuracy: 0.9068
+Epoch 53: val_accuracy did not improve from 0.90859
+160/160 [==============================] - 10s 63ms/step - loss: 0.2658 - accuracy: 0.9072 - val_loss: 0.4000 - val_accuracy: 0.9023
+Epoch 54/80
+159/160 [============================>.] - ETA: 0s - loss: 0.2239 - accuracy: 0.9237
+Epoch 54: val_accuracy did not improve from 0.90859
+160/160 [==============================] - 10s 60ms/step - loss: 0.2231 - accuracy: 0.9240 - val_loss: 0.3952 - val_accuracy: 0.9016
+Epoch 55/80
+160/160 [==============================] - ETA: 0s - loss: 0.2410 - accuracy: 0.9205
+Epoch 55: val_accuracy did not improve from 0.90859
+160/160 [==============================] - 10s 60ms/step - loss: 0.2410 - accuracy: 0.9205 - val_loss: 0.4071 - val_accuracy: 0.8906
+Epoch 56/80
+160/160 [==============================] - ETA: 0s - loss: 0.2332 - accuracy: 0.9201
+Epoch 56: val_accuracy improved from 0.90859 to 0.91016, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 10s 63ms/step - loss: 0.2332 - accuracy: 0.9201 - val_loss: 0.3808 - val_accuracy: 0.9102
+Epoch 57/80
+160/160 [==============================] - ETA: 0s - loss: 0.2282 - accuracy: 0.9250
+Epoch 57: val_accuracy did not improve from 0.91016
+160/160 [==============================] - 10s 63ms/step - loss: 0.2282 - accuracy: 0.9250 - val_loss: 0.3853 - val_accuracy: 0.9078
+Epoch 58/80
+159/160 [============================>.] - ETA: 0s - loss: 0.2189 - accuracy: 0.9255
+Epoch 58: val_accuracy did not improve from 0.91016
+160/160 [==============================] - 10s 61ms/step - loss: 0.2186 - accuracy: 0.9256 - val_loss: 0.3691 - val_accuracy: 0.9070
+Epoch 59/80
+160/160 [==============================] - ETA: 0s - loss: 0.2327 - accuracy: 0.9266
+Epoch 59: val_accuracy did not improve from 0.91016
+160/160 [==============================] - 10s 61ms/step - loss: 0.2327 - accuracy: 0.9266 - val_loss: 0.3939 - val_accuracy: 0.9039
+Epoch 60/80
+160/160 [==============================] - ETA: 0s - loss: 0.2141 - accuracy: 0.9271
+Epoch 60: val_accuracy did not improve from 0.91016
+160/160 [==============================] - 10s 60ms/step - loss: 0.2141 - accuracy: 0.9271 - val_loss: 0.3904 - val_accuracy: 0.9086
+Epoch 61/80
+160/160 [==============================] - ETA: 0s - loss: 0.1916 - accuracy: 0.9338
+Epoch 61: val_accuracy improved from 0.91016 to 0.91328, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 9s 58ms/step - loss: 0.1916 - accuracy: 0.9338 - val_loss: 0.3542 - val_accuracy: 0.9133
+Epoch 62/80
+160/160 [==============================] - ETA: 0s - loss: 0.2071 - accuracy: 0.9287
+Epoch 62: val_accuracy improved from 0.91328 to 0.91719, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 9s 59ms/step - loss: 0.2071 - accuracy: 0.9287 - val_loss: 0.3644 - val_accuracy: 0.9172
+Epoch 63/80
+160/160 [==============================] - ETA: 0s - loss: 0.2235 - accuracy: 0.9229
+Epoch 63: val_accuracy did not improve from 0.91719
+160/160 [==============================] - 10s 60ms/step - loss: 0.2235 - accuracy: 0.9229 - val_loss: 0.4057 - val_accuracy: 0.9047
+Epoch 64/80
+160/160 [==============================] - ETA: 0s - loss: 0.2032 - accuracy: 0.9316
+Epoch 64: val_accuracy did not improve from 0.91719
+160/160 [==============================] - 9s 58ms/step - loss: 0.2032 - accuracy: 0.9316 - val_loss: 0.3931 - val_accuracy: 0.9117
+Epoch 65/80
+160/160 [==============================] - ETA: 0s - loss: 0.1782 - accuracy: 0.9447
+Epoch 65: val_accuracy did not improve from 0.91719
+160/160 [==============================] - 10s 61ms/step - loss: 0.1782 - accuracy: 0.9447 - val_loss: 0.4044 - val_accuracy: 0.9086
+Epoch 66/80
+159/160 [============================>.] - ETA: 0s - loss: 0.2050 - accuracy: 0.9318
+Epoch 66: val_accuracy improved from 0.91719 to 0.92188, saving model to c:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\models\best_model.weights.h5
+160/160 [==============================] - 10s 63ms/step - loss: 0.2059 - accuracy: 0.9318 - val_loss: 0.3325 - val_accuracy: 0.9219
+Epoch 67/80
+160/160 [==============================] - ETA: 0s - loss: 0.1733 - accuracy: 0.9461
+Epoch 67: val_accuracy did not improve from 0.92188
+160/160 [==============================] - 9s 58ms/step - loss: 0.1733 - accuracy: 0.9461 - val_loss: 0.3732 - val_accuracy: 0.9180
+Epoch 68/80
+159/160 [============================>.] - ETA: 0s - loss: 0.1998 - accuracy: 0.9302
+Epoch 68: val_accuracy did not improve from 0.92188
+160/160 [==============================] - 9s 58ms/step - loss: 0.2001 - accuracy: 0.9301 - val_loss: 0.3765 - val_accuracy: 0.9109
+Epoch 69/80
+159/160 [============================>.] - ETA: 0s - loss: 0.1716 - accuracy: 0.9420
+Epoch 69: val_accuracy did not improve from 0.92188
+160/160 [==============================] - 10s 62ms/step - loss: 0.1715 - accuracy: 0.9420 - val_loss: 0.3827 - val_accuracy: 0.9070
+Epoch 70/80
+160/160 [==============================] - ETA: 0s - loss: 0.1581 - accuracy: 0.9482
+Epoch 70: val_accuracy did not improve from 0.92188
+160/160 [==============================] - 10s 63ms/step - loss: 0.1581 - accuracy: 0.9482 - val_loss: 0.3856 - val_accuracy: 0.9187
+Epoch 71/80
+159/160 [============================>.] - ETA: 0s - loss: 0.1692 - accuracy: 0.9428
+Epoch 71: val_accuracy did not improve from 0.92188
+160/160 [==============================] - 10s 62ms/step - loss: 0.1690 - accuracy: 0.9428 - val_loss: 0.3854 - val_accuracy: 0.9062
+Epoch 72/80
+160/160 [==============================] - ETA: 0s - loss: 0.1963 - accuracy: 0.9387
+Epoch 72: val_accuracy did not improve from 0.92188
+160/160 [==============================] - 10s 61ms/step - loss: 0.1963 - accuracy: 0.9387 - val_loss: 0.3590 - val_accuracy: 0.9125
+Epoch 73/80
+160/160 [==============================] - ETA: 0s - loss: 0.1660 - accuracy: 0.9455
+Epoch 73: val_accuracy did not improve from 0.92188
+160/160 [==============================] - 10s 60ms/step - loss: 0.1660 - accuracy: 0.9455 - val_loss: 0.3601 - val_accuracy: 0.9078
+Epoch 74/80
+160/160 [==============================] - ETA: 0s - loss: 0.1642 - accuracy: 0.9438
+Epoch 74: val_accuracy did not improve from 0.92188
+160/160 [==============================] - 9s 58ms/step - loss: 0.1642 - accuracy: 0.9438 - val_loss: 0.3501 - val_accuracy: 0.9172
+
+Saving final model...
+
+Training complete.
+
+Process finished with exit code 0

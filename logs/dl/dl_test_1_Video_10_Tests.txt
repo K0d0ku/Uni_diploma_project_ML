@@ -1,0 +1,2372 @@
+test 1:
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\dl\test_video.py 
+2026-04-30 14:39:52.880268: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+
+==============================
+Testing: sign_lstm_masked_best.keras
+==============================
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2026-04-30 14:40:06.435102: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+VIDEO 1/10
+File: P18_S004_04.mp4
+
+True ID: 4
+True: менде бәрі керемет
+
+Pred ID: 4
+Pred: менде бәрі керемет
+
+Confidence: 99.51%
+Result: PASS
+
+
+VIDEO 2/10
+File: P19_S081_01.mp4
+
+True ID: 81
+True: Бүгін менің туған күнім
+
+Pred ID: 77
+Pred: Иә, мен бала кезімнен өмір сүремін
+
+Confidence: 90.00%
+Result: FAIL
+
+
+VIDEO 3/10
+File: P24_S071_02.mp4
+
+True ID: 71
+True: Мен Мәскеуде тұрамын
+
+Pred ID: 43
+Pred: қайырлы таң
+
+Confidence: 99.48%
+Result: FAIL
+
+
+VIDEO 4/10
+File: P10_S077_04.mp4
+
+True ID: 77
+True: Иә, мен бала кезімнен өмір сүремін
+
+Pred ID: 77
+Pred: Иә, мен бала кезімнен өмір сүремін
+
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 5/10
+File: P12_S031_01.mp4
+
+True ID: 31
+True: мен саған көмектесемін
+
+Pred ID: 31
+Pred: мен саған көмектесемін
+
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 6/10
+File: P22_S029_03.mp4
+
+True ID: 29
+True: Мен қалай көмектесе аламын (сұрақ)
+
+Pred ID: 29
+Pred: Мен қалай көмектесе аламын (сұрақ)
+
+Confidence: 99.95%
+Result: PASS
+
+
+VIDEO 7/10
+File: P1_S067_02.mp4
+
+True ID: 67
+True: мен Қазақстанның оңтүстігіненмін
+
+Pred ID: 67
+Pred: мен Қазақстанның оңтүстігіненмін
+
+Confidence: 99.04%
+Result: PASS
+
+
+VIDEO 8/10
+File: P1_S009_01.mp4
+
+True ID: 9
+True: сіз не істеп жатырсыз
+
+Pred ID: 9
+Pred: сіз не істеп жатырсыз
+
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 9/10
+File: P3_S007_04.mp4
+
+True ID: 7
+True: менің жағдайым жаман
+
+Pred ID: 56
+Pred: менің атым
+
+Confidence: 33.04%
+Result: FAIL
+
+
+VIDEO 10/10
+File: P17_S044_00.mp4
+
+True ID: 44
+True: Қайырлы күн
+
+Pred ID: 0
+Pred: Сәлеметсіз бе
+
+Confidence: 87.54%
+Result: FAIL
+
+
+==============================
+Testing: sign_lstm_masked_supreme_best.keras
+==============================
+
+VIDEO 1/10
+File: P20_S012_02.mp4
+
+True ID: 12
+True: мен теледидар көріп отырмын
+
+Pred ID: 12
+Pred: мен теледидар көріп отырмын
+
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 2/10
+File: P12_S078_02.mp4
+
+True ID: 78
+True: Мен туғаннан бері өмір сүремін
+
+Pred ID: 78
+Pred: Мен туғаннан бері өмір сүремін
+
+Confidence: 99.97%
+Result: PASS
+
+
+VIDEO 3/10
+File: P21_S069_00.mp4
+
+True ID: 69
+True: мен Ресейдің шығысынанмын
+
+Pred ID: 69
+Pred: мен Ресейдің шығысынанмын
+
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 4/10
+File: P24_S039_02.mp4
+
+True ID: 39
+True: маған көбірек дем алу керек
+
+Pred ID: 39
+Pred: маған көбірек дем алу керек
+
+Confidence: 82.10%
+Result: PASS
+
+
+VIDEO 5/10
+File: P10_S031_03.mp4
+
+True ID: 31
+True: мен саған көмектесемін
+
+Pred ID: 31
+Pred: мен саған көмектесемін
+
+Confidence: 99.92%
+Result: PASS
+
+
+VIDEO 6/10
+File: P16_S072_00.mp4
+
+True ID: 72
+True: мен Санкт-Петербургте тұрамын
+
+Pred ID: 72
+Pred: мен Санкт-Петербургте тұрамын
+
+Confidence: 84.04%
+Result: PASS
+
+
+VIDEO 7/10
+File: P17_S068_01.mp4
+
+True ID: 68
+True: мен Қазақстанның батысынанмын
+
+Pred ID: 68
+Pred: мен Қазақстанның батысынанмын
+
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 8/10
+File: P17_S065_01.mp4
+
+True ID: 65
+True: Қай жерде дүниеге келдіңіз
+
+Pred ID: 65
+Pred: Қай жерде дүниеге келдіңіз
+
+Confidence: 81.01%
+Result: PASS
+
+
+VIDEO 9/10
+File: P2_S061_04.mp4
+
+True ID: 61
+True: Жасың нешеде
+
+Pred ID: 49
+Pred: ертеңгі сәттілік
+
+Confidence: 100.00%
+Result: FAIL
+
+
+VIDEO 10/10
+File: P22_S079_04.mp4
+
+True ID: 79
+True: Жоқ, біз жақында көшіп келдік
+
+Pred ID: 79
+Pred: Жоқ, біз жақында көшіп келдік
+
+Confidence: 100.00%
+Result: PASS
+
+
+==============================
+FINAL
+==============================
+
+Masked Best:     6/10
+Masked Supreme:  9/10
+
+
+Process finished with exit code 0
+
+
+
+
+test2:
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\dl\test_video.py 
+2026-04-30 14:45:11.770539: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+
+==============================
+Testing: sign_lstm_masked_best.keras
+==============================
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2026-04-30 14:45:22.655685: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+VIDEO 1/10
+File: P11_S058_01.mp4
+True ID: 58
+True: Менің лақап атым
+Pred ID: 58
+Pred: Менің лақап атым
+Confidence: 99.99%
+Result: PASS
+
+
+VIDEO 2/10
+File: P21_S044_01.mp4
+True ID: 44
+True: Қайырлы күн
+Pred ID: 45
+Pred: Қайырлы кеш
+Confidence: 86.22%
+Result: FAIL
+
+
+VIDEO 3/10
+File: P1_S070_01.mp4
+True ID: 70
+True: Алматыда тұрамын
+Pred ID: 72
+Pred: мен Санкт-Петербургте тұрамын
+Confidence: 74.57%
+Result: FAIL
+
+
+VIDEO 4/10
+File: P16_S023_00.mp4
+True ID: 23
+True: Керемет жаңалық
+Pred ID: 23
+Pred: Керемет жаңалық
+Confidence: 99.73%
+Result: PASS
+
+
+VIDEO 5/10
+File: P14_S022_04.mp4
+True ID: 22
+True: Жаңа ештеңе жоқ
+Pred ID: 22
+Pred: Жаңа ештеңе жоқ
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 6/10
+File: P22_S068_02.mp4
+True ID: 68
+True: мен Қазақстанның батысынанмын
+Pred ID: 68
+Pred: мен Қазақстанның батысынанмын
+Confidence: 99.97%
+Result: PASS
+
+
+VIDEO 7/10
+File: P4_S046_03.mp4
+True ID: 46
+True: Қайырлы түн
+Pred ID: 34
+Pred: Демалыс күні не істеу керек (сұрақ)
+Confidence: 87.93%
+Result: FAIL
+
+
+VIDEO 8/10
+File: P21_S039_00.mp4
+True ID: 39
+True: маған көбірек дем алу керек
+Pred ID: 48
+Pred: Әйеліңе сәлем айт
+Confidence: 45.31%
+Result: FAIL
+
+
+VIDEO 9/10
+File: P24_S053_04.mp4
+True ID: 53
+True: Біз бір-бірімізді шақырамыз
+Pred ID: 41
+Pred: Күндеріңіз сәтті өтсін
+Confidence: 99.34%
+Result: FAIL
+
+
+VIDEO 10/10
+File: P16_S007_00.mp4
+True ID: 7
+True: менің жағдайым жаман
+Pred ID: 7
+Pred: менің жағдайым жаман
+Confidence: 100.00%
+Result: PASS
+
+
+==============================
+Testing: sign_lstm_masked_supreme_best.keras
+==============================
+
+VIDEO 1/10
+File: P12_S065_02.mp4
+True ID: 65
+True: Қай жерде дүниеге келдіңіз
+Pred ID: 64
+Pred: сен қайдансың?
+Confidence: 71.80%
+Result: FAIL
+
+
+VIDEO 2/10
+File: P6_S069_02.mp4
+True ID: 69
+True: мен Ресейдің шығысынанмын
+Pred ID: 74
+Pred: Киевте қанша уақыт тұрасыз (сұрақ)
+Confidence: 63.89%
+Result: FAIL
+
+
+VIDEO 3/10
+File: P9_S070_04.mp4
+True ID: 70
+True: Алматыда тұрамын
+Pred ID: 71
+Pred: Мен Мәскеуде тұрамын
+Confidence: 86.15%
+Result: FAIL
+
+
+VIDEO 4/10
+File: P20_S000_00.mp4
+True ID: 0
+True: Сәлеметсіз бе
+Pred ID: 0
+Pred: Сәлеметсіз бе
+Confidence: 99.56%
+Result: PASS
+
+
+VIDEO 5/10
+File: P4_S078_03.mp4
+True ID: 78
+True: Мен туғаннан бері өмір сүремін
+Pred ID: 70
+Pred: Алматыда тұрамын
+Confidence: 97.85%
+Result: FAIL
+
+
+VIDEO 6/10
+File: P14_S050_01.mp4
+True ID: 50
+True: Бәрі жақсы болғанын қалаймын
+Pred ID: 50
+Pred: Бәрі жақсы болғанын қалаймын
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 7/10
+File: P0_S017_00.mp4
+True ID: 17
+True: бірдеңе болды (сұрақ)
+Pred ID: 17
+Pred: бірдеңе болды (сұрақ)
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 8/10
+File: P23_S040_04.mp4
+True ID: 40
+True: не істеу керек (сұрақ)
+Pred ID: 40
+Pred: не істеу керек (сұрақ)
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 9/10
+File: P20_S007_03.mp4
+True ID: 7
+True: менің жағдайым жаман
+Pred ID: 7
+Pred: менің жағдайым жаман
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 10/10
+File: P11_S056_01.mp4
+True ID: 56
+True: менің атым
+Pred ID: 56
+Pred: менің атым
+Confidence: 100.00%
+Result: PASS
+
+
+==============================
+FINAL
+==============================
+
+Masked Best:     5/10
+Masked Supreme:  6/10
+
+
+Process finished with exit code 0
+
+
+
+
+
+
+test 3:
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\dl\test_video.py 
+2026-04-30 14:49:26.578087: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+
+==============================
+Testing: sign_lstm_masked_best.keras
+==============================
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2026-04-30 14:49:39.317852: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+VIDEO 1/10
+File: P20_S011_03.mp4
+True ID: 11
+True: мен жұмыс істеп жатырмын
+Pred ID: 11
+Pred: мен жұмыс істеп жатырмын
+Confidence: 99.90%
+Result: PASS
+
+
+VIDEO 2/10
+File: P9_S048_03.mp4
+True ID: 48
+True: Әйеліңе сәлем айт
+Pred ID: 76
+Pred: Жоқ, мен қазір осында тұрамын
+Confidence: 99.25%
+Result: FAIL
+
+
+VIDEO 3/10
+File: P9_S061_03.mp4
+True ID: 61
+True: Жасың нешеде
+Pred ID: 67
+Pred: мен Қазақстанның оңтүстігіненмін
+Confidence: 61.08%
+Result: FAIL
+
+
+VIDEO 4/10
+File: P18_S009_02.mp4
+True ID: 9
+True: сіз не істеп жатырсыз
+Pred ID: 9
+Pred: сіз не істеп жатырсыз
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 5/10
+File: P18_S064_02.mp4
+True ID: 64
+True: сен қайдансың?
+Pred ID: 64
+Pred: сен қайдансың?
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 6/10
+File: P7_S037_04.mp4
+True ID: 37
+True: Көмектесіңіз, басым ауырады, жүрегім ауырады және тыныс алу қиын
+Pred ID: 26
+Pred: Жарайды, мен бүгін көп нәрсе жасадым
+Confidence: 99.77%
+Result: FAIL
+
+
+VIDEO 7/10
+File: P16_S017_03.mp4
+True ID: 17
+True: бірдеңе болды (сұрақ)
+Pred ID: 15
+Pred: не болды
+Confidence: 75.86%
+Result: FAIL
+
+
+VIDEO 8/10
+File: P20_S022_01.mp4
+True ID: 22
+True: Жаңа ештеңе жоқ
+Pred ID: 22
+Pred: Жаңа ештеңе жоқ
+Confidence: 92.03%
+Result: PASS
+
+
+VIDEO 9/10
+File: P17_S069_02.mp4
+True ID: 69
+True: мен Ресейдің шығысынанмын
+Pred ID: 69
+Pred: мен Ресейдің шығысынанмын
+Confidence: 95.90%
+Result: PASS
+
+
+VIDEO 10/10
+File: P10_S008_04.mp4
+True ID: 8
+True: менің жағдайым өте нашар
+Pred ID: 8
+Pred: менің жағдайым өте нашар
+Confidence: 99.98%
+Result: PASS
+
+
+==============================
+Testing: sign_lstm_masked_supreme_best.keras
+==============================
+
+VIDEO 1/10
+File: P0_S073_01.mp4
+True ID: 73
+True: мен, Ташкент қаласында тұрамын
+Pred ID: 73
+Pred: мен, Ташкент қаласында тұрамын
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 2/10
+File: P3_S001_04.mp4
+True ID: 1
+True: Сәлем
+Pred ID: 54
+Pred: Қош бол
+Confidence: 100.00%
+Result: FAIL
+
+
+VIDEO 3/10
+File: P13_S027_00.mp4
+True ID: 27
+True: Дәретхана қайда?
+Pred ID: 27
+Pred: Дәретхана қайда?
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 4/10
+File: P10_S024_02.mp4
+True ID: 24
+True: Күніңіз қалай өтті (сұрақ)
+Pred ID: 24
+Pred: Күніңіз қалай өтті (сұрақ)
+Confidence: 99.99%
+Result: PASS
+
+
+VIDEO 5/10
+File: P6_S021_00.mp4
+True ID: 21
+True: менде жаңалық бар
+Pred ID: 72
+Pred: мен Санкт-Петербургте тұрамын
+Confidence: 89.52%
+Result: FAIL
+
+
+VIDEO 6/10
+File: P3_S045_02.mp4
+True ID: 45
+True: Қайырлы кеш
+Pred ID: 45
+Pred: Қайырлы кеш
+Confidence: 98.38%
+Result: PASS
+
+
+VIDEO 7/10
+File: P11_S049_02.mp4
+True ID: 49
+True: ертеңгі сәттілік
+Pred ID: 49
+Pred: ертеңгі сәттілік
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 8/10
+File: P10_S058_01.mp4
+True ID: 58
+True: Менің лақап атым
+Pred ID: 58
+Pred: Менің лақап атым
+Confidence: 66.89%
+Result: PASS
+
+
+VIDEO 9/10
+File: P0_S018_01.mp4
+True ID: 18
+True: Ештеңе, бәрі жақсы
+Pred ID: 18
+Pred: Ештеңе, бәрі жақсы
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 10/10
+File: P24_S013_00.mp4
+True ID: 13
+True: Өмір қалай (қалай)
+Pred ID: 79
+Pred: Жоқ, біз жақында көшіп келдік
+Confidence: 99.74%
+Result: FAIL
+
+
+==============================
+FINAL
+==============================
+
+Masked Best:     6/10
+Masked Supreme:  7/10
+
+
+Process finished with exit code 0
+
+
+
+
+
+
+test 4:
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\dl\test_video.py 
+2026-04-30 14:53:58.283070: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+
+==============================
+Testing: sign_lstm_masked_best.keras
+==============================
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2026-04-30 14:54:11.488284: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+VIDEO 1/10
+File: P22_S027_04.mp4
+True ID: 27
+True: Дәретхана қайда?
+Pred ID: 27
+Pred: Дәретхана қайда?
+Confidence: 99.96%
+Result: PASS
+
+
+VIDEO 2/10
+File: P15_S017_01.mp4
+True ID: 17
+True: бірдеңе болды (сұрақ)
+Pred ID: 17
+Pred: бірдеңе болды (сұрақ)
+Confidence: 97.70%
+Result: PASS
+
+
+VIDEO 3/10
+File: P5_S042_00.mp4
+True ID: 42
+True: Кешіңіз жақсы өтсін
+Pred ID: 72
+Pred: мен Санкт-Петербургте тұрамын
+Confidence: 99.85%
+Result: FAIL
+
+
+VIDEO 4/10
+File: P5_S067_01.mp4
+True ID: 67
+True: мен Қазақстанның оңтүстігіненмін
+Pred ID: 61
+Pred: Жасың нешеде
+Confidence: 98.84%
+Result: FAIL
+
+
+VIDEO 5/10
+File: P10_S071_02.mp4
+True ID: 71
+True: Мен Мәскеуде тұрамын
+Pred ID: 70
+Pred: Алматыда тұрамын
+Confidence: 100.00%
+Result: FAIL
+
+
+VIDEO 6/10
+File: P18_S020_02.mp4
+True ID: 20
+True: менің саған жаңалығым бар
+Pred ID: 20
+Pred: менің саған жаңалығым бар
+Confidence: 99.95%
+Result: PASS
+
+
+VIDEO 7/10
+File: P7_S052_02.mp4
+True ID: 52
+True: Жақында кездескенше
+Pred ID: 33
+Pred: Маған аудармашы керек
+Confidence: 99.65%
+Result: FAIL
+
+
+VIDEO 8/10
+File: P17_S054_00.mp4
+True ID: 54
+True: Қош бол
+Pred ID: 55
+Pred: Сіздің атыңыз кім (сұрақ)
+Confidence: 55.68%
+Result: FAIL
+
+
+VIDEO 9/10
+File: P1_S010_01.mp4
+True ID: 10
+True: мен демалып жатырмын
+Pred ID: 10
+Pred: мен демалып жатырмын
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 10/10
+File: P9_S025_00.mp4
+True ID: 25
+True: Атқаратын іс көп болды
+Pred ID: 80
+Pred: туған күнің қашан
+Confidence: 88.69%
+Result: FAIL
+
+
+==============================
+Testing: sign_lstm_masked_supreme_best.keras
+==============================
+
+VIDEO 1/10
+File: P18_S072_02.mp4
+True ID: 72
+True: мен Санкт-Петербургте тұрамын
+Pred ID: 72
+Pred: мен Санкт-Петербургте тұрамын
+Confidence: 82.36%
+Result: PASS
+
+
+VIDEO 2/10
+File: P20_S060_04.mp4
+True ID: 60
+True: мен де
+Pred ID: 60
+Pred: мен де
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 3/10
+File: P0_S029_03.mp4
+True ID: 29
+True: Мен қалай көмектесе аламын (сұрақ)
+Pred ID: 29
+Pred: Мен қалай көмектесе аламын (сұрақ)
+Confidence: 99.99%
+Result: PASS
+
+
+VIDEO 4/10
+File: P12_S066_02.mp4
+True ID: 66
+True: мен Қазақстанның солтүстігіненмін
+Pred ID: 66
+Pred: мен Қазақстанның солтүстігіненмін
+Confidence: 99.98%
+Result: PASS
+
+
+VIDEO 5/10
+File: P19_S058_04.mp4
+True ID: 58
+True: Менің лақап атым
+Pred ID: 56
+Pred: менің атым
+Confidence: 97.23%
+Result: FAIL
+
+
+VIDEO 6/10
+File: P19_S065_04.mp4
+True ID: 65
+True: Қай жерде дүниеге келдіңіз
+Pred ID: 65
+Pred: Қай жерде дүниеге келдіңіз
+Confidence: 97.32%
+Result: PASS
+
+
+VIDEO 7/10
+File: P21_S080_00.mp4
+True ID: 80
+True: туған күнің қашан
+Pred ID: 80
+Pred: туған күнің қашан
+Confidence: 99.96%
+Result: PASS
+
+
+VIDEO 8/10
+File: P15_S069_02.mp4
+True ID: 69
+True: мен Ресейдің шығысынанмын
+Pred ID: 69
+Pred: мен Ресейдің шығысынанмын
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 9/10
+File: P9_S051_03.mp4
+True ID: 51
+True: көп рахмет
+Pred ID: 80
+Pred: туған күнің қашан
+Confidence: 100.00%
+Result: FAIL
+
+
+VIDEO 10/10
+File: P2_S007_02.mp4
+True ID: 7
+True: менің жағдайым жаман
+Pred ID: 46
+Pred: Қайырлы түн
+Confidence: 99.12%
+Result: FAIL
+
+
+==============================
+FINAL
+==============================
+
+Masked Best:     4/10
+Masked Supreme:  7/10
+
+
+Process finished with exit code 0
+
+
+
+test 5:
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\dl\test_video.py 
+2026-04-30 14:58:20.660177: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+
+==============================
+Testing: sign_lstm_masked_best.keras
+==============================
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2026-04-30 14:58:32.313757: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+VIDEO 1/10
+File: P14_S004_03.mp4
+True ID: 4
+True: менде бәрі керемет
+Pred ID: 4
+Pred: менде бәрі керемет
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 2/10
+File: P12_S042_04.mp4
+True ID: 42
+True: Кешіңіз жақсы өтсін
+Pred ID: 42
+Pred: Кешіңіз жақсы өтсін
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 3/10
+File: P20_S010_00.mp4
+True ID: 10
+True: мен демалып жатырмын
+Pred ID: 10
+Pred: мен демалып жатырмын
+Confidence: 99.97%
+Result: PASS
+
+
+VIDEO 4/10
+File: P21_S064_03.mp4
+True ID: 64
+True: сен қайдансың?
+Pred ID: 64
+Pred: сен қайдансың?
+Confidence: 88.15%
+Result: PASS
+
+
+VIDEO 5/10
+File: P24_S033_02.mp4
+True ID: 33
+True: Маған аудармашы керек
+Pred ID: 52
+Pred: Жақында кездескенше
+Confidence: 89.98%
+Result: FAIL
+
+
+VIDEO 6/10
+File: P12_S048_00.mp4
+True ID: 48
+True: Әйеліңе сәлем айт
+Pred ID: 48
+Pred: Әйеліңе сәлем айт
+Confidence: 99.96%
+Result: PASS
+
+
+VIDEO 7/10
+File: P3_S037_02.mp4
+True ID: 37
+True: Көмектесіңіз, басым ауырады, жүрегім ауырады және тыныс алу қиын
+Pred ID: 37
+Pred: Көмектесіңіз, басым ауырады, жүрегім ауырады және тыныс алу қиын
+Confidence: 46.74%
+Result: PASS
+
+
+VIDEO 8/10
+File: P5_S068_04.mp4
+True ID: 68
+True: мен Қазақстанның батысынанмын
+Pred ID: 20
+Pred: менің саған жаңалығым бар
+Confidence: 95.97%
+Result: FAIL
+
+
+VIDEO 9/10
+File: P13_S077_02.mp4
+True ID: 77
+True: Иә, мен бала кезімнен өмір сүремін
+Pred ID: 77
+Pred: Иә, мен бала кезімнен өмір сүремін
+Confidence: 99.99%
+Result: PASS
+
+
+VIDEO 10/10
+File: P2_S016_03.mp4
+True ID: 16
+True: Ой, мен жай ғана шаршадым
+Pred ID: 79
+Pred: Жоқ, біз жақында көшіп келдік
+Confidence: 98.28%
+Result: FAIL
+
+
+==============================
+Testing: sign_lstm_masked_supreme_best.keras
+==============================
+
+VIDEO 1/10
+File: P0_S069_02.mp4
+True ID: 69
+True: мен Ресейдің шығысынанмын
+Pred ID: 69
+Pred: мен Ресейдің шығысынанмын
+Confidence: 78.61%
+Result: PASS
+
+
+VIDEO 2/10
+File: P22_S049_03.mp4
+True ID: 49
+True: ертеңгі сәттілік
+Pred ID: 49
+Pred: ертеңгі сәттілік
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 3/10
+File: P2_S058_04.mp4
+True ID: 58
+True: Менің лақап атым
+Pred ID: 21
+Pred: менде жаңалық бар
+Confidence: 89.18%
+Result: FAIL
+
+
+VIDEO 4/10
+File: P2_S022_02.mp4
+True ID: 22
+True: Жаңа ештеңе жоқ
+Pred ID: 22
+Pred: Жаңа ештеңе жоқ
+Confidence: 96.04%
+Result: PASS
+
+
+VIDEO 5/10
+File: P22_S021_03.mp4
+True ID: 21
+True: менде жаңалық бар
+Pred ID: 21
+Pred: менде жаңалық бар
+Confidence: 93.85%
+Result: PASS
+
+
+VIDEO 6/10
+File: P21_S073_04.mp4
+True ID: 73
+True: мен, Ташкент қаласында тұрамын
+Pred ID: 73
+Pred: мен, Ташкент қаласында тұрамын
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 7/10
+File: P24_S002_02.mp4
+True ID: 2
+True: Қалыңыз қалай
+Pred ID: 75
+Pred: Иә, мен осында дүниеге келдім
+Confidence: 91.94%
+Result: FAIL
+
+
+VIDEO 8/10
+File: P22_S001_01.mp4
+True ID: 1
+True: Сәлем
+Pred ID: 1
+Pred: Сәлем
+Confidence: 94.36%
+Result: PASS
+
+
+VIDEO 9/10
+File: P3_S064_00.mp4
+True ID: 64
+True: сен қайдансың?
+Pred ID: 64
+Pred: сен қайдансың?
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 10/10
+File: P20_S054_02.mp4
+True ID: 54
+True: Қош бол
+Pred ID: 54
+Pred: Қош бол
+Confidence: 95.45%
+Result: PASS
+
+
+==============================
+FINAL
+==============================
+
+Masked Best:     7/10
+Masked Supreme:  8/10
+
+
+Process finished with exit code 0
+
+
+test 6:
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\dl\test_video.py 
+2026-04-30 15:02:41.689407: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+
+==============================
+Testing: sign_lstm_masked_best.keras
+==============================
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2026-04-30 15:02:55.572157: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+VIDEO 1/10
+File: P3_S008_02.mp4
+True ID: 8
+True: менің жағдайым өте нашар
+Pred ID: 58
+Pred: Менің лақап атым
+Confidence: 76.86%
+Result: FAIL
+
+
+VIDEO 2/10
+File: P23_S065_00.mp4
+True ID: 65
+True: Қай жерде дүниеге келдіңіз
+Pred ID: 65
+Pred: Қай жерде дүниеге келдіңіз
+Confidence: 99.53%
+Result: PASS
+
+
+VIDEO 3/10
+File: P8_S024_03.mp4
+True ID: 24
+True: Күніңіз қалай өтті (сұрақ)
+Pred ID: 40
+Pred: не істеу керек (сұрақ)
+Confidence: 84.20%
+Result: FAIL
+
+
+VIDEO 4/10
+File: P4_S053_02.mp4
+True ID: 53
+True: Біз бір-бірімізді шақырамыз
+Pred ID: 80
+Pred: туған күнің қашан
+Confidence: 99.98%
+Result: FAIL
+
+
+VIDEO 5/10
+File: P0_S045_03.mp4
+True ID: 45
+True: Қайырлы кеш
+Pred ID: 45
+Pred: Қайырлы кеш
+Confidence: 79.76%
+Result: PASS
+
+
+VIDEO 6/10
+File: P0_S027_01.mp4
+True ID: 27
+True: Дәретхана қайда?
+Pred ID: 27
+Pred: Дәретхана қайда?
+Confidence: 98.05%
+Result: PASS
+
+
+VIDEO 7/10
+File: P0_S030_01.mp4
+True ID: 30
+True: маған көмек керек
+Pred ID: 30
+Pred: маған көмек керек
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 8/10
+File: P9_S070_00.mp4
+True ID: 70
+True: Алматыда тұрамын
+Pred ID: 71
+Pred: Мен Мәскеуде тұрамын
+Confidence: 99.67%
+Result: FAIL
+
+
+VIDEO 9/10
+File: P7_S036_03.mp4
+True ID: 36
+True: (Өтінемін) Полиция шақырыңыз
+Pred ID: 22
+Pred: Жаңа ештеңе жоқ
+Confidence: 88.73%
+Result: FAIL
+
+
+VIDEO 10/10
+File: P10_S047_03.mp4
+True ID: 47
+True: өзіңе қамқор бол
+Pred ID: 47
+Pred: өзіңе қамқор бол
+Confidence: 100.00%
+Result: PASS
+
+
+==============================
+Testing: sign_lstm_masked_supreme_best.keras
+==============================
+
+VIDEO 1/10
+File: P11_S013_04.mp4
+True ID: 13
+True: Өмір қалай (қалай)
+Pred ID: 13
+Pred: Өмір қалай (қалай)
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 2/10
+File: P10_S021_01.mp4
+True ID: 21
+True: менде жаңалық бар
+Pred ID: 21
+Pred: менде жаңалық бар
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 3/10
+File: P1_S036_01.mp4
+True ID: 36
+True: (Өтінемін) Полиция шақырыңыз
+Pred ID: 36
+Pred: (Өтінемін) Полиция шақырыңыз
+Confidence: 90.90%
+Result: PASS
+
+
+VIDEO 4/10
+File: P24_S006_02.mp4
+True ID: 6
+True: менде бәрі жақсы
+Pred ID: 16
+Pred: Ой, мен жай ғана шаршадым
+Confidence: 71.60%
+Result: FAIL
+
+
+VIDEO 5/10
+File: P12_S078_03.mp4
+True ID: 78
+True: Мен туғаннан бері өмір сүремін
+Pred ID: 78
+Pred: Мен туғаннан бері өмір сүремін
+Confidence: 99.82%
+Result: PASS
+
+
+VIDEO 6/10
+File: P8_S066_04.mp4
+True ID: 66
+True: мен Қазақстанның солтүстігіненмін
+Pred ID: 14
+Pred: Өзіңізді қалай сезінесіз
+Confidence: 77.94%
+Result: FAIL
+
+
+VIDEO 7/10
+File: P19_S024_02.mp4
+True ID: 24
+True: Күніңіз қалай өтті (сұрақ)
+Pred ID: 24
+Pred: Күніңіз қалай өтті (сұрақ)
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 8/10
+File: P18_S053_03.mp4
+True ID: 53
+True: Біз бір-бірімізді шақырамыз
+Pred ID: 53
+Pred: Біз бір-бірімізді шақырамыз
+Confidence: 99.93%
+Result: PASS
+
+
+VIDEO 9/10
+File: P12_S077_03.mp4
+True ID: 77
+True: Иә, мен бала кезімнен өмір сүремін
+Pred ID: 77
+Pred: Иә, мен бала кезімнен өмір сүремін
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 10/10
+File: P7_S047_01.mp4
+True ID: 47
+True: өзіңе қамқор бол
+Pred ID: 27
+Pred: Дәретхана қайда?
+Confidence: 51.72%
+Result: FAIL
+
+
+==============================
+FINAL
+==============================
+
+Masked Best:     5/10
+Masked Supreme:  7/10
+
+
+Process finished with exit code 0
+
+
+test 7:
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\dl\test_video.py 
+2026-04-30 15:09:05.783798: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+
+==============================
+Testing: sign_lstm_masked_best.keras
+==============================
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2026-04-30 15:09:15.236931: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+VIDEO 1/10
+File: P10_S004_00.mp4
+True ID: 4
+True: менде бәрі керемет
+Pred ID: 4
+Pred: менде бәрі керемет
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 2/10
+File: P2_S065_04.mp4
+True ID: 65
+True: Қай жерде дүниеге келдіңіз
+Pred ID: 29
+Pred: Мен қалай көмектесе аламын (сұрақ)
+Confidence: 61.15%
+Result: FAIL
+
+
+VIDEO 3/10
+File: P1_S049_03.mp4
+True ID: 49
+True: ертеңгі сәттілік
+Pred ID: 49
+Pred: ертеңгі сәттілік
+Confidence: 99.97%
+Result: PASS
+
+
+VIDEO 4/10
+File: P20_S001_02.mp4
+True ID: 1
+True: Сәлем
+Pred ID: 3
+Pred: Жұмысыңыз қалай
+Confidence: 94.93%
+Result: FAIL
+
+
+VIDEO 5/10
+File: P3_S011_01.mp4
+True ID: 11
+True: мен жұмыс істеп жатырмын
+Pred ID: 62
+Pred: менің жасым
+Confidence: 98.60%
+Result: FAIL
+
+
+VIDEO 6/10
+File: P7_S020_00.mp4
+True ID: 20
+True: менің саған жаңалығым бар
+Pred ID: 8
+Pred: менің жағдайым өте нашар
+Confidence: 99.67%
+Result: FAIL
+
+
+VIDEO 7/10
+File: P6_S010_02.mp4
+True ID: 10
+True: мен демалып жатырмын
+Pred ID: 39
+Pred: маған көбірек дем алу керек
+Confidence: 43.12%
+Result: FAIL
+
+
+VIDEO 8/10
+File: P10_S051_00.mp4
+True ID: 51
+True: көп рахмет
+Pred ID: 51
+Pred: көп рахмет
+Confidence: 99.07%
+Result: PASS
+
+
+VIDEO 9/10
+File: P16_S060_04.mp4
+True ID: 60
+True: мен де
+Pred ID: 59
+Pred: Танысқаныма қуаныштымын
+Confidence: 97.21%
+Result: FAIL
+
+
+VIDEO 10/10
+File: P1_S043_03.mp4
+True ID: 43
+True: қайырлы таң
+Pred ID: 43
+Pred: қайырлы таң
+Confidence: 99.99%
+Result: PASS
+
+
+==============================
+Testing: sign_lstm_masked_supreme_best.keras
+==============================
+
+VIDEO 1/10
+File: P12_S040_03.mp4
+True ID: 40
+True: не істеу керек (сұрақ)
+Pred ID: 40
+Pred: не істеу керек (сұрақ)
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 2/10
+File: P1_S038_00.mp4
+True ID: 38
+True: мен дем ала алмаймын
+Pred ID: 38
+Pred: мен дем ала алмаймын
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 3/10
+File: P8_S073_01.mp4
+True ID: 73
+True: мен, Ташкент қаласында тұрамын
+Pred ID: 73
+Pred: мен, Ташкент қаласында тұрамын
+Confidence: 99.98%
+Result: PASS
+
+
+VIDEO 4/10
+File: P21_S050_01.mp4
+True ID: 50
+True: Бәрі жақсы болғанын қалаймын
+Pred ID: 50
+Pred: Бәрі жақсы болғанын қалаймын
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 5/10
+File: P23_S079_01.mp4
+True ID: 79
+True: Жоқ, біз жақында көшіп келдік
+Pred ID: 79
+Pred: Жоқ, біз жақында көшіп келдік
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 6/10
+File: P10_S048_02.mp4
+True ID: 48
+True: Әйеліңе сәлем айт
+Pred ID: 48
+Pred: Әйеліңе сәлем айт
+Confidence: 99.99%
+Result: PASS
+
+
+VIDEO 7/10
+File: P5_S016_01.mp4
+True ID: 16
+True: Ой, мен жай ғана шаршадым
+Pred ID: 0
+Pred: Сәлеметсіз бе
+Confidence: 99.95%
+Result: FAIL
+
+
+VIDEO 8/10
+File: P4_S047_04.mp4
+True ID: 47
+True: өзіңе қамқор бол
+Pred ID: 5
+Pred: менде бәрі жақсы
+Confidence: 55.54%
+Result: FAIL
+
+
+VIDEO 9/10
+File: P8_S012_01.mp4
+True ID: 12
+True: мен теледидар көріп отырмын
+Pred ID: 26
+Pred: Жарайды, мен бүгін көп нәрсе жасадым
+Confidence: 65.88%
+Result: FAIL
+
+
+VIDEO 10/10
+File: P24_S069_01.mp4
+True ID: 69
+True: мен Ресейдің шығысынанмын
+Pred ID: 43
+Pred: қайырлы таң
+Confidence: 99.70%
+Result: FAIL
+
+
+==============================
+FINAL
+==============================
+
+Masked Best:     4/10
+Masked Supreme:  6/10
+
+
+Process finished with exit code 0
+
+
+
+test 8:
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\dl\test_video.py 
+2026-04-30 15:13:24.791709: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+
+==============================
+Testing: sign_lstm_masked_best.keras
+==============================
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2026-04-30 15:13:37.008586: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+VIDEO 1/10
+File: P23_S044_03.mp4
+True ID: 44
+True: Қайырлы күн
+Pred ID: 44
+Pred: Қайырлы күн
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 2/10
+File: P1_S032_02.mp4
+True ID: 32
+True: мен жұмыс іздеп жүрмін
+Pred ID: 32
+Pred: мен жұмыс іздеп жүрмін
+Confidence: 99.97%
+Result: PASS
+
+
+VIDEO 3/10
+File: P14_S006_01.mp4
+True ID: 6
+True: менде бәрі жақсы
+Pred ID: 6
+Pred: менде бәрі жақсы
+Confidence: 49.84%
+Result: PASS
+
+
+VIDEO 4/10
+File: P12_S068_01.mp4
+True ID: 68
+True: мен Қазақстанның батысынанмын
+Pred ID: 68
+Pred: мен Қазақстанның батысынанмын
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 5/10
+File: P16_S022_03.mp4
+True ID: 22
+True: Жаңа ештеңе жоқ
+Pred ID: 22
+Pred: Жаңа ештеңе жоқ
+Confidence: 99.55%
+Result: PASS
+
+
+VIDEO 6/10
+File: P15_S047_01.mp4
+True ID: 47
+True: өзіңе қамқор бол
+Pred ID: 47
+Pred: өзіңе қамқор бол
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 7/10
+File: P3_S039_01.mp4
+True ID: 39
+True: маған көбірек дем алу керек
+Pred ID: 39
+Pred: маған көбірек дем алу керек
+Confidence: 88.43%
+Result: PASS
+
+
+VIDEO 8/10
+File: P1_S042_02.mp4
+True ID: 42
+True: Кешіңіз жақсы өтсін
+Pred ID: 42
+Pred: Кешіңіз жақсы өтсін
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 9/10
+File: P15_S041_04.mp4
+True ID: 41
+True: Күндеріңіз сәтті өтсін
+Pred ID: 41
+Pred: Күндеріңіз сәтті өтсін
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 10/10
+File: P7_S043_02.mp4
+True ID: 43
+True: қайырлы таң
+Pred ID: 26
+Pred: Жарайды, мен бүгін көп нәрсе жасадым
+Confidence: 83.71%
+Result: FAIL
+
+
+==============================
+Testing: sign_lstm_masked_supreme_best.keras
+==============================
+
+VIDEO 1/10
+File: P13_S054_00.mp4
+True ID: 54
+True: Қош бол
+Pred ID: 66
+Pred: мен Қазақстанның солтүстігіненмін
+Confidence: 83.78%
+Result: FAIL
+
+
+VIDEO 2/10
+File: P5_S081_00.mp4
+True ID: 81
+True: Бүгін менің туған күнім
+Pred ID: 81
+Pred: Бүгін менің туған күнім
+Confidence: 86.95%
+Result: PASS
+
+
+VIDEO 3/10
+File: P0_S015_00.mp4
+True ID: 15
+True: не болды
+Pred ID: 15
+Pred: не болды
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 4/10
+File: P10_S030_01.mp4
+True ID: 30
+True: маған көмек керек
+Pred ID: 30
+Pred: маған көмек керек
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 5/10
+File: P10_S067_04.mp4
+True ID: 67
+True: мен Қазақстанның оңтүстігіненмін
+Pred ID: 67
+Pred: мен Қазақстанның оңтүстігіненмін
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 6/10
+File: P5_S073_03.mp4
+True ID: 73
+True: мен, Ташкент қаласында тұрамын
+Pred ID: 21
+Pred: менде жаңалық бар
+Confidence: 100.00%
+Result: FAIL
+
+
+VIDEO 7/10
+File: P15_S062_01.mp4
+True ID: 62
+True: менің жасым
+Pred ID: 62
+Pred: менің жасым
+Confidence: 99.61%
+Result: PASS
+
+
+VIDEO 8/10
+File: P16_S011_02.mp4
+True ID: 11
+True: мен жұмыс істеп жатырмын
+Pred ID: 11
+Pred: мен жұмыс істеп жатырмын
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 9/10
+File: P5_S000_00.mp4
+True ID: 0
+True: Сәлеметсіз бе
+Pred ID: 17
+Pred: бірдеңе болды (сұрақ)
+Confidence: 73.12%
+Result: FAIL
+
+
+VIDEO 10/10
+File: P11_S040_00.mp4
+True ID: 40
+True: не істеу керек (сұрақ)
+Pred ID: 40
+Pred: не істеу керек (сұрақ)
+Confidence: 100.00%
+Result: PASS
+
+
+==============================
+FINAL
+==============================
+
+Masked Best:     9/10
+Masked Supreme:  7/10
+
+
+Process finished with exit code 0
+
+
+
+test 9:
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\dl\test_video.py 
+2026-04-30 15:13:24.791709: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+
+==============================
+Testing: sign_lstm_masked_best.keras
+==============================
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2026-04-30 15:13:37.008586: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+VIDEO 1/10
+File: P23_S044_03.mp4
+True ID: 44
+True: Қайырлы күн
+Pred ID: 44
+Pred: Қайырлы күн
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 2/10
+File: P1_S032_02.mp4
+True ID: 32
+True: мен жұмыс іздеп жүрмін
+Pred ID: 32
+Pred: мен жұмыс іздеп жүрмін
+Confidence: 99.97%
+Result: PASS
+
+
+VIDEO 3/10
+File: P14_S006_01.mp4
+True ID: 6
+True: менде бәрі жақсы
+Pred ID: 6
+Pred: менде бәрі жақсы
+Confidence: 49.84%
+Result: PASS
+
+
+VIDEO 4/10
+File: P12_S068_01.mp4
+True ID: 68
+True: мен Қазақстанның батысынанмын
+Pred ID: 68
+Pred: мен Қазақстанның батысынанмын
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 5/10
+File: P16_S022_03.mp4
+True ID: 22
+True: Жаңа ештеңе жоқ
+Pred ID: 22
+Pred: Жаңа ештеңе жоқ
+Confidence: 99.55%
+Result: PASS
+
+
+VIDEO 6/10
+File: P15_S047_01.mp4
+True ID: 47
+True: өзіңе қамқор бол
+Pred ID: 47
+Pred: өзіңе қамқор бол
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 7/10
+File: P3_S039_01.mp4
+True ID: 39
+True: маған көбірек дем алу керек
+Pred ID: 39
+Pred: маған көбірек дем алу керек
+Confidence: 88.43%
+Result: PASS
+
+
+VIDEO 8/10
+File: P1_S042_02.mp4
+True ID: 42
+True: Кешіңіз жақсы өтсін
+Pred ID: 42
+Pred: Кешіңіз жақсы өтсін
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 9/10
+File: P15_S041_04.mp4
+True ID: 41
+True: Күндеріңіз сәтті өтсін
+Pred ID: 41
+Pred: Күндеріңіз сәтті өтсін
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 10/10
+File: P7_S043_02.mp4
+True ID: 43
+True: қайырлы таң
+Pred ID: 26
+Pred: Жарайды, мен бүгін көп нәрсе жасадым
+Confidence: 83.71%
+Result: FAIL
+
+
+==============================
+Testing: sign_lstm_masked_supreme_best.keras
+==============================
+
+VIDEO 1/10
+File: P13_S054_00.mp4
+True ID: 54
+True: Қош бол
+Pred ID: 66
+Pred: мен Қазақстанның солтүстігіненмін
+Confidence: 83.78%
+Result: FAIL
+
+
+VIDEO 2/10
+File: P5_S081_00.mp4
+True ID: 81
+True: Бүгін менің туған күнім
+Pred ID: 81
+Pred: Бүгін менің туған күнім
+Confidence: 86.95%
+Result: PASS
+
+
+VIDEO 3/10
+File: P0_S015_00.mp4
+True ID: 15
+True: не болды
+Pred ID: 15
+Pred: не болды
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 4/10
+File: P10_S030_01.mp4
+True ID: 30
+True: маған көмек керек
+Pred ID: 30
+Pred: маған көмек керек
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 5/10
+File: P10_S067_04.mp4
+True ID: 67
+True: мен Қазақстанның оңтүстігіненмін
+Pred ID: 67
+Pred: мен Қазақстанның оңтүстігіненмін
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 6/10
+File: P5_S073_03.mp4
+True ID: 73
+True: мен, Ташкент қаласында тұрамын
+Pred ID: 21
+Pred: менде жаңалық бар
+Confidence: 100.00%
+Result: FAIL
+
+
+VIDEO 7/10
+File: P15_S062_01.mp4
+True ID: 62
+True: менің жасым
+Pred ID: 62
+Pred: менің жасым
+Confidence: 99.61%
+Result: PASS
+
+
+VIDEO 8/10
+File: P16_S011_02.mp4
+True ID: 11
+True: мен жұмыс істеп жатырмын
+Pred ID: 11
+Pred: мен жұмыс істеп жатырмын
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 9/10
+File: P5_S000_00.mp4
+True ID: 0
+True: Сәлеметсіз бе
+Pred ID: 17
+Pred: бірдеңе болды (сұрақ)
+Confidence: 73.12%
+Result: FAIL
+
+
+VIDEO 10/10
+File: P11_S040_00.mp4
+True ID: 40
+True: не істеу керек (сұрақ)
+Pred ID: 40
+Pred: не істеу керек (сұрақ)
+Confidence: 100.00%
+Result: PASS
+
+
+==============================
+FINAL
+==============================
+
+Masked Best:     9/10
+Masked Supreme:  7/10
+
+
+Process finished with exit code 0
+
+
+
+test 10:
+C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Scripts\python.exe C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\src\dl\test_video.py 
+2026-04-30 15:13:24.791709: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+
+==============================
+Testing: sign_lstm_masked_best.keras
+==============================
+WARNING:tensorflow:From C:\Users\Bekal\Documents\my_own_documents\Uni_Diploma\Project\Model_training\KrSL_FluenSigners-50_Kuro\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2026-04-30 15:13:37.008586: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+VIDEO 1/10
+File: P23_S044_03.mp4
+True ID: 44
+True: Қайырлы күн
+Pred ID: 44
+Pred: Қайырлы күн
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 2/10
+File: P1_S032_02.mp4
+True ID: 32
+True: мен жұмыс іздеп жүрмін
+Pred ID: 32
+Pred: мен жұмыс іздеп жүрмін
+Confidence: 99.97%
+Result: PASS
+
+
+VIDEO 3/10
+File: P14_S006_01.mp4
+True ID: 6
+True: менде бәрі жақсы
+Pred ID: 6
+Pred: менде бәрі жақсы
+Confidence: 49.84%
+Result: PASS
+
+
+VIDEO 4/10
+File: P12_S068_01.mp4
+True ID: 68
+True: мен Қазақстанның батысынанмын
+Pred ID: 68
+Pred: мен Қазақстанның батысынанмын
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 5/10
+File: P16_S022_03.mp4
+True ID: 22
+True: Жаңа ештеңе жоқ
+Pred ID: 22
+Pred: Жаңа ештеңе жоқ
+Confidence: 99.55%
+Result: PASS
+
+
+VIDEO 6/10
+File: P15_S047_01.mp4
+True ID: 47
+True: өзіңе қамқор бол
+Pred ID: 47
+Pred: өзіңе қамқор бол
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 7/10
+File: P3_S039_01.mp4
+True ID: 39
+True: маған көбірек дем алу керек
+Pred ID: 39
+Pred: маған көбірек дем алу керек
+Confidence: 88.43%
+Result: PASS
+
+
+VIDEO 8/10
+File: P1_S042_02.mp4
+True ID: 42
+True: Кешіңіз жақсы өтсін
+Pred ID: 42
+Pred: Кешіңіз жақсы өтсін
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 9/10
+File: P15_S041_04.mp4
+True ID: 41
+True: Күндеріңіз сәтті өтсін
+Pred ID: 41
+Pred: Күндеріңіз сәтті өтсін
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 10/10
+File: P7_S043_02.mp4
+True ID: 43
+True: қайырлы таң
+Pred ID: 26
+Pred: Жарайды, мен бүгін көп нәрсе жасадым
+Confidence: 83.71%
+Result: FAIL
+
+
+==============================
+Testing: sign_lstm_masked_supreme_best.keras
+==============================
+
+VIDEO 1/10
+File: P13_S054_00.mp4
+True ID: 54
+True: Қош бол
+Pred ID: 66
+Pred: мен Қазақстанның солтүстігіненмін
+Confidence: 83.78%
+Result: FAIL
+
+
+VIDEO 2/10
+File: P5_S081_00.mp4
+True ID: 81
+True: Бүгін менің туған күнім
+Pred ID: 81
+Pred: Бүгін менің туған күнім
+Confidence: 86.95%
+Result: PASS
+
+
+VIDEO 3/10
+File: P0_S015_00.mp4
+True ID: 15
+True: не болды
+Pred ID: 15
+Pred: не болды
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 4/10
+File: P10_S030_01.mp4
+True ID: 30
+True: маған көмек керек
+Pred ID: 30
+Pred: маған көмек керек
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 5/10
+File: P10_S067_04.mp4
+True ID: 67
+True: мен Қазақстанның оңтүстігіненмін
+Pred ID: 67
+Pred: мен Қазақстанның оңтүстігіненмін
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 6/10
+File: P5_S073_03.mp4
+True ID: 73
+True: мен, Ташкент қаласында тұрамын
+Pred ID: 21
+Pred: менде жаңалық бар
+Confidence: 100.00%
+Result: FAIL
+
+
+VIDEO 7/10
+File: P15_S062_01.mp4
+True ID: 62
+True: менің жасым
+Pred ID: 62
+Pred: менің жасым
+Confidence: 99.61%
+Result: PASS
+
+
+VIDEO 8/10
+File: P16_S011_02.mp4
+True ID: 11
+True: мен жұмыс істеп жатырмын
+Pred ID: 11
+Pred: мен жұмыс істеп жатырмын
+Confidence: 100.00%
+Result: PASS
+
+
+VIDEO 9/10
+File: P5_S000_00.mp4
+True ID: 0
+True: Сәлеметсіз бе
+Pred ID: 17
+Pred: бірдеңе болды (сұрақ)
+Confidence: 73.12%
+Result: FAIL
+
+
+VIDEO 10/10
+File: P11_S040_00.mp4
+True ID: 40
+True: не істеу керек (сұрақ)
+Pred ID: 40
+Pred: не істеу керек (сұрақ)
+Confidence: 100.00%
+Result: PASS
+
+
+==============================
+FINAL
+==============================
+
+Masked Best:     9/10
+Masked Supreme:  7/10
+
+
+Process finished with exit code 0
