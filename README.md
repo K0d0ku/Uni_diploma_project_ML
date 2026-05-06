@@ -134,13 +134,14 @@ The project is made on a low-end acer laptop with the following hardware specifi
 | **Memory (RAM)** | 8GB (4GB Soldered + 4GB DDR$ SODimm) |
 | **Internal Storage** | 512GB M.2 SSD                        |
 | **External Storage** | 1TB External M.2 SSD                 |
-| **Graphics (GPU)** | Intel HD Graphics 520 (128MB VRAM)   |
+| **Graphics (GPU)** | Intel HD Graphics 520 (128MB VRAM)   |  
+  
 the listed hardware specifications makes the project very challenging with limited hardware computational power 
+
+---
 
 ### Dataset
 Dataset is from [KRSLR FluentSigners-50](https://krslproject.github.io/FluentSigners-50/) by the K-SLARS team.  
-
----
 ## FluentSigners-50: a signer independent benchmark dataset for Sign Language Processing,
 #### Medet Mukushev, Aidyn Ubingazhibov, Aigerim Kydyrbekova, Alfarabi Imashev, Vadim Kimmelman, Anara Sandygulova Nazarbayev University, University of Bergen
 ### Citation (K-SLARS team)
@@ -159,12 +160,13 @@ Each folder contains **250 video** samples per annotation for all annotations fr
 
 | Annotations              |     Samples      |  Signers   | Versions (per signer) | Amount overall |
 |:-------------------------|:----------------:|:----------:|:-----------------:|:--------------:|
-| 173 annotation / classes | 250 per annotation | 50 signers |         5         |  43250 videos  |
-BUT , due to my hardware limitations i could only download and use only a quarter (25%) of the dataset, which is still a very good size for training a model.
-
+| 173 annotation / classes | 250 per annotation | 50 signers |         5         |  43250 videos  |  
+  
+BUT , due to my hardware limitations i could only download and use only a quarter (25%) of the dataset, which is still a very good size for training a model.  
+  
 | Annotations             |      Samples       |  Signers   | Versions (per signer) | Amount overall |
 |:------------------------|:------------------:|:----------:|:-----------------:|:--------------:|
-| 80 annotation / classes | 125 per annotation | 25 signers |         5         |  10000 videos  |
+| 80 annotation / classes | 125 per annotation | 25 signers |         5         |  10000 videos  |  
 
 The project annotations can be seen at: 
 - [Kazakh](data/annotations/kazakh.json)
@@ -262,8 +264,7 @@ Softmax Output (Gesture probability distribution)
    - 478 face landmarks (3D: x, y, z) 
    - 21 left-hand keypoints (3D)
    - 21 right-hand keypoints (3D)
-   - Normalized and standardized before model input
-   - 
+   - Normalized and standardized before model input  
 
 ### System Pipeline
 
