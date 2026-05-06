@@ -1,6 +1,4 @@
-# Kazakh Sign Language Recognition (KrSL) - FluentSigners-50
-
-**A University Diploma Research Project for Accessible Sign Language Recognition**
+# My University Diploma Research Project for Accessible Kazakh Dialect of Sign Language Recognition
 
 ![Status](https://img.shields.io/badge/status-Active%20Development-brightgreen)
 ![Python](https://img.shields.io/badge/python-3.11-blue)
@@ -11,18 +9,78 @@
 ![Parameters](https://img.shields.io/badge/parameters-15.6M-blue)
 
 ---
+## Table of contents
+- [Prologue](#prologue)
+- [Mission](#mission)
+  - [Research Focus](#research-focus)
+- [Specifications](#specifications)
+  - [Project](#project)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Device Specifications](#device-specifications)
+  - [Dataset](#dataset)
+  - [Project Requirements](#project-requirements)
+- [Project Overview](#project-overview)
+  - [Key Achievements](#key-achievements)
+- [Technical Specifications](#technical-specifications)
+  - [Model: sign_lstm_masked_supreme_best.keras](#model-sign_lstm_masked_supreme_bestkeras)
+  - [System Pipeline](#system-pipeline)
+  - [FluentSigners-50 Dataset Usage](#fluentsigners-50-dataset-usage)
+- [Project Architecture](#project-architecture)
+  - [Feature Extraction (1,692-Dimensional Vector)](#feature-extraction-1692-dimensional-vector)
+  - [Training Details](#training-details)
+  - [Performance Metrics Summary](#performance-metrics-summary)
+- [Testing](#testing)
+  - [Video test](#video-test)
+  - [Camera testing (in development)](#camera-testing-in-development)
+- [Model Performance](#model-performance)
+  - [Validation Results](#validation-results)
+  - [Hardware Performance](#hardware-performance)
+  - [Example Test Results](#example-test-results)
+- [Key Innovations](#key-innovations)
+- [Use Cases](#use-cases)
+- [Development Status](#development-status)
+  - [Completed Features](#completed-features)
+  - [In Development](#in-development)
+  - [Future Improvements (are not promised)](#future-improvements-are-not-promised)
+- [Performance Analysis](#performance-analysis)
+  - [Accuracy by Sign Category](#accuracy-by-sign-category)
+  - [Inference Performance](#inference-performance)
+- [Known Limitations](#known-limitations)
+- [Usage Notes](#usage-notes)
+- [Support & Questions](#support--questions)
+- [Project Statistics](#project-statistics)
+- [Key Takeaways](#key-takeaways)
+- [Conclusion](#conclusion)
+### **To see the results of testing please check the videos at: [etc/video](etc/video), [etc/img](etc/img) and [etc/gif](etc/gif)**  
+### model accuracy result example:
+![preview 10](etc/gif/V%20-%201.4%20accuracy%20Preview%20-%2010.gif)
+
+## Prologue
+This repository is designated for my university diploma research project focused on developing an accessible Kazakh Sign Language Recognition system model. In this repository, I document the entire research and development process, including data preparation, model training, evaluation, and deployment considerations. The project is designed to be open-source and free to use, with the goal of enabling real-world applications that facilitate communication for deaf individuals using Kazakh Sign Language.
+
 
 ## Mission
-
 > **"Help for those in need should not be limited or paid."**
 
 This project develops a deployment-ready Kazakh Sign Language Recognition system to facilitate real-time communication between deaf people using Kazakh Sign Language (KrSL) and others. By combining cutting-edge deep learning with efficient CPU-based inference, we create accessible technology that works on consumer hardware with no licensing barriers.
 
----
+This project embodies a core principle: **technology for accessibility should never have barriers.**
 
-## Project Overview
+Too often, assistive technology comes with:
+- Expensive licensing fees
+- Complex hardware requirements
+- Proprietary formats
+- Limited customization options
 
-**KrSL FluentSigners-50** is a masked LSTM-based Kazakh Sign Language gesture recognition system trained as part of university diploma research. The model achieves **85% accuracy** for recognizing 80 Kazakh sign language categories from the FluentSigners-50 dataset, optimized for web and server-side deployment with real-time CPU inference.
+**my approach:**
+- Open-source and free to use
+- Works on consumer computers
+- No licensing restrictions
+- Fully customizable for future needs
+- Community-driven improvements
+
+By proving that quality sign language recognition works on basic hardware, we hope to inspire similar accessible technology initiatives worldwide.
 
 ### Research Focus
 - Researching methods to ease communication between deaf communities and hearing populations
@@ -30,20 +88,129 @@ This project develops a deployment-ready Kazakh Sign Language Recognition system
 - Creating accessible technology with no usage restrictions or licensing fees
 - Proving that high-quality sign language recognition is achievable on consumer hardware
 
-### Key Achievements
 
-| Aspect | Details |
-|:---|:---|
-| **Accuracy** | 85% on validation set |
-| **Model Size** | 15.6 Million parameters |
+---
+
+## Specifications
+
+### Project
+- **License:** MIT
+- **Institution:** University Diploma Program
+- **Diploma program:** Bachelor of Science in Computer Science
+- **University:** [Satbayev University](https://satbayev.university/en) `(Kazakhstan, Almaty)`
+
+### Prerequisites
+- Python 3.11+
+- 2GB+ RAM minimum (works on 8GB)
+- CPU with SSE support (all modern CPUs have this)
+- Webcam or MP4 video file (optional)
+
+### Installation
+
+```bash
+# Clone repository
+git clone https://github.com/YOUR_USERNAME/KrSL_FluenSigners-50_Kuro.git
+cd KrSL_FluenSigners-50_Kuro
+
+# Create virtual environment
+python -m venv venv
+venv\Scripts\activate  # Windows
+# source venv/bin/activate  # Linux/Mac
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Download pre-trained model (if not included)
+# Place sign_lstm_masked_supreme_best.keras in models/
+```
+
+### Device Specifications
+The project is made on a low-end acer laptop with the following hardware specifications:
+
+| Component | Specification Details                |
+| :--- |:-------------------------------------|
+| **Processor (CPU)** | Intel Core i5-6300U                  |
+| **Memory (RAM)** | 8GB (4GB Soldered + 4GB DDR$ SODimm) |
+| **Internal Storage** | 512GB M.2 SSD                        |
+| **External Storage** | 1TB External M.2 SSD                 |
+| **Graphics (GPU)** | Intel HD Graphics 520 (128MB VRAM)   |
+the listed hardware specifications makes the project very challenging with limited hardware computational power 
+
+### Dataset
+Dataset is from [KRSLR FluentSigners-50](https://krslproject.github.io/FluentSigners-50/) by the K-SLARS team.  
+
+---
+## FluentSigners-50: a signer independent benchmark dataset for Sign Language Processing,
+#### Medet Mukushev, Aidyn Ubingazhibov, Aigerim Kydyrbekova, Alfarabi Imashev, Vadim Kimmelman, Anara Sandygulova Nazarbayev University, University of Bergen
+### Citation (K-SLARS team)
+Mukushev M, Ubingazhibov A, Kydyrbekova A, Imashev A, Kimmelman V, et al. (2022) FluentSigners-50: A signer independent benchmark dataset for sign language processing. PLOS ONE 17(9): e0273649. https://doi.org/10.1371/journal.pone.0273649
+### Acknowledgment (K-SLARS team)
+This work was supported by the Nazarbayev University Faculty Development Competitive Research Grant Program 2019-2021 "Kazakh Sign Language Automatic Recognition System (K-SLARS)". Award number is 110119FD4545".  
+
+---
+Since there are not a lot of *openly available* datasets for Kazakh Sign Language, i made my choice on FluentSigners-50 specifically, because its not only openly available but also the size of the dataset is perfect,   
+it is made including all known Inclusiv categories such as: Deaf, Hard of hearing, Hearing Coda and Hearing Soda, form all regions of Kazakhstan, of most ethnicities and age ranges:
+![Fig. 1 Number of videos per age distribution of participants](https://raw.githubusercontent.com/krslproject/fluentsigners-50/main/fig2.png)
+Even the size of dataset is perfect not too big or not too small, the dataset provides raw video files of annotations.  
+As the name suggests the dataset is made with 50 contributors, whom were communicating via the sign language very long or even since birth.  
+The dataset Contains **173** annotations, which are the direct translations of the gesture movement sequence, and is structured as such, so each folder is an annotation.  
+Each folder contains **250 video** samples per annotation for all annotations from **50 signers** with **5 versions** per signer, roughly containing 43250 videos overall.  
+
+| Annotations              |     Samples      |  Signers   | Versions (per signer) | Amount overall |
+|:-------------------------|:----------------:|:----------:|:-----------------:|:--------------:|
+| 173 annotation / classes | 250 per annotation | 50 signers |         5         |  43250 videos  |
+BUT , due to my hardware limitations i could only download and use only a quarter (25%) of the dataset, which is still a very good size for training a model.
+
+| Annotations             |      Samples       |  Signers   | Versions (per signer) | Amount overall |
+|:------------------------|:------------------:|:----------:|:-----------------:|:--------------:|
+| 80 annotation / classes | 125 per annotation | 25 signers |         5         |  10000 videos  |
+
+The project annotations can be seen at: 
+- [Kazakh](data/annotations/kazakh.json)
+- [Gloss](data/annotations/gloss.json)
+- [Russian](data/annotations/russian.json)
+
+And the original annotations are at:
+- [Gloss](https://raw.githubusercontent.com/krslproject/fluentsigners-50/main/gloss_annotation.csv)
+- [Russian](https://raw.githubusercontent.com/krslproject/fluentsigners-50/main/russian_translation.csv)
+
+### Project Requirements
+
+The project is written in Python 3.11 and uses TensorFlow/Keras for deep learning, MediaPipe for landmark extraction, and OpenCV for video processing and visualization.
+The requirements are listed in [requirements.txt](requirements.txt) and include various packages, with the core dependencies being:
+- TensorFlow 2.15.0
+- MediaPipe 0.10.9
+- OpenCV 4.13.0
+- NumPy 1.26.4
+- Pandas 3.0.1
+- keras 2.15.0  
+- Matplotlib 3.10.8  
+
+and is made in:
+- Pycharm IDE (2023.1, 2026.1(community ed.))
+---
+
+## Project Overview
+**KrSL FluentSigners-50** is a masked LSTM-based Kazakh Sign Language gesture recognition system trained as part of university diploma research. The model achieves **85% accuracy** for recognizing 80 Kazakh sign language categories from the FluentSigners-50 dataset, optimized for web and server-side deployment with real-time CPU inference.  
+
+Due to the computational limitation i had to rely and use on a lot of known modern methods of training the model for this specific task, as the model has to **visually analyze a video or live camera** to detect the sequence of gestures, and accurately predict / detect that following sequence with most accuracy and possibly in real time,   
+so i chose to train a BiLstm neural network. As you (or others) might surf thru the code, you can see the various stages of me making improvements of experimenting with the model.  
+Because it is my first time actually making a serious model on the subject of machine learning and all of my previous experiences in machine learning field include Simple image models or already premade datasets, it was very difficult for me to make what we have here,
+the current latest and stable version of the model is [V1.4 sign_lstm_masked_supreme_best](https://github.com/K0d0ku/Uni_diploma_project_ML/releases/tag/v1.4) `(check releases)`, with the model reachin accuracy of **85%** and working perfectly in real time even at the current device specifications.
+
+### Key Achievements
+| Aspect | Details                                        |
+|:---|:-----------------------------------------------|
+| **Accuracy** | 85% on actual video and camera test            |
+| **Model Size** | 15.6 Million parameters                        |
 | **Training Epochs** | 240 (initial) + 500 (continuation) = 740 total |
-| **Training Method** | Grokking (knowledge absorption technique) |
-| **Architecture** | Masked Bidirectional LSTM with attention |
-| **Inference Speed** | Real-time on CPU (Intel HD 520) |
-| **Deployment** | Web and Server-side ready |
-| **Hardware Support** | Works on basic consumer hardware |
-| **Dataset Used** | FluentSigners-50 (25% of original) |
-| **Sign Classes** | 80 Kazakh gesture annotations |
+| **Training Method** | Grokking (knowledge absorption technique)      |
+| **Architecture** | Masked Bidirectional LSTM with attention       |
+| **Inference Speed** | Real-time on CPU                               |
+| **Deployment** | Web and Server-side ready                      |
+| **Hardware Support** | Works on basic consumer hardware               |
+| **Dataset Used** | FluentSigners-50 (25% of original)             |
+| **Sign Classes** | 80 Kazakh gesture annotations                  |
 
 ---
 
@@ -95,65 +262,7 @@ Softmax Output (Gesture probability distribution)
    - 21 left-hand keypoints (3D)
    - 21 right-hand keypoints (3D)
    - Normalized and standardized before model input
-
-### Hardware Context
-
-The model was developed and optimized on:
-- **CPU:** Intel Core i5-6300U (2.4 GHz, 2 cores)
-- **GPU:** Intel HD Graphics 520 (128MB dedicated)
-- **RAM:** 8GB
-- **Storage:** 512GB SSD + 1TB external SSD
-- **OS:** Windows 10 / 11
-
-**Achievement:** Despite these limitations, the model runs **perfectly fast** on CPU, proving that high-quality sign language recognition doesn't require expensive hardware.
-
----
-
-## Dataset & Annotations
-
-### FluentSigners-50 Dataset Usage
-
-| Metric | Original Dataset | Used in Project |
-|:---|:---:|:---:|
-| **Total Annotations** | ~175 | 80 (45.7%) |
-| **Samples per Annotation** | 250 | 125 (50%) |
-| **Total Videos** | ~43,750 | ~10,000 (22.9%) |
-| **Unique Signers** | 25 (P0-P24) | 25 (P0-P24) |
-| **Coverage** | Full dataset | Representative subset |
-
-### 80 Recognized Kazakh Sign Language Gestures
-
-The model recognizes 80 signs including:
-
-**Greetings & Politeness:**
-- Сәлеметсіз бе (Hello - formal)
-- Сәлем (Hi - informal)
-- Сәлеметсіз (Goodbye)
-
-**Questions & Responses:**
-- Қалыңыз қалай (How are you?)
-- Жұмысыңыз қалай (How's work?)
-- Өзіңізді қалай сезінесіз (How do you feel?)
-- Қандай жаңалық (What's new?)
-
-**States & Feelings:**
-- Менде бәрі жақсы (I'm fine)
-- Менде бәрі керемет (Everything's great)
-- Менің жағдайым жаман (I'm not well)
-- Менің жағдайым өте нашар (I'm very bad)
-
-**Activities & Actions:**
-- Мен демалып жатырмын (I'm resting)
-- Мен жұмыс істеп жатырмын (I'm working)
-- Мен теледидар көріп отырмын (I'm watching TV)
-
-**And 60+ more signs...**
-
-*See `data/annotations/kazakh.json` for complete sign glossary with translations to Russian and gloss annotations.*
-
----
-
-## Project Architecture
+   - 
 
 ### System Pipeline
 
@@ -187,7 +296,7 @@ The model recognizes 80 signs including:
 ┌─────────────────────────────────────────────────────────┐
 │   Create Sequence Mask for Variable Lengths             │
 │   Mask indicates valid (real) vs padded (empty) frames  │
-└────────���───────────┬──────────────────────────────────┘
+└──────────────────────┬──────────────────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────┐
@@ -209,6 +318,28 @@ The model recognizes 80 signs including:
 │     Display on video with recognized annotation         │
 └─────────────────────────────────────────────────────────┘
 ```
+
+### FluentSigners-50 Dataset Usage
+The annotations can be seen at: 
+- [Kazakh](data/annotations/kazakh.json)
+- [Gloss](data/annotations/gloss.json)
+- [Russian](data/annotations/russian.json)
+
+| Metric | Original Dataset |         Used in Project         |
+|:---|:----------------:|:-------------------------------:|
+| **Total Annotations** |       173        |           80 (46.24%)           |
+| **Samples per Annotation** |       250        |            125 (50%)            |
+| **Total Videos** |     ~43,250      |        ~10,000 (23.12%)         |
+| **Unique Signers** |        50        |               25                |
+| **Coverage** |   Full dataset   | Representative subset (quarter) |
+
+
+
+---
+
+
+## Project Architecture
+
 
 ### Feature Extraction (1,692-Dimensional Vector)
 
@@ -232,178 +363,273 @@ MediaPipe Holistic Output
 
 Total Dimensionality: 132 + 1434 + 63 + 63 = 1,692-D per frame
 ```
+The system utilizes a multi-stage pipeline to transform raw .mp4 video files into structured numerical arrays (.npy). This ensures that the model receives consistent, normalized data regardless of the original video length or framerate.
 
-### Training Pipeline Details
+| File                                                          | Responsibility                                                        | Path                                    |
+|:--------------------------------------------------------------|:----------------------------------------------------------------------|:----------------------------------------|
+| [mdeiapipe_utils.py](src/utils/mediapipe_utils.py)            | Low-level landmark extraction using MediaPipe Holistic.               | src/utils/mediapipe_utils.py            |
+| [extract_dataset.py](src/preprocessing/extract_landmarks.py)  | High-level dataset processing, sequence padding, and I/O management.  | src/preprocessing/extract_landmarks.py  |
 
-**Phase 1: Initial Training (240 epochs)**
+1. Landmark Extraction (mediapipe_utils.py)  
+This module initializes the MediaPipe Holistic model and flattens coordinate data into a single feature vector.
+```python
+def extract_landmarks(results):
+    # Extracts Pose (132), Face (1434), Left Hand (63), and Right Hand (63)
+    # Total: 1,692 features per frame
+    
+    pose = np.array([[lm.x, lm.y, lm.z, lm.visibility] for lm in results.pose_landmarks.landmark]).flatten() if results.pose_landmarks else np.zeros(132)
+    face = np.array([[lm.x, lm.y, lm.z] for lm in results.face_landmarks.landmark]).flatten() if results.face_landmarks else np.zeros(1434)
+    lh = np.array([[lm.x, lm.y, lm.z] for lm in results.left_hand_landmarks.landmark]).flatten() if results.left_hand_landmarks else np.zeros(63)
+    rh = np.array([[lm.x, lm.y, lm.z] for lm in results.right_hand_landmarks.landmark]).flatten() if results.right_hand_landmarks else np.zeros(63)
+
+    return np.concatenate([pose, face, lh, rh]).astype(np.float32)
+```
+`Note on Implementation: In cases where landmarks are not detected, the system defaults to "Zero Mapping." While this maintains vector dimensionality, it is noted as a limitation in the current pipeline version under low-light or occluded conditions.`
+
+2. Dataset Processing (extract_landmarks.py)  
+To prepare data for the BiLSTM model, the extraction script performs Temporal Standardization. Every video is converted into a fixed-length sequence of 30 frames.  
+- Frame Skipping: To handle high-FPS video on limited hardware, every _N_ - th frame is processed (default _N_=2).
+- Sequence Normalization:
+- - Short Videos: Padded with zero-arrays at the end to reach 30 frames.
+- - Long Videos: Downsampled using linear interpolation to select 30 representative frames.
+- Two-Pass Extraction Logic: To ensure balanced classes, the script first attempts to extract 80 samples per class. If the initial batch fails (due to detection errors), it triggers a fallback pass to process all available videos in the directory.
+
+```python
+if len(sequence) < TARGET_LENGTH:
+    # Zero-padding for short sequences
+    padding = np.zeros((TARGET_LENGTH - len(sequence), EXPECTED_SIZE))
+    sequence = np.vstack([sequence, padding])
+elif len(sequence) > TARGET_LENGTH:
+    # Linear downsampling for long sequences
+    indices = np.linspace(0, len(sequence) - 1, TARGET_LENGTH, dtype=int)
+    sequence = sequence[indices]
+```
+
+#### Data Flow Visualization
+```
+    A[Raw Video .mp4] --> B[OpenCV Frame Capture]
+    B --> C[MediaPipe Holistic]
+    C --> D[1,692-D Vector Extraction]
+    D --> E{Sequence Length?}
+    E -- < 30 --> F[Zero Padding]
+    E -- > 30 --> G[Linear Sampling]
+    F --> H[Final .npy Array]
+    G --> H
+```
+This structure allows for a modular dataset. By saving landmarks as independent .npy files, the training-test split can be re-shuffled without re-running the heavy MediaPipe extraction process.
+
+### Training Details
+The core of the system is a Deep Bidirectional LSTM (BiLSTM) network designed to process temporal sequences of skeletal landmarks. With over 15.6 million parameters, the model is deep enough to capture the nuances of Kazakh Sign Language (KrSL) while maintaining real-time inference speeds on standard CPUs.
+
+#### The "Masked" Architecture
+To address the "zero-mapping" issue in the dataset (where missing landmarks were replaced with zeros), a custom Multiply Masking layer was implemented. This ensures that the LSTM ignores padded or missing data points during the forward pass, focusing only on valid gesture information.  
+
+#### Technical Implementation
+```python
+# Defining dual inputs
+input_seq = Input(shape=(30, 1692), name="Landmark_Input")
+input_mask = Input(shape=(30, 1), name="Mask_Input")
+
+# Applying the mask: 
+# This zero-multiplication ensures the BiLSTM doesn't try to 'learn' patterns 
+# from the artifacts of missing data.
+masked_seq = Multiply()([input_seq, input_mask])
+
+# Stacked Bidirectional LSTMs for temporal depth
+x = Bidirectional(LSTM(512, return_sequences=True))(masked_seq)
+x = BatchNormalization()(x)
+x = Dropout(0.3)(x)
+
+x = Bidirectional(LSTM(512))(x)
+x = BatchNormalization()(x)
+```
+#### Two-Phase Training Pipeline
+The training was executed in two distinct stages to push the model beyond simple memorization and toward true generalization (a process often referred to in ML as Grokking).
+
+**Phase 1: Initial Training (240 epochs) [train.py](src/dl/train.py)**  
+In this phase, the model learns the basic geometric relationships of the 1,692-dimensional vector.
+- Objective: Establish a solid weights baseline.
+- Strategy: High patience in EarlyStopping to prevent the script from killing the process during the early, "noisy" phase of learning.
+```python
+early_stop = EarlyStopping(
+    monitor="val_accuracy",
+    patience=240,            # ignore it lol
+    restore_best_weights=True # Automatically reverts to the highest-performing epoch
+)
+
+# Initial training call
+history = model.fit(
+    [X_train, M_train], y_train,
+    validation_data=([X_val, M_val], y_val),
+    epochs=240,
+    batch_size=32,
+    callbacks=[early_stop, checkpoint]
+)
+```
+
 - Learning the fundamental patterns
 - Model memorizing dataset characteristics
 - Overfitting phase (expected with grokking method)
 - Gradual improvement on validation metrics
+![train.py](graphs/dl/V_1.4_training.png)
 
-**Phase 2: Continued Training (500 epochs)**
+**Phase 2: Continued Training (500 epochs) [train_continue.py](src/dl/train_continue.py)**  
+After the initial 240 epochs, the model was re-loaded from its best checkpoint to undergo extended fine-tuning. This is where the model "discovered" deeper patterns in the Kazakh Sign Language dataset that weren't apparent in the first 200 epochs.  
+- Objective: Force convergence and improve validation accuracy from the baseline to 85%.
+- Logic: By using a lower learning rate or simply extending the exposure to data, the model's validation performance experienced a sudden "jump."
+```python
+# Loading the best weights from Phase 1 to begin fine-tuning
+model = load_model(BEST_MODEL_FILE)
+
+# Continuing training for an additional 500 epochs
+history = model.fit(
+    [X_train, M_train], y_train,
+    validation_data=([X_val, M_val], y_val),
+    epochs=500,
+    batch_size=32,
+    callbacks=[early_stop, checkpoint] # Early stopping here prevents 'useless' extra cycles
+)
+```
 - Fine-tuning from best checkpoint
 - "Grokking" phase - models suddenly jump in generalization
 - Extended training helps model discover deeper patterns
 - Final convergence at 85% validation accuracy
+![train_continue.py](graphs/dl/V_1.4_continue_training.png)
+`tho cause of limited computational power and my own ignorance i could not overcome the plateau nor improve the model's accuracy further than 85% at the current time`
 
 **Final Result:**
 - Best checkpoint saved as `sign_lstm_masked_supreme_best.keras`
 - 15.6M trainable parameters
 - Optimized for inference speed on CPU
 - All training metadata preserved in logs
+![result](graphs/dl/full_model_comparison.png)
+
+### Performance Metrics Summary
+
+| Training Phase | Epochs | Best Val Accuracy | Final Val Accuracy | Training Time |
+|:---|:---:|:---:|:---:|:-------------:|
+| Initial Training | 240 | 78.5% | 82.1% |   ~11 hours   |
+| Continued Training | 500 | 84.7% | 85.0% |   ~23 hours   |
+| **Total** | **740** | **85.0%** | **85.0%** | **~34 hours** |
+
 
 ---
 
-## Project Structure
+## Testing
 
-```
-KrSL_FluenSigners-50_Kuro/
-│
-├── src/                                   # Source code
-│   ├── main.py                           # Entry point
-│   │
-│   ├── dl/                               # Deep learning pipeline
-│   │   ├── build_dataset_masked.py      # Create masked dataset
-│   │   ├── train.py                     # Initial training (240 epochs)
-│   │   ├── train_continue.py            # Continued training (500 epochs)
-│   │   ├── test_video.py                # Batch video inference
-│   │   ├── test_video_solo.py           # Single video testing
-│   │   ├── test_cam.py                  # Webcam inference (in development)
-│   │   ├── test_video_preview.py        # (excluded - system paths)
-│   │   └── data/                        # (excluded)
-│   │
-│   ├── preprocessing/                    # Data preparation
-│   │   ├── extract_landmarks.py         # MediaPipe extraction
-│   │   ├── extract_landmarks_expressional.py
-│   │   ├── normalize_fin_dataset.py     # Normalization
-│   │   ├── create_fin_dataset.py        # Dataset creation
-│   │   ├── dataset_analysis.py          # Statistics
-│   │   └── recompute_normalization_reduced.py
-│   │
-│   ├── training/                         # Training utilities
-│   │   ├── train_lstm.py                # LSTM training logic
-│   │   ├── train_lstm_expressional.py
-│   │   ├── continue_training.py
-│   │   ├── load_dataset.py
-│   │   ├── prepare_data.py
-│   │   └── save_labels.py
-│   │
-│   ├── inference/                        # Prediction & evaluation
-│   │   ├── predict.py
-│   │   ├── test_on_cam.py
-│   │   └── test_on_videos.py
-│   │
-│   └── utils/                            # Utilities
-│       ├── mediapipe_utils.py
-│       └── mediapipe_expressional.py
-│
-���── data/                                  # Data & annotations
-│   ├── annotations/
-│   │   ├── kazakh.json                  # 80 Kazakh sign glossary
-│   │   ├── russian.json                 # Russian translations
-│   │   └── gloss.json                   # Sign glosses
-│   │
-│   ├── stats/
-│   │   └── annotation_stats.json
-│   │
-│   └── (Excluded in .gitignore)
-│       ├── keypoints/                   # Extracted landmarks
-│       ├── processed/                   # Processed datasets
-│       └── kerypoints_expressional/     # Expressional variant
-│
-├── models/                               # Trained models (excluded)
-│   ├── sign_lstm_masked_supreme_best.keras  # BEST MODEL
-│   ├── sign_lstm_supreme_best.keras     # Alternative
-│   ├── sign_lstm_best.keras             # Lightweight variant
-│   └── (other checkpoint variants)
-│
-├── fin/                                  # Final data (excluded)
-│   ├── best_model.keras
-│   ├── final_model.keras
-│   ├── X_train.npy, X_test.npy
-│   ├── y_train.npy, y_test.npy
-│   └── feature_mean.npy, feature_std.npy
-│
-├── logs/                                 # Training & inference logs
-│   ├── train_lstm_*.txt                 # Training outputs
-│   ├── test_*.txt                       # Test results
-│   ├── dataset_loading*.txt
-│   ├── landmark_extraction.txt
-│   └── (organized by variant)
-│
-├── graphs/                               # Visualizations
-│   ├── model_summary_*.png              # Architecture diagrams
-│   ├── training_comparison_*.png        # Training curves
-│   ├── test_confidence_scatter_*.png    # Confidence distribution
-│   └── test_grid_evaluation_*.png       # Evaluation matrices
-│
-├── etc/                                  # Resources
-│   ├── img/                             # Screenshots
-│   ├── video/                           # Demo videos (proof of work)
-│   └── doc/                             # Documentation
-│
-├── configs/
-│   └── settings.py                      # Configuration
-│
-├── requirements.txt                      # Python dependencies
-├── .gitignore                           # Git ignore rules
-├── README.md                            # This file
-└── GIT_SETUP_SUMMARY.md                 # Repository setup notes
+### Video test
+The testing suite [test_video_solo.py](src/dl/test_video_solo.py) is designed to validate the model's performance on raw .mp4 files. It bridges the gap between static landmark files and real-world video input by recreating the exact preprocessing pipeline used during training.  
+
+### **To see the results of testing please check the videos at: [etc/video](etc/video), [etc/img](etc/img)**
+
+#### Inference Modes
+The script provides three operational modes to balance speed and diagnostic depth:  
+1. Mode 1 (Console Output): Fast processing; prints IDs, labels, and confidence scores directly to the terminal.
+2. Mode 2 (Video Preview): Overlays prediction results (True vs. Predicted) on the video playback.
+3. Mode 3 (Full Diagnostics): Mode 2 + Real-time visualization of MediaPipe Holistic landmarks (Skeleton, Face Mesh, and Hands).
+#### The Inference Pipeline
+For every test video, the system performs a high-speed version of the feature extraction pipeline:
+1. emporal Sampling: Uses np.linspace to pick exactly 30 frames across the video duration, ensuring the BiLSTM receives a consistent time-step sequence.
+2. Normalization: Applies global Mean/Std scaling (loaded from mean.npy and std.npy) to align input data with the training distribution.
+3. Mask Generation: Dynamically computes a binary mask for the sequence to identify valid frames vs. zero-padded artifacts.
+4. Prediction: Feeds the (1, 30, 1692) landmark array and the (1, 30, 1) mask into the model.
+
+Dynamic Masking & Normalization:
+```python
+def compute_mask(sequence):
+    # Identifies frames where landmarks exist (sum of values > 0)
+    return (np.abs(sequence).sum(axis=1) > 1e-6).astype(np.float32)
+
+# ... inside process_video ...
+mask = compute_mask(sequence)[..., np.newaxis]
+sequence = (sequence - mean) / std # Standardizing using training metadata
 ```
 
----
+#### Visual Feedback & UI
+To make the testing results accessible, the system uses PIL (Python Imaging Library) to render Cyrillic/Kazakh fonts and color-coded results directly onto the OpenCV window.
+- Green Label: Correct prediction (PASS).
+- Red Label: Incorrect prediction (FAIL).
+- Confidence Meter: Displays the Softmax probability of the top-1 class.
+Results Overlay  
+```python
+# Color-coded feedback: Green for PASS, Blue/Red for FAIL
+color = (0, 255, 0) if result == "PASS" else (255, 0, 0)
 
-## Quick Start
-
-### Prerequisites
-- Python 3.11+
-- 2GB+ RAM minimum (works on 8GB)
-- CPU with SSE support (all modern CPUs have this)
-- Webcam or MP4 video file (optional)
-
-### Installation
-
-```bash
-# Clone repository
-git clone https://github.com/YOUR_USERNAME/KrSL_FluenSigners-50_Kuro.git
-cd KrSL_FluenSigners-50_Kuro
-
-# Create virtual environment
-python -m venv venv
-venv\Scripts\activate  # Windows
-# source venv/bin/activate  # Linux/Mac
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Download pre-trained model (if not included)
-# Place sign_lstm_masked_supreme_best.keras in models/
+draw.text((10, 10), f"True [{true_id}]: {true_text}", font=font, fill=(0, 255, 0))
+draw.text((10, 45), f"Pred [{pred_id}]: {pred_text}", font=font, fill=(255, 255, 0))
+draw.text((10, 80), f"{result} ({confidence:.2%})", font=font, fill=color)
 ```
 
-### Usage Examples
+#### Evaluation Strategy
+The test script automates the validation process by:
+- Randomly selecting 10 categories from the dataset.
+- Picking a random video from each category.
+- Calculating a final accuracy score (e.g., 8/10) to provide a quick snapshot of the "sign_lstm_masked_supreme_best" model's reliability.
 
-**Test Single Video File (Recommended Start)**
-```bash
-python src/dl/test_video_solo.py
-# Modes:
-# 1. Output only       - Console predictions only
-# 2. Video preview     - Shows video with predictions
-# 3. Video + Landmarks - Shows MediaPipe landmarks
+### Video testing result example:
+![preview 7](etc/gif/V%20-%201.4%20accuracy%20Preview%20-%207.gif)
+![preview 3](etc/gif/V%20-%201.4%20accuracy%20Preview%20-%203.gif)
+`The video testing requires a video that can show the annnotation or sequence of gestures just like in the FluentSigners-50 dataset, so if you want to test the model on your own video, make sure to replicate the sequence of gestures from the FluentSigners-50 video dataset`
+
+### Camera testing (in development)
+The real-time inference module [test_cam.py](src/dl/test_cam.py) implements a sliding-window approach to process live video. It captures frames from the webcam, extracts landmarks in real-time, and provides immediate visual feedback.
+
+#### The Sliding Window Mechanism
+Unlike batch video testing, the camera system must handle a continuous stream of data. To achieve this, the system uses a *Circular Buffer (Deque)*.
+- Window Size: 30 frames (_SEQ\_LEN_).
+- *Prediction Interval*: To maintain a smooth frame rate (FPS) on CPU-only hardware, the model only runs inference every 5 frames (_PRED\_INTERVAL_). This prevents the UI from lagging while still providing "near-instant" feedback.
+```python
+from collections import deque
+
+# Buffer stores the last 30 frames of landmark data
+buffer = deque(maxlen=SEQ_LEN)
+
+# ... inside the loop ...
+if len(buffer) == SEQ_LEN and frame_count % PRED_INTERVAL == 0:
+    # Perform normalization and prediction
 ```
 
-**Batch Test Multiple Videos**
-```bash
-python src/inference/test_on_videos.py
-# Tests 10 random videos and generates report
+#### Development Modes
+The system currently supports two modes of interaction, ranging from fully automatic to manual diagnostic testing.
+1. Mode 1: Simple Live Prediction (Active)
+This is the standard "production" mode. The system continuously watches the user and displays the most likely sign and its confidence score at the top of the screen.
+   - Best for: General demonstration and checking model responsiveness.
+   - Visuals: Overlays the skeletal mesh and face landmarks to ensure the user is correctly positioned within the frame.
+2. Mode 2: Manual Evaluation (In Development)
+Designed for rigorous validation, this mode allows a researcher to test specific signs against a "ground truth."
+   1. Input: The user enters an Expected Class ID into the terminal.
+   2. Execution: The user performs the sign.
+   3. Trigger: Pressing `SPACE` captures the current 30-frame buffer and compares the model's output to the Expected ID.
+   4. Feedback: Displays a clear PASS or FAIL on the screen, useful for identifying specific signs that the model confuses (e.g., similar hand shapes).
+
+#### Localization & UI Rendering
+To support the project's focus on Kazakh Sign Language, the UI utilizes Pillow (PIL) to render non-ASCII characters (Cyrillic), which standard OpenCV functions cannot handle.
+```python
+# Convert OpenCV (BGR) to PIL (RGB)
+img_pil = Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
+draw = ImageDraw.Draw(img_pil)
+
+# Render Kazakh/Cyrillic text
+text = f"{last_prediction} ({last_conf:.2%})"
+draw.text((10, 30), text, font=font, fill=(0, 255, 0))
+
+# Convert back to OpenCV
+frame = cv2.cvtColor(np.array(img_pil), cv2.COLOR_RGB2BGR)
 ```
 
-**Real-Time Webcam Inference (In Development)**
-```bash
-python src/dl/test_cam.py
-# Live camera feed with real-time predictions
-# Press 'q' to quit, 's' to save predictions
-```
+#### Current Technical Challenges
+- Timing Jitter: In Mode 2, there is a known issue regarding the timing of the SPACE bar trigger and the buffer state. Future updates will implement a "Capture Window" to ensure the full gesture is recorded before evaluation.
+- Lighting Sensitivity: Since the model was trained on a specific dataset, real-time performance can vary based on background clutter and lighting conditions, which affect MediaPipe's landmark stability.
+
+#### Performance Summary (CPU Inference)
+
+| Component       | Metric                                |
+|:----------------|:--------------------------------------|
+| Average Latency | ~40–60ms per frame (MediaPipe + LSTM) |
+| Effective FPS   | ~30–45 FPS on the current devic specs |
+| Accuracy (Live) | Highly dependent on user distance and framing|
+
+`I did not included an image or gif of camera testing because i did not wanted to share my or other volunteers facial data, but for those who are interested in it take the model from releases and try to replicate the sequence of gestures from the FluentSigners-50 video dataset`
 
 ---
 
@@ -429,8 +655,8 @@ F1-Score (macro):        ~82%
 ### Hardware Performance
 ```
 Device:                   Intel Core i5-6300U + Intel HD 520
-Inference Time:          ~50-100ms per 30-frame sequence
-FPS:                     10-20 real-time FPS on video
+Inference Time:          ~40-60ms per 30-frame sequence
+FPS:                     25-50 real-time FPS on video
 Memory Usage:            ~400-600MB
 Latency:                 Negligible on modern CPUs
 Scaling:                 Excellent on server-grade hardware
@@ -439,92 +665,35 @@ Scaling:                 Excellent on server-grade hardware
 ### Example Test Results
 
 ```
-TEST VIDEO 1
-File: P23_S028_02.mp4
-True Gesture:  Сәлем (Hi)
-Predicted:     Сәлем (Hi)
-Confidence:    94.2%
-Result:        CORRECT
+VIDEO 6/10
+File: P12_S048_00.mp4
+True ID: 48
+True: Әйеліңе сәлем айт
+Pred ID: 48
+Pred: Әйеліңе сәлем айт
+Confidence: 99.96%
+Result: PASS
 
-TEST VIDEO 2  
-File: P17_S066_03.mp4
-True Gesture:  Қалыңыз қалай (How are you?)
-Predicted:     Қалыңыз қалай (How are you?)
-Confidence:    89.3%
-Result:        CORRECT
 
-TEST VIDEO 3
-File: P10_S054_03.mp4
-True Gesture:  Менде бәрі жақсы (I'm fine)
-Predicted:     Менің жағдайым жаман (I'm not well)
-Confidence:    71.5%
-Result:        INCORRECT
+VIDEO 7/10
+File: P3_S037_02.mp4
+True ID: 37
+True: Көмектесіңіз, басым ауырады, жүрегім ауырады және тыныс алу қиын
+Pred ID: 37
+Pred: Көмектесіңіз, басым ауырады, жүрегім ауырады және тыныс алу қиын
+Confidence: 46.74%
+Result: PASS
+
+
+VIDEO 8/10
+File: P5_S068_04.mp4
+True ID: 68
+True: мен Қазақстанның батысынанмын
+Pred ID: 20
+Pred: менің саған жаңалығым бар
+Confidence: 95.97%
+Result: FAIL
 ```
-
----
-
-## Training Methodology
-
-### Training Approach: Grokking
-
-The "Grokking" method extends training beyond the point of overfitting:
-
-1. **Initial Phase (0-240 epochs)**
-   - Model memorizes training data
-   - Training loss decreases, validation loss may increase
-   - Patterns begin forming in weights
-   
-2. **Transition Phase (240-400 epochs)**
-   - Model starts generalizing
-   - The "grok moment" - sudden jump in accuracy
-   - Validation metrics improve dramatically
-   
-3. **Fine-tuning Phase (400-740 epochs)**
-   - Continued learning from best checkpoint
-   - Refinement of learned representations
-   - Final convergence at 85% accuracy
-
-**Result:** Extended training enables deeper learning of gesture patterns, leading to better generalization across different signers and recording conditions.
-
----
-
-## Technology Stack
-
-### Core Libraries
-- **TensorFlow/Keras** (2.15.0) - Deep learning framework
-- **MediaPipe** (0.10.9) - Pose and gesture detection
-- **OpenCV** (4.13.0) - Video processing
-- **NumPy** (1.26.4) - Numerical computing
-- **Pandas** (3.0.1) - Data manipulation
-
-### Additional Tools
-- **Pillow** (12.1.1) - Image processing
-- **scikit-learn** (1.8.0) - ML utilities
-- **Matplotlib/Seaborn** - Visualization
-- **h5py** (3.15.1) - Model file handling
-
-See `requirements.txt` for complete dependency list (223 packages total).
-
----
-
-## Research & Dataset
-
-### Original Dataset
-**FluenSigners-50 by KrSLR Team**
-- ~175 unique Kazakh sign language annotations
-- 250 video samples per annotation
-- ~43,750 total videos
-- Multiple professional signers
-- High-quality video capture
-
-### Used Subset (This Project)
-- 80 sign annotations (45.7% of full dataset)
-- 125 samples per annotation (50%)
-- ~10,000 videos processed
-- Representative coverage of common gestures
-- Maintained signer diversity (P0-P24)
-
-**Dataset Attribution:** KrSLR Team - Kazakh Sign Language Recognition Research Group
 
 ---
 
@@ -569,7 +738,6 @@ See `requirements.txt` for complete dependency list (223 packages total).
 
 ### Deployment Scenarios
 **Web Applications** - Integration via REST API  
-**Mobile Apps** - Server-side inference, client displays results  
 **Communication Tools** - Live interpretation services  
 **Accessibility Services** - Real-time deaf-hearing communication  
 **Research Platform** - Further KrSL research and development  
@@ -581,7 +749,7 @@ See `requirements.txt` for complete dependency list (223 packages total).
 ### Completed Features
 - Core model training and validation
 - Video file inference (test_video_solo.py)
-- Batch video processing (test_video.py)
+- Batch video processing (test_video.py) `(old)`
 - Real-time prediction display
 - Confidence scoring and analysis
 - Comprehensive logging
@@ -592,9 +760,8 @@ See `requirements.txt` for complete dependency list (223 packages total).
   - UI/UX improvements in progress
   - Performance optimization ongoing
 
-### Future Improvements
+### Future Improvements (are not promised)
 - [ ] Web API service (Flask/FastAPI)
-- [ ] Mobile app integration
 - [ ] Model quantization for edge deployment
 - [ ] ONNX format export
 - [ ] TensorFlow Lite support
@@ -627,12 +794,13 @@ Factors affecting accuracy:
 ```
 CPU Type                 Inference Time    FPS
 ─────────────────────────────────────────────────
-Intel HD 520 (Project)   85ms (avg)       11-12 FPS
-Intel Core i7 (modern)   30-40ms          25-33 FPS
-Intel i9 (high-end)      15-20ms          50-66 FPS
-AMD Ryzen 5 (mid-range)  40-50ms          20-25 FPS
-GPU (NVIDIA RTX 3060)    8-12ms           83-125 FPS
+Intel HD 520 (Project)   85ms (avg)       25-40 FPS
+Intel Core i7 (modern)   30-40ms          60+ FPS
+Intel i9 (high-end)      15-20ms          60+ FPS
+AMD Ryzen 5 (mid-range)  40-50ms          40+ FPS
+GPU (NVIDIA RTX 3060)    8-12ms           120+ FPS (prob like 240+ but idk cuz i dont have a gpu)
 ```
+`tho the framerate really depends on the device computational power so this predicted framerate might not be right`
 
 ---
 
@@ -682,59 +850,9 @@ Despite these, the model still achieves 85% accuracy and runs **perfectly fast**
 
 ---
 
-## Citation & Academic Context
-
-### University Diploma Project
-- **Research Topic:** Methods for easy communication between deaf people using Kazakh Sign Language and others
-- **Goal:** Develop accessible, deployment-ready gesture recognition
-- **Scope:** Complete ML pipeline from data to production inference
-- **Evaluation:** Real-world video performance and accuracy metrics
-
-### Core Research Questions
-1. Can quality sign language recognition work on limited hardware?
-2. How effective is masked LSTM for variable gesture sequences?
-3. Does extended grokking training improve real-world accuracy?
-4. Can open-source technology enable accessible communication?
-
----
-
-## Data & Attribution
-
-### Dataset
-- **Source:** FluenSigners-50 by KrSLR Team
-- **License:** [Dataset License - Check with KrSLR Team]
-- **Usage:** Educational and research purposes
-
-### Project
-- **License:** MIT
-- **Contributors:** Bekal
-- **Institution:** University Diploma Program
-
----
-
-## About the Mission
-
-This project embodies a core principle: **technology for accessibility should never have barriers.**
-
-Too often, assistive technology comes with:
-- Expensive licensing fees
-- Complex hardware requirements
-- Proprietary formats
-- Limited customization options
-
-**Our approach:**
-- Open-source and free to use
-- Works on consumer computers
-- No licensing restrictions
-- Fully customizable for future needs
-- Community-driven improvements
-
-By proving that quality sign language recognition works on basic hardware, we hope to inspire similar accessible technology initiatives worldwide.
-
----
 
 ## Support & Questions
-
+`i prob wont answer cause i know ain no single soul finna see this project besides my uni professors`  
 For issues or questions:
 1. Check `logs/` for detailed execution traces
 2. Review video outputs in `etc/video/` for evidence of functionality
@@ -745,18 +863,16 @@ For issues or questions:
 
 ## Project Statistics
 
-| Metric | Value |
-|:---|:---:|
-| **Total Development Time** | Multiple months |
-| **Model Parameters** | 15.6 Million |
-| **Training Epochs** | 740 |
-| **Dataset Size (Used)** | ~10,000 videos |
-| **Annotation Classes** | 80 Kazakh signs |
-| **Achieved Accuracy** | 85% |
-| **Inference Speed** | <100ms on CPU |
+| Metric |          Value          |
+|:---|:-----------------------:|
+| **Total Development Time** |     Multiple months     |
+| **Model Parameters** |      15.6 Million       |
+| **Training Epochs** |     740 (grokking)      |
+| **Dataset Size (Used)** |     ~10,000 videos      |
+| **Annotation Classes** |     80 Kazakh signs     |
+| **Achieved Accuracy** |           85%           |
+| **Inference Speed** |      <100ms on CPU      |
 | **Hardware Used** | Intel i5-6300U, 8GB RAM |
-| **Lines of Code** | 3000+ |
-| **Documentation Pages** | 10+ |
 
 ---
 
@@ -777,49 +893,14 @@ This project demonstrates that:
 - Machine learning can serve real human needs
 - Open-source collaboration enables impact without barriers
 
-**The model works. It's not deployed (yet). It's accessible. It's free.**
-*Help for those in need should not be limited or paid.*
+**The model works. It's not deployed (yet). It's accessible. It's free.**  
+`Help for those in need should not be limited or paid.`
 
 ---
 
-[//]: # (**Project Status:** Deployment Ready  )
-**Last Updated:** May 5, 2026  
+**Project Status:** Active Development  
+**Last Updated:** May 7, 2026  
 **Version:** 1.4 (Masked Supreme Model)
-[//]: # (**University Diploma:** Approved  )
 
 **Thank you for exploring this project!**
 
-## Training Results & Visualizations
-
-### Model Architecture Summary
-![Model Architecture](graphs/dl/full_model_comparison.png)
-
-*Figure 1: Complete model architecture comparison showing the masked bidirectional LSTM structure*
-
-### Training Progress - Initial Phase (240 epochs)
-![Initial Training](graphs/dl/V_1.4_training.png)
-
-*Figure 2: Training curves for the initial 240 epochs showing loss and accuracy progression*
-
-### Training Progress - Continued Phase (500 epochs)
-![Continued Training](graphs/dl/V_1.4_continue_training.png)
-
-*Figure 3: Extended training curves showing the grokking effect and final convergence*
-
-### Performance Metrics Summary
-
-| Training Phase | Epochs | Best Val Accuracy | Final Val Accuracy | Training Time |
-|:---|:---:|:---:|:---:|:---:|
-| Initial Training | 240 | 78.5% | 82.1% | ~8 hours |
-| Continued Training | 500 | 84.7% | 85.0% | ~15 hours |
-| **Total** | **740** | **85.0%** | **85.0%** | **~23 hours** |
-
-### Hardware Performance Benchmarks
-
-| Hardware | Inference Time | FPS | Memory Usage |
-|:---|:---:|:---:|:---:|
-| Intel Core i5-6300U (Project) | 85ms | 11-12 | 400-600MB |
-| Intel Core i7 (Modern) | 30-40ms | 25-33 | 500-700MB |
-| Intel Core i9 (High-end) | 15-20ms | 50-66 | 600-800MB |
-| AMD Ryzen 5 | 40-50ms | 20-25 | 450-650MB |
-| NVIDIA RTX 3060 | 8-12ms | 83-125 | 800-1200MB |
