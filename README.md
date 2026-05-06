@@ -55,6 +55,7 @@
 ### **To see the results of testing please check the videos at: [etc/video](etc/video), [etc/img](etc/img) and [etc/gif](etc/gif)**  
 ### model accuracy result example:
 ![preview 10](etc/gif/V%20-%201.4%20accuracy%20Preview%20-%2010.gif)
+### for latest model check the [releases](https://github.com/K0d0ku/Uni_diploma_project_ML/releases)
 
 ## Prologue
 This repository is designated for my university diploma research project focused on developing an accessible Kazakh Sign Language Recognition system model. In this repository, I document the entire research and development process, including data preparation, model training, evaluation, and deployment considerations. The project is designed to be open-source and free to use, with the goal of enabling real-world applications that facilitate communication for deaf individuals using Kazakh Sign Language.
