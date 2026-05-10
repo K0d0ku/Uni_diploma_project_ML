@@ -7,6 +7,9 @@
 ![Accuracy](https://img.shields.io/badge/accuracy-85%25-success)
 ![CPU-Optimized](https://img.shields.io/badge/CPU%20Optimized-Yes-blueviolet)
 ![Parameters](https://img.shields.io/badge/parameters-15.6M-blue)
+---
+
+"Bekal" commits are mine, i just forgot to sync the local and github project accounts
 
 ---
 ## Table of contents
